@@ -1,0 +1,92 @@
+body{
+	margin: 0;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.speakers-container *{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.speakers-container {
+	width: 1000px;
+	max-width: 1000px;
+	margin:0 auto;
+	border: 1px solid;
+}
+
+.speaker {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.speaker:hover {
+	background: #fff2e2;
+}
+
+.speaker-photo {
+	float: left;
+	width: 50%;
+	height: auto;
+}
+
+.layout-half {
+	width: 50%;
+}
+
+.speaker-bio {
+	overflow: hidden;
+
+}
+
+.speaker-bio p:first-of-type {
+	margin-top: 3.4375em;
+    margin-bottom: 1.125em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    line-height: 1.1;
+}
+
+.speaker-bio p:last-of-type{
+	padding-left: 1.88em;
+	padding-right: 1.88em;
+}
+
+.speaker-bio p:last-of-type::after{
+	display: block;
+	content: '';
+	height: 1px;
+	width: 2.81em;
+	margin: 0.81em auto;
+	background-color: #000;
+
+}
+
+.speaker-bio a {
+	display: block;
+	width: 1.25em;
+	height: 1.25em;
+	background: url("../images/icon-twitter.svg") no-repeat; /* 0 0 : x y좌표 기본값 */
+	background-size: contain;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.speaker-bio a:hover { 
+	fill: #4ca6de;
+}
+
+.align-right {
+	float: right;
+}
+
+
+
+
+

@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+/**
+ * 본문 디자인(설계)
+ * ---------------------------------------------
+ * 글자 모양(Font Family): Spoqa Han Sans (Like Noto Sans)
+ * 글자 색상(Color): #373737
+ * 글자 크기(Font Size): 14px
+ * 행간 비율(Line Height): 1.5 (14 x 1.5 = 21px)
+ * 자간 설정(Letter Spacing): -25
+ */
+
+
+html {
+	font-size: 14px;
+}
+
+body {
+	margin-bottom: 1.5em;
+    font-family: "Spoqa Han Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	letter-spacing: -0.025em;
+	color: #2c2c2c;
+}
+
+body:hover {
+	background-image: linear-gradient(180deg, transparent 0%, transparent 95%, #7045cf 95%, #7045cf 100% );
+	background-size: 1px 21px;
+	/* 맨 앞의 transparent 0%와 맨 뒤의 #7045cf 100% 는 삭제 가능 */
+}
+
+a, a:link, a:hover, a:visited, a:focus {
+ 	color: #fff;
+ 	text-decoration: none;
+ } 
+
+
+h1,h2,h3,h4,h5,h6,p {
+  margin-bottom: 1.5em;
+}
+
+/**
+ * 제목 디자인
+ * h1~6
+ * -----------------------------------------------------------
+ * 글자 크기 배율(Type Scale): x1.313
+ * 본문 기본 글자 크기(Base Font Size): 14px = 1em
+ * ※ 소수점은 4자리까지 끊고 절삭.
+ * -----------------------------------------------------------
+ * [ line-height을 구하는 공식 ]
+ * 1) ceil( 글자 크기 비율(1.313) ÷ 기본 행간 비율(1.5)) = 글자 크기가 차지하는 행의 개수
+ *    1.313/1.5 = .8753333333 => 1개
+ * 2) 기본 행간 비율(1.5) ÷ 글자 크기 비율(1.313) × 행의 개수 = 행간
+ *    1.5/1.313 = 1.1424219345 * 1 = 1.1424219345 
+ * -----------------------------------------------------------
+ * [ margin-bottom을 구하는 공식 ]
+ * 기본 행간 비율(1.5) ÷ 글자 크기 비율(1.313)  
+ * ※ 소수점 4자리에서 끊고 절삭 : 1.5/1.313 = 1.1424219345 
+ * ----------------------------------------------------------- */
+
+h6 { 
+	font-size: 1em;				/*  x 1.313 */
+	line-height: 1.5; 			/* 아래 정의된 line-height에 의해 무효화 됨. */
+	line-height: 1.5;           /* 행간을 소수점 3번째 자리까지 쓰되 올림 (다소 어긋난 높이 조정) */
+	margin-bottom: 1.5em;
+}
+
+h5 { 
+	font-size: 1.313em;          /*  x 1.313 */
+	line-height: 1.1424219345;	/* 행의 개수(1)*1.5/1.313=1.1424219345 */
+	line-height: 1.15;
+	margin-bottom: 1.1424em;
+}
+
+h4 {
+	font-size: 1.7239em;		/*  x 1.313 */
+	line-height: 1.7402401531;  /* 행의 개수(2)*1.5/1.7239=1.7402401531 */
+	line-height: 1.75; 
+	margin-bottom: 0.8701em;	/* 1.5/1.7239=0.8701200766 */
+}
+
+h3 {
+	font-size: 2.2635em;		/*  x 1.313 */
+	line-height: 1.3253810471;  /* 행의 개수(2)*1.5/2.2635=1.3253810471 */
+	line-height: 1.33 ;
+	margin-bottom: 0.6626em;    /* 1.5/2.2635=0.6626905235 */
+}
+
+h2 {
+	font-size: 2.9720em;		/*  x 1.313 */
+	line-height: 1.0094212651;	/* 행의 개수(3)*1.5/2.9720=1.0094212651 */
+	line-height: 1;
+	margin-bottom: 0.50471em; 	/* 1.5/2.9720=0.5047106326 */
+}
+
+h1 {
+	font-size: 3.9023em;		/*  x 1.313 */
+	line-height: 1.1531660815;	/* 행의 개수(3)*1.5/3.9023=1.1531660815 */
+	line-height: 1.16;
+	margin-bottom: 0.3843em;    /* 1.5/3.9023=0.3843886938 */
+}
+
+/* HEADER */
+
+.headder-wrapper {
+	background: #9c27b0;
+	margin-bottom: 63px;
+}
+
+.header {
+	min-width: 960px;
+	width: 960px;
+	height: 42px;
+	line-height: 42px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+	font-size: 18px;
+	line-height: 42px;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.navigation-wrapper {
+	float: right;
+
+}
+
+.navigation {
+	font-size: 13px;
+	float: left;
+	margin-left: 20px;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.paragraph {
+	margin-bottom: 105px;
+}
+
+.title {
+	box-sizing: border-box;
+	color: #959595;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #dfdfdf;
+	margin-bottom: 42px;
+}
+
+.title-description {
+	font-size: 1rem;
+	color: #c0c1c2;
+	margin-left: 30px;
+}
+
+/* HEADING */
+
+.heading {
+	float: left;
+	width: 68px;
+	margin-right: 38px;
+	font-size: 1rem;
+	color: #c0c1c2;
+}
+
+.heading-number {
+	float: left;
+	width: 790px;
+}
+
+.heading-number	 p:last-child {
+	margin-bottom: 0;
+}
+
+.subtitle1 { 
+	height: 4.5rem;
+	line-height: 4.5rem;
+ }
+
+.subtitle2 .subtitle3, .subtitle4 { 
+	height: 3rem;
+	line-height: 3rem;
+ }
+
+.subtitle5, .subtitle6, .subtitle7 { 
+	line-height: 1.5rem;
+ }
+
+/* LISTSTYLE */
+
+.list {
+	float: left;
+	margin-right: 74px;	
+}
+
+[class^="sublist-"] {
+	list-style-position: inside;
+	margin-bottom: 21px;
+}
+
+.unorder {
+	list-style-type: disc;
+	padding-left: 16px;
+}
+
+.unorder .sublist-unorder li {
+	list-style-type: circle;
+}
+
+.order {
+	list-style-type: decimal;
+	padding-left: 16px;
+}
+.order .sublist-order li{
+	list-style-type: decimal;
+	color: #9d9c9c;
+}
+
+.order .sublist-order li span{
+	color: #2c2c2c;
+}
+
+.dfinition dd{
+	padding-left: 18px;
+	
+}
+
+
+/*TABLE*/
+
+.table-wrapper {
+	width: 100%;
+}
+
+.table-wrapper th, .table-wrapper td{
+	vertical-align: middle;
+	height: 41px;
+	text-align: center;
+}
+
+.table1{
+	margin-bottom: 104px;
+}
+
+.table1 tr td:nth-of-type(1){
+	text-align: left;
+	padding-left: 36px;
+}
+
+.table1 th, .table1 td {
+	border-bottom: 1px solid #e2e1e1;
+	} 
+
+.table1 .title-background {
+	border-top: 1px solid #e2e1e1;
+	background: #f8f8f8;
+}
+
+.table2 td {
+	border-bottom: 1px dashed #e2e1e1;
+} 
+
+.table2 th, .table2 tr:last-child{
+	border-bottom: 1px solid #505050;
+}
+
+.table2 .rowspan{
+	text-align: left;
+	padding-left: 36px;
+}
+
+.table2 .border{
+	border-bottom: 1px solid #505050;
+}
+
+.table-caption {
+	position: absolute;
+	left: -99999px;
+}
+
+
+/*COLOR*/
+
+.color1 {
+	float: left;
+	margin-bottom: 6px;
+}
+
+.color2 {
+	float: left;
+}
+
+.float {
+	float:left;
+	margin-right:28px;
+}
+
+.float:nth-of-type(6) {
+	margin-right:0;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.warning {
+	background: #fcb409;
+}
+
+.info {
+	background: #63a2fc;
+}
+
+.success {
+	background: #44cb83;
+}
+
+.primary {
+	background: #7171ef;
+}
+
+.danger {
+	background: #ff5448;
+}
+
+.default {
+	background: #787f94;
+}
+
+.gray1 {
+	background: #333741;
+}
+
+.gray2 {
+	background: #586076;
+}
+
+.gray3 {
+	background: #787f93;
+}
+
+.gray4 {
+	background: #bac2cf;
+}
+
+.gray5 {
+	background: #d9e0e9;
+}
+
+.font {
+	font: 12px/14px "Helvetica light";
+	color: #2c2c2c;
+	letter-spacing: +1.2px;
+}
+	

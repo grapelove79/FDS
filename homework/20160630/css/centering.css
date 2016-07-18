@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.box {
+	width: 200px;
+	height: 200px;
+	border: 14px solid orange;
+	margin-bottom: 20px;
+	font-size:32px;
+	font-weight: bold;
+	font-weight: 700;
+	color: orange;
+	text-align: center;
+	background: #fff;
+}
+
+
+/*line-height */
+.box1{
+	line-height: 200px;
+}
+
+/*table-cell*/
+.box2{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*inline-block*/
+.box3{
+	line-height: 200px;
+	display:inline-block;
+	margin-top:20px;
+}
+
