@@ -96,7 +96,7 @@ body {
 	padding-right: 1.88em;
 }
 
-.speaker-bio p:last-of-type::after{
+.speaker-bio .speaker-desc::after{
 	display: block;
 	content: '';
 	height: 1px;
