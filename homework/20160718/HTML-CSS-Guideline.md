@@ -93,5 +93,70 @@ From the HTML5 spec:
 </html>
 ```
 
-- 다국어 작업시 [국가별 언어](http://www.w3schools.com/tags/ref_language_codes.asp) 코드 참조
-	
+- 다국어 작업시 [국가별 언어](http://www.w3schools.com/tags/ref_language_codes.asp) 코드 참조.
+
+#### IE 호환 모드
+- Internet Explorer에서 IE의 버전을 지정하는 문서 호환성 <메타> 태그의 사용을 지원합니다. 
+- 최신모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서 항상 최신 표준 모드로 렌더링됩니다.
+
+```
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
+
+- 더 많은 정보를 위해 [awesome Stack Overflow article](http://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do) 참조.
+
+#### Character 인코딩
+- 빠르고 쉽게 명시적인 문자 인코딩을 선언함으로써 콘텐츠의 적절한 렌더링을 보장합니다. 
+
+```
+<head>
+  <meta charset="UTF-8">
+</head>
+```
+
+#### HTML5 용 레이아웃 가이드
+- Wrap을 relative로 하여 Minidaum을 상단으로 올리는 형태
+- article : 태그 자체로 완전한 하나의 개별 컨텐츠 article은 그 안에 section을 가질 수 있음
+= section : 제목 태그(Heading Tag)를 지닌 영역 구분
+
+```
+<div id="Index"> <!-- 웹접근성용 바로가기 링크 모음 -->
+    <a href="#Body">본문 바로가기</a>
+    <a href="#Gnb">메뉴 바로가기</a>
+</div>
+<article id="Wrap" class="서비스명_type1"><!-- position:relative 적용 / 레이아웃 관련 클래스 적용 -->
+    <header id="Head">
+        <h1>
+            <a id="Logo">로고(text)</a>
+            <a id="ServiceLogo">서비스명(text)</a>
+        </h1>
+        <ul id="RelServices">관련서비스들</ul>
+        <nav id="Gnb">GNB</nav>
+    </header>
+    <article id="Content"  class="cont_폴더명"><!-- 대메뉴별(폴더명) 관련 클래스 적용 -->
+        <!-- 알아서 구성 -->
+        <div id="cSub">#cSub or #cFeature 페이지내 의미에 따라 구분하여 사용</div>
+        <!-- 컨텐츠의 기본 영역(body Main) -->
+        <div id="cMain">
+            <nav id="mNav">#mNav</nav>
+            <div id="mSub">#mSub or #mFeature</div>
+            <article id="mArticle">
+                <h2 id="Body">서비스명 본문</h2>
+                <!-- Body 본문바로가기 링크임 - 페이지별 위치 및 element 명은 서비스에 맞게 변경하여 사용-->
+            </article>
+            <aside id="mAside">#mAside</aside>
+            <div id="mEtc">#mEtc</div>
+        </div>
+        <!-- 기타 하단 Etc 영역(body Etc) -->
+        <div id="cEtc">#cEtc</div>
+    </article>
+    <footer id="Foot">
+        copyright
+    </footer>
+    <div id="UI__minidaum"></div><!-- //position:absolute로 상단 위치. cgi 수정작업 전까지는 기존 id를 유지 -->
+</article>
+```
+#### 필수 attributes
+필수 애트리뷰트는 누락시 문법 오류로 검출되므로, 값이 없을 경우라도 누락해서는 안된다.
+- 흔히 누락하는 애트리뷰트
+##### 흔히 누락하는 애트리뷰트
