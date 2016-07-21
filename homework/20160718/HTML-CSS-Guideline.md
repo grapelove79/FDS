@@ -1,7 +1,6 @@
 #HTML/CSS Guide by @youngsun
 
 ##견고한 웹사이트 개발을 위한 HTML and CSS 가이드
--
 
 - 환경 및 설정
 - HTML 가이드
