@@ -1,6 +1,3 @@
-###### HTML/CSS Guide by @youngsun
-
-# 견고한 웹사이트 개발을 위한 HTML and CSS 가이드
 
 ![ HTML and CSS 가이드](mk_pro_cover.jpg)
 
