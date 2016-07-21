@@ -61,28 +61,28 @@ js/
 ### 기본 규칙
 
 #### HTML5 DOCTYPE
-	- 모든 HTML 페이지의 시작 부분에서 간단한 DOCTYPE이 가능한 모든 브라우저에 표준 모드와 더 일관성있는 렌더링을 적용합니다.
-	- DOCTYPE은 문서의 최상단에 위치해야 하며, 그 위에 주석이나 스크립트 등의 코드가 오게해서는 안된다.
+- 모든 HTML 페이지의 시작 부분에서 간단한 DOCTYPE이 가능한 모든 브라우저에 표준 모드와 더 일관성있는 렌더링을 적용합니다.
+- DOCTYPE은 문서의 최상단에 위치해야 하며, 그 위에 주석이나 스크립트 등의 코드가 오게해서는 안된다.
 	
-	```
-	<!DOCTYPE html>
-	```
+```
+<!DOCTYPE html>
+```
 	
 #### 문법
-	- Soft teb 사용한다. 코드는 모든 환경에서 동일한 렌더링을 보증할 수 있는 유일한 방법이다.
+- Soft teb 사용한다. 코드는 모든 환경에서 동일한 렌더링을 보증할 수 있는 유일한 방법이다.
 	
-	```
-	<!DOCTYPE html>
-	<html>
-	  <head>
-	    <title >Page title </title>
-	  </head>
-	  <body>
-	    <img src="images/company-logo.png" alt="Company">
-	    <h1 class="hello-world">Hello, world!</h1>
-	  </body>
-	</html>
-	```
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >Page title </title>
+  </head>
+  <body>
+    <img src="images/company-logo.png" alt="Company">
+    <h1 class="hello-world">Hello, world!</h1>
+  </body>
+</html>
+```
 	
 #### 언어 속성
 From the HTML5 spec:
