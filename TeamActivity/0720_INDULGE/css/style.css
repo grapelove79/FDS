@@ -13,9 +13,11 @@ a {
 }
 
 .hide {
-  position: absolute;
-  top: -10000px;
-  z-index: -99999;
+  position：absolute; 
+  left:-10000px; 
+  top:auto; 
+  height:1px; 
+  overflow:hidden;
 }
 
 /* row module */
@@ -40,7 +42,7 @@ a {
 .container {
   background: url(../images/sea.png) no-repeat;
   background-position: top center;
-  padding-bottom: 100%;
+  background-size: 800px;
   padding-top: 63px;
 }
 /* header */
@@ -66,7 +68,10 @@ a {
 
 
 .navigation-container  {
+  width: 285px;
   margin-bottom: 154px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .global-Navigation-container {
@@ -84,7 +89,7 @@ a {
 }
 
 .global-Navigation-container .global-navigation {
-  display: none;
+  display: none; 
 }
 
 .search {
@@ -114,7 +119,7 @@ a {
 }
 
 .search form {
-  display: none;
+  display: none; 
 }
 
 /* contents */
@@ -129,7 +134,7 @@ a {
 
 }
 .focus-on .focus-on-text {
-     margin-bottom: 34px;
+  margin-bottom: 34px;
 }
 .focus-on .focus-on-text span{
   display: block;
@@ -284,5 +289,8 @@ a {
   margin-left: 14.6875%;
 }
 
+@media screen and (min-width: 600px) {
 
+  
+}
 
