@@ -12,6 +12,12 @@ a {
   text-decoration: none;
 }
 
+.hide {
+  position: absolute;
+  top: -10000px;
+  z-index: -99999;
+}
+
 /* row module */
 .row-s-1 { height: 21px; }
 .row-s-2 { height: 42px; }
