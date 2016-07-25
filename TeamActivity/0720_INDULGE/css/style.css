@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+body {
+  color: #fff;
+  font: 1rem/1.5;
+  background:  #003652;
+  }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hide {
+  position: absolute;
+  top: -10000px;
+  z-index: -99999;
+}
+
+/* row module */
+.row-s-1 { height: 21px; }
+.row-s-2 { height: 42px; }
+.row-s-3 { height: 63px; }
+.row-s-4 { height: 84px; }
+.row-s-5 { height: 105px; }
+.row-s-6 { height: 126px; }
+.row-s-7 { height: 147px; }
+.row-s-8 { height: 168px; }
+.row-s-9 { height: 189px; }
+.row-s-10 { height: 210px; }
+.row-s-11 { height: 231px; }
+.row-s-12 { height: 252px; }
+.row-s-13 { height: 273px; }
+.row-s-14 { height: 294px; }
+.row-s-15 { height: 315px; }
+.row-s-20 { height: 420px; }
+.row-s-23 { height: 483px; }
+
+
+.logo {
+  height: 51px;
+  background: url("../images/logo-header.png") no-repeat top center;
+  margin-top: 63px;
+}
+
+.navigation-container {
+  margin-top: 63px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.global-navigation-container {
+  background: url(../images/icon-hamberger.png) no-repeat;
+
+}
+.global-navigation-container .global-navigation {
+  display: none;
+}
+
+.search form{
+  display: none;
+}
+.container {
+  background: url(../images/sea.png) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding-bottom: 100%;
+}
+
+.focus-on{
+  text-align: center;
+  padding-left: 13%;
+  padding-right: 13%;
+  line-height: 1.5;
+  margin-bottom: 62px;
+}
+.focus-on span{
+  display: block;
+  font-family: "LatoWebHairline", sans-serif;
+  font-size: 2rem;
+}
+
+.focus-on strong{
+  font-family: "LatoWebBold", sans-serif;
+  font-size: 1.6875rem;
+}
+
+
+
+  /* 격리된 float 레이아웃 방식: Isolate Float Layout Technique */
+  /* 왼쪽으로 밀어 놓은 것을 하나씩 끌어다 쓰것  것*/
+  /* margin-right: -100%; 은  KEY POINT 이다 !!! */
+  [class*="unit-"] { 
+  box-sizing: border-box; 
+  float: left; 
+}
+
+
+  /*[class*="box-isolate"] {
+    margin-right: -100%;
+  }
+  .isolate-order-1 {margin-left: calc(12.8% * 0);}
+  .isolate-order-2 {margin-left: calc(12.8% * 1);}
+  .isolate-order-3 {margin-left: calc(12.8% * 2); width: calc(12.8% * 2); }
+  .isolate-order-4 {margin-left: calc(12.8% * 3);}*/
+  .row-1 { margin-bottom: calc( 21px * 1); }
+
+
+.title {
+  position: relative;
+  border: 1px solid red;
+}
+.title-1-1 { padding-bottom: 100%; }
+.title-1-2 { padding-bottom: 50%; }
+.title-1-3 { padding-bottom: 33.333333333%; }
+.title-2-3 { padding-bottom: 66.666666666%; }
+.title-4-3 { padding-bottom: 133.34%; }
+.title-1-4 { padding-bottom: 25%; }
+.title-content { background: #7f6162; }
+.title-text {  
+  position: absolute; 
+  text-align: center;
+  padding: 15%;
+  box-sizing: border-box;
+}
+
+
+
+/*
+.tile-content { position: absolute; }
+.text-tile { background-color: #7f6162; }
+.tile-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 15%;
+  box-sizing: border-box;
+}*/
+
+[class*="photo-"] {
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      border:1px solid red;
+    }
+
+.photo-1 { background-image: url(../images/Photo-01.jpg); }
+.photo-2 { background-image: url(../images/Photo-02.jpg); }
+.photo-3 { background-image: url(../images/Photo-03.jpg); }
+.photo-4 { background-image: url(../images/Photo-04.jpg); }
+.photo-5 { background-image: url(../images/Photo-05.jpg); }
+.photo-6 { background-image: url(../images/Photo-06.jpg); }
+.photo-7 { background-image: url(../images/Photo-07.jpg); }
+.photo-8 { background-image: url(../images/Photo-08.jpg); }
+.photo-9 { background-image: url(../images/Photo-09.jpg); }
+.photo-10 { background-image: url(../images/Photo-10.jpg); }
+.photo-11 { background-image: url(../images/Photo-11.jpg); }
+.photo-12 { background-image: url(../images/Photo-12.jpg); }
+.photo-13 { background-image: url(../images/Photo-13.jpg); }
+.photo-14 { background-image: url(../images/Photo-14.jpg); }
+
+
+
+
