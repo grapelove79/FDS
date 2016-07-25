@@ -12,12 +12,6 @@ a {
   text-decoration: none;
 }
 
-.hide {
-  position: absolute;
-  top: -10000px;
-  z-index: -99999;
-}
-
 /* row module */
 .row-s-1 { height: 21px; }
 .row-s-2 { height: 42px; }
@@ -45,23 +39,25 @@ a {
 }
 /* header */
 .logo {
-  width: 89.0625%;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   padding-bottom: 42px;
+  width: 89.0625%;
   border-bottom: 1px solid #fff;
   margin-bottom: 21px;
 
 }
+
 .logo a {
   position: absolute;
-  height: 100%;
-  top: 50%;
   left: 50%;
   background: url("../images/logo-header.png") no-repeat center center;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
+
 }
+
 
 .navigation-container  {
   margin-bottom: 154px;
