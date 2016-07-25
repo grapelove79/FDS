@@ -14,7 +14,7 @@
   width: 100%;
 }
 .grid-container[class*="show-grid"]::before {
-  height: 700vh;
+  height: 100vh;
 }
 /* sprit방식 */
 .grid-container.show-grid::before {
