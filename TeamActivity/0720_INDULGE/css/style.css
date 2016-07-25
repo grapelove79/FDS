@@ -134,12 +134,12 @@ a {
 .focus-on .focus-on-text span{
   display: block;
   font-family: "LatoWebHairline", sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .focus-on .focus-on-text strong{
   font-family: "LatoWebBold", sans-serif;
-  font-size: 1.6875rem;
+  font-size: 1.6875em;
 }
 
 .focus-on .button {
@@ -149,7 +149,7 @@ a {
   left: 50%;
   transform: translate(-50%);
   font-family: "LatoWebBold", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   width: 178px;
   margin-bottom: 63px;
 }
@@ -215,7 +215,7 @@ a {
   padding-top: 14px;
   box-sizing: border-box;
   line-height: 1.4;
-  font-size: 1.375rem;
+  font-size: 1.375em;
 }
 
 .title-text3 {
