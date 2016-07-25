@@ -114,11 +114,12 @@ a {
 /* contents */
 .focus-on{
   position: relative;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
-  padding-left: 13%;
-  padding-right: 13%;
   line-height: 1.5;
-  margin-bottom: 56px;
+  margin-bottom: 31px;
 
 }
 .focus-on .focus-on-text {
@@ -144,6 +145,7 @@ a {
   font-family: "LatoWebBold", sans-serif;
   font-size: 1.125rem;
   width: 178px;
+  margin-bottom: 63px;
 }
 
 
@@ -151,11 +153,6 @@ a {
   content: "\f04b";
   padding-right: 10px;
 }
-
-
-
-
-
 
 
   /* 격리된 float 레이아웃 방식: Isolate Float Layout Technique */
@@ -167,44 +164,72 @@ a {
 }
 
 
-  /*[class*="box-isolate"] {
-    margin-right: -100%;
-  }
-  .isolate-order-1 {margin-left: calc(12.8% * 0);}
-  .isolate-order-2 {margin-left: calc(12.8% * 1);}
-  .isolate-order-3 {margin-left: calc(12.8% * 2); width: calc(12.8% * 2); }
-  .isolate-order-4 {margin-left: calc(12.8% * 3);}*/
-
-
 .title {
   position: relative;
 }
-.title-1-1 { padding-bottom: 100%; }
-.title-1-2 { padding-bottom: 50%; }
+
+/*.title-1-2 { padding-bottom: 50%; }*/
+.title-1-1 { padding-bottom: 132%; }
+.title-1-2 { padding-bottom: 52.941176%}
+.title-3-2 { padding-bottom: 151.34%;}
+
 .title-1-3 { padding-bottom: 33.333333333%; }
-.title-2-3 { padding-bottom: 66.666666666%; }
-.title-4-3 { padding-bottom: 133.34%; }
-.title-1-4 { padding-bottom: 25%; }
+.title-2-3 { padding-bottom: 71.66661%; }
+.title-4-3 { padding-bottom: 151.34%; }
+.title-1-4 { padding-bottom: 39%; }
+
 .title-content { background: #7f6162; }
-.title-text {  
+
+
+.title-center {text-align: center;}
+.title-left { text-align: left; left:0; padding-left: 18px;}
+.title-right { text-align: right; right: 0; padding-right: 18px;}
+
+
+[class*=title-text] {
+  font-family: "LatoWebLight", sans-serif;
   position: absolute; 
-  text-align: center;
-  padding: 15%;
-  box-sizing: border-box;
 }
 
-
-
-/*
-.tile-content { position: absolute; }
-.text-tile { background-color: #7f6162; }
-.tile-content {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding: 15%;
+.title-text1 { 
+  width: 80%; 
+  left: 50%;
+  padding-top: 21px;
+  transform: translate(-50%);
   box-sizing: border-box;
-}*/
+  line-height: 1.2;
+  font-size: 1.125em;
+}
+.bottom .title-text1:nth-child(1) {
+  bottom: 0;
+  padding-bottom: 21px;
+}
+
+.title-text2 {
+  padding-top: 14px;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-size: 1.375rem;
+}
+
+.title-text3 {
+  padding-top: 34px;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-size: 1.375em;
+}
+
+.title-content .button-s {
+  position: absolute;
+  width: 96px;
+  height: 21px;
+  line-height: 21px;
+  border: 1px solid #fff;
+  transform: translate(-50%);
+  font-size: 0.75em;
+  margin-top: 21px;
+
+}
 
 [class*="photo-"] {
       background-repeat: no-repeat;
@@ -228,6 +253,29 @@ a {
 .photo-13 { background-image: url(../images/Photo-13.jpg); }
 .photo-14 { background-image: url(../images/Photo-14.jpg); }
 
+/* footer */
+.logo-footer {
+  margin-top: 56px;
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.sns {
+  font-size: 2.47125em;
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.footer-navigation {
+  font-family: "LatoWebLight", sans-serif;
+  font-size: 1.125em;
+
+}
+
+.footer-navigation a {
+  margin-bottom: 30px;
+  margin-left: 14.6875%;
+}
 
 
 

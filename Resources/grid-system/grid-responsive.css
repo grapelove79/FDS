@@ -14,18 +14,16 @@
   width: 100%;
 }
 .grid-container[class*="show-grid"]::before {
-  height: 500vh;
+  height: 700vh;
 }
 /* sprit방식 */
-/*.grid-container.show-grid::before {
+.grid-container.show-grid::before {
   background: 
   linear-gradient(transparent 19px, #26923f 20px);
   background-size:  1px 21px;
-}*/
+}
 .grid-container.show-grid:hover::before {
-  background: 
-  linear-gradient(transparent 19px, #26923f 20px);
-  background-size:  1px 21px;
+  display: none;
 }
 
 /**
