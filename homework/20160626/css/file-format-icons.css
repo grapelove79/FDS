@@ -1,0 +1,120 @@
+/**
+* ----------------------
+* .lecture
+* ----------------------*/
+
+
+/* 기본적인 리스트 스타일 초기화 */
+
+
+/* 정말 자주 사용되는 코드 */
+
+.reset-list ul,
+.reset-list ol,
+ul.reset-list,
+ol.reset-list {
+    /* mt0+mb0+pl0 (Emmet문법)*/
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.lecture-file-list a {
+    display: block;
+    /* font-size: 30px; 
+	30/16 = 1.88 */
+    font-size: 1.88em;
+    text-decoration: none;
+    text-indent: 40px;
+    background-repeat: no-repeat;
+}
+
+
+/**
+* --------------------------
+* 파일 포멧에 따라자동적으로 아이콘을
+* 배경 이미지로 설정하는 스타일
+* --------------------------*/
+
+a[href$=".psd"] {
+    background-image: url("../images/psd.png");
+}
+
+a[href$=".ai"] {
+    background-image: url("../images/ai.png");
+}
+
+a[href$=".txt"] {
+    background-image: url("../images/txt.png");
+}
+
+a[href$=".avi"] {
+    background-image: url("../images/avi.png");
+}
+
+a[href$=".mov"] {
+    background-image: url("../images/mov.png");
+}
+
+a[href$=".pdf"] {
+    background-image: url("../images/pdf.png");
+}
+
+a[href^="http://"][target="_blank"] {
+    /* 배경 이미지 설정 */
+    background-image: url("../images/external-link.png");
+    background-position: 0 4px;
+    /* 순서: 가로 세로 x y */
+}
+
+a[href$=".doc"] {
+    background-image: url("../images/doc.png");
+}
+
+a[href$=".xls"] {
+    background-image: url("../images/xls.png");
+}
+
+a[href$=".jpg"] {
+    background-image: url("../images/jpg.png");
+}
+
+a[href$=".png"] {
+    background-image: url("../images/png.png");
+}
+
+a[href$=".mp3"] {
+    background-image: url("../images/mp3.png");
+}
+
+a[href$=".html"] {
+    background-image: url("../images/html.png");
+}
+
+a[href$=".mp4"] {
+    background-image: url("../images/mp4.png");
+}
+
+a[href$=".gif"] {
+    background-image: url("../images/gif.png");
+}
+
+a[href$=".tiff"] {
+    background-image: url("../images/tiff.png");
+}
+
+a[href$=".js"] {
+    background-image: url("../images/js.png");
+}
+
+a[href$=".flac"] {
+    background-image: url("../images/flac.png");
+}
+
+a[href$=".aac"] {
+    background-image: url("../images/aac.png");
+}
+
+/* 인자값은 ""를 쓴다 */
+/* list-style-type: decimal : 순서대로 1,2,3,4 */

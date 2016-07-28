@@ -1,0 +1,58 @@
+body.overlay-grid::before { 
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 50%;
+  height: 2040px; /*컨테츠가 늘어나면 주려고 했는데 현재는 height만 줘도 됨.*/
+  transform: translateX(-50%);
+}
+
+body.overlay-grid::before,
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+body.overlay-grid::before {
+  background: url("./images/GS-pattern-10-100-10.png");
+}
+
+body.overlay-grid:hover::before{
+	display:none;
+}
+
+/**
+ * --------------------------------
+ * 그리드 로우(Row) 모듈
+ * ※ clearfix 유사
+ * ----------------------------- */
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/**
+ * --------------------------------
+ * 그리드 컬럼(Column) 모듈
+ * ----------------------------- */
+
+[class*="col-"]{
+   float: left;
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ .col-1  { width: 100px; }
+ .col-2  { width: 220px; } 
+ .col-3  { width: 340px; }
+ .col-4  { width: 460px; }
+ .col-5  { width: 580px; }
+ .col-6  { width: 700px; }
+ .col-7  { width: 820px; }
+ .col-8  { width: 940px; }
+ .col-9  { width: 1060px; }
+ .col-10 { width: 1180px; } 

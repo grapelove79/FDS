@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*grid-system(Static).css @grapelove, 2016*/
+
+/**
+ * --------------------------------
+ * 그리드 컨테이너 모듈
+ * ----------------------------- */
+
+/* 격자를 위에 띄어주기 위해 body에 넣음 그리드를 밑에 넣으면 위에 이미지들때문에 안보이기
+때문이다. 가상요소를 쓴 이유는 굳이 태그를 더 추가 하지 않아도 되기 때문에. */
+/* 자식요소에 Z-index의 값이 아무리 높아도 부모요소가 다른 부모요소 보다 계층구조가 낮으면 그 이상 띄워지지 않는다. */
+body.overlay-grid::before { 
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 50%;
+  min-height: 100vh; /*컨테츠가 늘어나면 주려고 했는데 현재는 height만 줘도 됨.*/
+  transform: translateX(-50%);
+ 
+  
+}
+
+body.overlay-grid::before,
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.overlay-grid::before,
+.container.hover-hide-grid::before {
+  background: url("./images/GS-pattern-10-60-10.png");
+}
+
+/*.container.hover-hide-grid:hover {
+  background: none;
+}*/
+
+body.overlay-grid:hover::before,
+.container.hover-hide-grid:hover::before{
+  background: none;
+}
+
+/**
+ * --------------------------------
+ * 그리드 로우(Row) 모듈
+ * ※ clearfix 유사
+ * ----------------------------- */
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/**
+ * --------------------------------
+ * 그리드 컬럼(Column) 모듈
+ * ----------------------------- */
+ [class*="col-"]{
+   float: left;
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ .col-1  { width: 60px;  }  /* 계산식: 60*1+(20*(1-1))px   */
+ .col-2  { width: 140px; }  /* 계산식: 60*2+(20*(2-1))px   */
+ .col-3  { width: 220px; }  /* 계산식: 60*3+(20*(3-1))px   */
+ .col-4  { width: 300px; }  /* 계산식: 60*4+(20*(4-1))px   */
+ .col-5  { width: 380px; }  /* 계산식: 60*5+(20*(5-1))px   */
+ .col-6  { width: 460px; }  /* 계산식: 60*6+(20*(6-1))px   */
+ .col-7  { width: 540px; }  /* 계산식: 60*7+(20*(7-1))px   */
+ .col-8  { width: 620px; }  /* 계산식: 60*8+(20*(8-1))px   */
+ .col-9  { width: 700px; }  /* 계산식: 60*9+(20*(9-1))px   */
+ .col-10 { width: 780px; }  /* 계산식: 60*10+(20*(10-1))px */
+ .col-11 { width: 860px; }  /* 계산식: 60*11+(20*(11-1))px */
+ .col-12 { width: 940px; }  /* 계산식: 60*12+(20*(12-1))px */

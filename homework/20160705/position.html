@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="02-position.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"><!-- cnd방식  -->
+	<style>
+		html, body {
+			margin: 0;
+			height: 100vh;
+			/*background-position: center;*/
+			background: radial-gradient(yellow, yellowgreen, green);
+		/*	text-align: center;
+			line-height: 100vh;*/
+		}
+		.container{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); /*유지보수가 쉽다.*/
+			/*display: inline-block;*/
+			/*width: 300px;*/
+			border-radius: 15px;
+			border:5px solid black;
+			box-shadow: 0 0 25px #000;  /*box-shadow: x y blur spread color; outset이 기본값.*/
+		}
+		.clearfix::after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		button{
+			position: relative;
+			border: 1px solid black;
+			width: 150px;
+			height: 50px;
+			float: left;
+			background: linear-gradient( to bottom, yellow, #F6500B );
+			cursor: pointer;
+			font-size:15px;
+			font-weight: bold;
+			
+		}
+		button:hover{
+			background: linear-gradient( to top, yellow, #F6500B );
+			box-shadow: inset 0 0 10px #999;
+				
+		}
+
+		button:first-of-type{
+			border-radius: 10px 0px 0px 10px;
+			border-right: 0;
+			}
+		button:last-of-type{
+			border-radius: 0px 10px 10px 0px;
+			border-left: 0;
+			}
+		button .fa{
+			position: absolute;
+			left:15px;
+			top:10px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 
+	position properties
+	- static (Defalut)
+	- relative (self) *일반 흐름(Normal Flow)을 깨지 않는다.
+	- absolute (offsetParent) * 일반 흐름(Normal Flow)에서 벗어난다.  -->
+
+	<div class="container clearfix">
+		<button>
+			<span aria-hidden="true" class="fa fa-step-backward"></span> backward
+		</button>
+		<button>
+			<span aria-hidden="true" class="fa fa-play"></span>play
+		</button>
+		<button>
+			<span aria-hidden="true" class="fa fa-step-forward"></span>forward
+		</button>
+	</div>
+
+
+</body>
+</html>
