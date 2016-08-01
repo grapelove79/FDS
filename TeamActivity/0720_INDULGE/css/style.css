@@ -171,6 +171,7 @@ a {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  background-position: center;
  }
 
 .photo-1 { background-image: url(../images/Photo-01.jpg); }
@@ -280,6 +281,7 @@ a {
 /* 미디어 쿼리 1180이상 디바이스 */
 @media screen and (min-width: 800px) {
 
+  .unit-1 { width: 100%; }
   .unit-l-5-2-12 {width: 20%;}
   .unit-l-5-3-12 {width: 30%;}
   .unit-l-5-5-12 {width: 40%;}
@@ -303,6 +305,21 @@ a {
   .row-l-15 { height: 315px; }
   .row-l-16 { height: 420px; }
   .row-l-17 { height: 483px; }
+
+.photo-1 { background-image: url(../images/Photo-01.jpg); }
+.photo-2 { background-image: url(../images/Photo-02.jpg); }
+.photo-3 { background-image: url(../images/Photo-03.jpg); }
+.photo-4 { background-image: url(../images/Photo-04.jpg); }
+.photo-5 { background-image: url(../images/Photo-05.jpg); }
+.photo-6 { background-image: url(../images/Photo-06.jpg); }
+.photo-7 { background-image: url(../images/Photo-07.jpg); }
+.photo-8 { background-image: url(../images/Photo-08.jpg); }
+.photo-9 { background-image: url(../images/Photo-09.jpg); }
+.photo-10 { background-image: url(../images/Photo-10.jpg); }
+.photo-11 { background-image: url(../images/Photo-11.jpg); }
+.photo-12 { background-image: url(../images/Photo-12.jpg); }
+.photo-13 { background-image: url(../images/Photo-13.jpg); }
+.photo-14 { background-image: url(../images/Photo-14.jpg); }
 
   .container {
     max-width: 1180px;
