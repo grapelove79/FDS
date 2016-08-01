@@ -1,2 +1,42 @@
+$value: true !default;
+$main-bg: #000;
+
 html 
   font-size: 
+
+h1 
+  @if $value == null
+    color: blue
+  @else if $value == false
+    color: green
+  @else 
+    color: black
+
+l
+@mixin contrast-color($color, $compare-light: 50%, $amount: 20%)
+  @if type-of($color) != color
+    @error "전달받은 #{$color} 값은 색상 데이터 유형이 아닙니다."
+
+  // $lightness: lightness($color) > $compare-light
+  // @if $value, 1, 2
+
+  $lightness: if(lightness($color) > $compare-light,1,2)
+
+  if 
+
+  
+
+  @debug $lightness
+
+  @if($lightness == true)
+    $bg-color: darken($color, $amount)
+  @else
+    $bg-color: lighten($color, $amount)
+
+    color: $color
+    background-color: $bg-color
+
+
+.main
+  color: if($main-bg == black, #fff, #000)
+  @include contrast-color(#000, 50%, 20%)
