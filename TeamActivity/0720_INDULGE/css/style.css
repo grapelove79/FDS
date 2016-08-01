@@ -171,6 +171,7 @@ a {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  background-position: center;
  }
 
 .photo-1 { background-image: url(../images/Photo-01.jpg); }
