@@ -5,6 +5,7 @@
  * --------------------------------
  * Overlay Grid Guideline Module
  * ----------------------------- */
+
 .grid-container::before {
   content: '';
   position: absolute;
@@ -14,14 +15,16 @@
   width: 100%;
 }
 .grid-container[class*="show-grid"]::before {
-  height: 430vh;
+  height: 350vh;
 }
 /* sprit방식 */
 .grid-container.show-grid::before {
   background: 
+  linear-gradient(90deg, rgba(191, 64, 64, 0.3) 81%, rgba(0, 0, 0, 0) 81%), 
   linear-gradient(transparent 19px, #26923f 20px);
-  background-size:  1px 21px;
+  background-size: 100px 1px, 1px 21px;
 }
+
 .grid-container.show-grid:hover::before {
   display: none;
 }
@@ -132,7 +135,7 @@
 .unit-s-10-11 { width: 90.9090909090909%; }
 
 /*.unit-m-1-12 { width: 1/12*100%; }*/
-.unit-s-1-12 { width: 90.9090909090909%; }
+.unit-s-1-12 { width: 8.3333333333333332%; }
 .unit-s-5-12 { width: 41.66666666666667%; }
 .unit-s-7-12 { width: 58.333333333333336%; }
 .unit-s-11-12 { width: 91.66666666666666%; }
@@ -222,7 +225,7 @@
 .unit-m-10-11 { width: 90.9090909090909%; }
 
 /*.unit-m-1-12 { width: 1/12*100%; }*/
-.unit-m-1-12 { width: 90.9090909090909%; }
+.unit-m-1-12 { width: 8.3333333333333332%; }
 .unit-m-5-12 { width: 41.66666666666667%; }
 .unit-m-7-12 { width: 58.333333333333336%; }
 .unit-m-11-12 { width: 91.66666666666666%; }
@@ -313,7 +316,7 @@
 .unit-l-10-11 { width: 90.9090909090909%; }
 
 /*.unit-m-1-12 { width: 1/12*100%; }*/
-.unit-l-1-12 { width: 90.9090909090909%; }
+.unit-l-1-12 { width: 8.3333333333333332%; }
 .unit-l-5-12 { width: 41.66666666666667%; }
 .unit-l-7-12 { width: 58.333333333333336%; }
 .unit-l-11-12 { width: 91.66666666666666%; }
