@@ -280,6 +280,7 @@ a {
 /* 미디어 쿼리 1180이상 디바이스 */
 @media screen and (min-width: 900px) {
 
+  .unit-l {width: 100%;}
   .unit-l-5-2-12 {width: 20%;}
   .unit-l-5-3-12 {width: 30%;}
   .unit-l-5-5-12 {width: 40%;}
