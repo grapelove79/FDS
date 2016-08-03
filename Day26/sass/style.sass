@@ -1,0 +1,36 @@
+$space: 1rem
+
+body
+	width: 940px
+	margin: $space * 4 auto
+
+
+//  $base-font-size: 14px;
+//  $base-line-height: 1.5;
+
+// .selector{
+//     font: #{$base-font-size}/#{$base-line-height} Verdana 
+//     }
+ 
+// _font()믹스인을 활용하는 함수  
+@function _font-short($font-size: 14px, $line-height: 1.5)
+  @return #{$font-size}/#{$line-height}
+
+// 정규 믹스인 font-short
+@mixin font-short($font-size: null, $font-family: null, $line-height: 1.5, $etc: null)
+  @if $font-size == null or $font-family == null
+    @error "font-size, font-family는 필수 속성입니다. 값을 입력해주세요."
+  font: $etc _font-short($font-size, $line-height) $font-family
+
+    
+.selector 
+  @include font-short(16px, Verdana) 
+  //font-size와 font-family는 필수속성이다.둘중에 하나라도 있으면 에러가 안뜨는데 둘다 안쓰면 에러가 쓴다.
+
+// 단축 믹스인 font
+@mixin font($args...)
+  @include font-short($args...)
+
+
+
+
