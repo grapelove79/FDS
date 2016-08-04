@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+  <style>
+    #button-group { display: flex; flex-flow: wrap; position: fixed; top: 0; left: 0; width: 100%; }
+    #button-group button { cursor: pointer; flex: 1; border: none; padding: 1em; color: #fff; text-shadow: 0 0 3px rgba(0,0,0,0.36);}
+    #button-group button:focus {outline: none;}
+    #button-group button:nth-child(1) { background: #273CF0; }
+    #button-group button:nth-child(2) { background: #F07A76; }
+    #button-group button:nth-child(3) { background: #5BF01C; }
+    #button-group button:nth-child(4) { background: #F02CB5; }
+    #button-group button:nth-child(5) { background: #1FF0B4; }
+    #button-group button:nth-child(1):hover,
+    #button-group button:nth-child(1):focus { background: #F0CBC0; }
+    #button-group button:nth-child(2):hover,
+    #button-group button:nth-child(2):focus { background: #F022D3; }
+    #button-group button:nth-child(3):hover,
+    #button-group button:nth-child(3):focus { background: #5E40F0; }
+    #button-group button:nth-child(4):hover,
+    #button-group button:nth-child(4):focus { background: #F08207; }
+    #button-group button:nth-child(5):hover,
+    #button-group button:nth-child(5):focus { background: #2F58F0; }
+  </style>
+</head>
+<body>
+	<div id="button-group" role="group">
+		<button type="button">#273CF0</button>
+		<button type="button">#F07A76</button>
+		<button type="button">#5BF01C</button>
+		<button type="button">#F02CB5</button>
+		<button type="button">#1FF0B4</button>
+	</div>
+	<script>
+		var body = document.body;
+		var btn_group = document.getElementById('button-group');
+		// console.log(btn_group);
+		var btns = btn_group.getElementsByTagName('button');
+		// console.log(btns);
+		var btn_1 = btns[0];
+		var btn_2 = btns[1];
+		var btn_3 = btns[2];
+		var btn_4 = btns[3];
+		var btn_5 = btns[4];
+
+		function changeColor() { // 함수의 궁극적인 목적을 먼저 집고 넘어간다./ 
+			var wanted_color = this.firstChild.nodeValue; //nodeValue는 node의 값이다., nodeName
+		  body.style.backgroundColor = wanted_color;
+		};
+
+		btn_1.onmouseenter =
+		btn_2.onmouseenter =
+		btn_3.onmouseenter =
+		btn_4.onmouseenter =
+		btn_5.onmouseenter = changeColor;  // 클릭해서 색을 변경하고 싶을때 onclick 이다.
+
+		/* 아래 함수는 위로 축소 시킴 */
+		// btn_1.onclick = function() {
+	 //  var wanted_color = this.firstChild.nodeValue; //여기서 this는  btn_number 를 가리킨다.
+	 //  body.style.backgroundColor = wanted_color;
+		// };
+		// btn_2.onclick = function() {
+	 //  var wanted_color = this.firstChild.nodeValue;
+	 //  body.style.backgroundColor = wanted_color;
+		// };
+		// btn_3.onclick = function() {
+	 //  var wanted_color = this.firstChild.nodeValue;
+	 //  body.style.backgroundColor = wanted_color;
+		// };
+		// btn_4.onclick = function() {
+	 //  var wanted_color = this.firstChild.nodeValue;
+	 //  body.style.backgroundColor = wanted_color;
+		// };
+		// btn_5.onclick = function() {
+	 //  var wanted_color = this.firstChild.nodeValue;
+	 //  body.style.backgroundColor = wanted_color;
+		// };
+
+	</script>
+</body>
+</html>
