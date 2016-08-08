@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+
+	<p class="my-para">
+		<strong>Hello</strong>How are you doing?
+	</p>
+
+	<form name="primary_form" action="#" method="GET">
+		<p>
+			<label for="c_id">ID</label>
+			<input type="text" name="c_id" id="c_id" placehoder="yomoo0">
+		</p>
+		<button type="summit">전송</button>
+	</form>
+
+	<form name="secondary-form" action="#" method="GET">
+		<p>
+			<label for="c_id">E-mail</label>
+			<input type="text" name="c_id" id="c_id" placehoder="yomoo0@exampl.com">
+		</p>
+		<button type="summit">전송</button>
+	</form>
+
+	<script> //ui를 불러오는 시간을 지체시키지 않기 위해 script는 뒤에 쓴다.
+		var forms = document.forms;		// DOM Lv.0방식
+		console.log(forms);		// [form, form]이 수집된다.
+
+		/*
+		* -----------------------------------
+		* DOM Level.1
+		* document.documentElement;
+		* document.getElementsByTagName();
+		* document.getElementById();
+		*/
+
+		var root_element;
+
+		root_element = document.documentElement; // HTML문서에서 가능
+
+		var root_element = document.documentElement;
+		console.log(root_element); //<html>
+
+		var head = document.head; // HTML 에서만 사용 가능
+		var body = document.body; // HTML 에서만 사용 가능
+
+		var inputs = document.getElementsByTagName('input');
+		var buttons = document.getElementsByTagName('button');
+		console.log('inputs:',  inputs);
+		console.log('buttons:', buttons);
+
+
+		// ID 속성을 통한 접근 방법(Interface: Secleting)
+		var c_id = document.getElementById('c_id');
+		var c_mail = document.getElementById('c_mail');
+		console.log('c_id:', c_id);
+		console.log('c_mail:', c_mail);
+
+
+
+		var first_para = document.getElementsByTagName('p').item(0);
+		var first_para_nodes = first_para.chilNodes;
+
+		console.log(first_para_nodes[0].nodeType === document.ELEMENT_NODE);
+		// <p>와 <strong>을 엔터쳐서 구분했을때 공백(#text)으로 인식하기 때문에 first_para.chilNodes는  #text 노드로 나온다. 그래서 flase이다.
+		console.log(first_para_nodes[1].nodeType === document.ELEMENT_NODE);
+		console.log(first_para_nodes[2].nodeType === document.TEXT_NODE);
+	</script>
+</body>
+</html>
