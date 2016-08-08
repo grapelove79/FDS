@@ -1,0 +1,87 @@
+#btn-group {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+#btn-group button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 40px;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative; }
+  #btn-group button:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8); }
+  #btn-group button:focus {
+    outline: none;
+    box-shadow: none; }
+  #btn-group button::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+body {
+  overflow: hidden;
+  font: 16px/1.5 'Noto Sans KR', sans-serif; }
+
+.page-header {
+  position: relative;
+  z-index: 100; }
+  .page-header .page-title {
+    margin-bottom: 0; }
+
+#btn-group {
+  width: 100%;
+  padding: 48px;
+  text-align: center; }
+  #btn-group button:nth-child(1) {
+    background: #00BCD4; }
+    #btn-group button:nth-child(1)::after {
+      background: #00BCD4; }
+    #btn-group button:nth-child(1):focus {
+      background: #008fa1; }
+  #btn-group button:nth-child(2) {
+    background: #FF5252; }
+    #btn-group button:nth-child(2)::after {
+      background: #FF5252; }
+    #btn-group button:nth-child(2):focus {
+      background: #ff1f1f; }
+  #btn-group button:nth-child(3) {
+    background: #009688; }
+    #btn-group button:nth-child(3)::after {
+      background: #009688; }
+    #btn-group button:nth-child(3):focus {
+      background: #00635a; }
+  #btn-group button:nth-child(4) {
+    background: #FFC107; }
+    #btn-group button:nth-child(4)::after {
+      background: #FFC107; }
+    #btn-group button:nth-child(4):focus {
+      background: #d39e00; }
+  #btn-group button:nth-child(5) {
+    background: #673AB7; }
+    #btn-group button:nth-child(5)::after {
+      background: #673AB7; }
+    #btn-group button:nth-child(5):focus {
+      background: #512e90; }
+  #btn-group .focused::after {
+    width: 4000px;
+    height: 4000px;
+    transition: all 0.65s; }
