@@ -217,9 +217,9 @@ var container = document.getElementsByClassName('container');
 // 유사 배열에 담겨서 나온다
 ```
 
-- document.querySelector('css selector')
+- `document.querySelector('css selector')`
     - querySelectorAll('css selector')[0]과 같다, 막강!!! IE8이상. 원하는 대상 바로 선택. 첫번째 하나만 반환
-- document.querySelectorAll('css selector')
+- `document.querySelectorAll('css selector')`
     - 막강!!! IE8이상. 원하는 대상 바로 선택. 전체 복수로 반환
     - .querySelector() === .querySelector()[0]
 - IE 8 이상 지원
@@ -245,25 +245,24 @@ var maked_li_text = document.createTextNode('this is list item');
 ```
 ## 노드 조작
 문서 객체를 동적으로 조작한다, node 만들기. 동적 생성
-
-- document.createElement('element')
+- ``document.createElement('element')``
     - html 요소 만들기. 실제 DOM에 붙는건 아니다.
-- document.createAttribute('attribute')
+- `document.createAttribute('attribute')`
     - 안씀
-- document.createTextNode('text')
+- `document.createTextNode('text')`
     - 텍스트 노드 만들기
-- 부모노드.appendChild(자식노드)
+- `부모노드.appendChild(자식노드)`
     - 부모의 꽁지쪽에 붙이기
     - 모달의 경우 이렇게 붙여서 aria로 연결시키고, role="dialog"라고 붙이면 리더기도 제대로 접근하게 된다.
     - 앞에 붙이는 건 없으니, 함수로 만들어서 붙이자. 헐~
-- 목표노드.부모노드.insertBefore(insert삽입할노드, target목표노드)
+- `목표노드.부모노드.insertBefore(insert삽입할노드, target목표노드)`
     - 노드 ~ 앞에 삽입
-- node.removeChild(childnode)
-- node.replaceChild(alternate, target)
+- `node.removeChild(childnode)`
+- `node.replaceChild(alternate, target)`
     - replacedNode = parentNode.replaceChild(newChild, oldChild);
-- node.cloneNode(boolean)
+- `node.cloneNode(boolean)`
     - false가 기본값 ul이면 ul만 복제. true면 ul과 자식까지 복제
-- element.innerHTML
+- `element.innerHTML`
     - 위의 것들을 손쉽게 해줌
 ```
 // 동적으로 생성한 텍스트를 역시나 동적으로 생성한 div에 추가
@@ -285,7 +284,7 @@ target.parentNode.insertBefore(target_container, target)
 ```
 ##기타
 ###객체
-Number,String, Boolean, Array, Function, Object, Math, Date, RegEx, ....
+Number, String, Boolean,  Array, Function, Object, Math, Date, RegEx, ....
 위에 나열된 객체 생성자로부터 태어난 객체(인스턴스)를 통해 확인(검증)
 
 ### 형변환 및 반전
@@ -337,7 +336,7 @@ $0.children[$0.children.length -2] // lastchild 5-2 =3
 ###Children : 
 - 모든자식요소찾기
 - Children은 모든 ie에서 지원
-- document.codumentElement.firstChild; 첫번째 자식 노드 찾기
+- `document.codumentElement.firstChild`; 첫번째 자식 노드 찾기
 
 >firstElementChild (ie8이하 지원안됨. ie9이상지원)
 
