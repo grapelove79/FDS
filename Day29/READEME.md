@@ -114,14 +114,13 @@ $0 은 콘솔창에서 가리키는 요소
 |---|---|
 |nodeType| 노드의 타입 반환(요소노드는 1, 텍스트노드 3, 주석노드 8) |
 |nodeName( tagName)|요소의 이름을 문자(대문자)로 반환.  텍스트노드의 경우는 #text로 반환. 요소의 경우 DIV처럼 대문자로 반환 - 노드.nodeName.toLowerCase(); 라고하면 소문자로 반환 - 노드.tagName도 쓸 수 있다. (예전방식) |
-|nodeValue( data )| 
-Text 노드에서만 접근 가능, ELEMENT_NODE는 null 반환, 텍스트 노드의 실제 값 반환 |
+|nodeValue( data )| Text 노드에서만 접근 가능, ELEMENT_NODE는 null 반환, 텍스트 노드의 실제 값 반환 |
 
     - ELEMENT_NODE = 1
     - TEXT_NODE = 3
     - COMMENT_NODE = 8
 
-- 요소를 탐색할 때 고려할 수 있는 DOM API (단! IE 9 이상에서만 작동)
+### 요소를 탐색할 때 고려할 수 있는 DOM API (단! IE 9 이상에서만 작동)
 
        --> 직접적인 요소를 선택할 수 있는 방법(Traversal Properties)크로스브라우징 helper function만들어 사용!
 
@@ -131,11 +130,12 @@ Text 노드에서만 접근 가능, ELEMENT_NODE는 null 반환, 텍스트 노�
     - 노드.nextElementSibling     : 노드의 다음 위치에 자리한 형제 요소 노드 반환
     - 노드.parentElement          : 노드의 부모 요소 노드 반환
 
-NODE Information
+###NODE Information
 HTML DOM 방식의 속성 접근 방법, 웹 초창기 때부터 존재했던 속성들
-
+```html
 <div id="parent" class="papa" data-con="true" role="tab" aria-hidden="false"> 일 때...
-
+```
+```javascript
 var parent_el = document.getElementById('parent');
 console.log('id:', parent_el.id); // 'parent' 출력
 console.log('class:', parent_el.className);
@@ -152,12 +152,15 @@ console.log('data-:', parent_el['data-con']); // undefiend
 console.log('role:', parent_el.getAttribute('role'));
 console.log('data-con:', parent_el.getAttribute('data-con'));
 console.log('aria-hidden:', parent_el.getAttribute('aria-hidden'));
+```
 
+```javascript
 var parent_el = document.getElementById('parent');
 
 parent_el.id
 parent_el.className  (class는 예약어)
 parent_el.title
+```
 
 그렇다면 새롭게 등장한 속성들은 어떻게 가져오는가?(data-*, role, aria)
 
