@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Dom + JavaScript</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 	.parent>.child*4>.children{Children $}*5 -->
+<div id="parent" class="container" data-container="true" aria-hidden="false" role="group">
+	<div class="child">
+	<!-- First Child -->
+		<div class="children">Children 1</div>
+		<div class="children">Children 2</div>
+		<div class="children">Children 3</div>
+		<div class="children">Children 4</div>
+		<div class="children">Children 5</div>
+	</div>
+	<div class="child">
+		<div class="children">Children 1</div>
+		<div class="children"></div>
+		<div class="children"></div>
+		<div class="children"></div>
+		<div class="children">Children 5</div>
+	</div>
+	<div class="child">
+		<div class="children">Children 1</div>
+		<div class="children">Children 2</div>
+		<div class="children"></div>
+		<div class="children">Children 4</div>
+		<div class="children">Children 5</div>
+	</div>
+	<div class="child">
+		<!-- Last Child -->
+		<div class="children">Children 1</div>
+		<div class="children">Children 2</div>
+		<div class="children">Children 3</div>
+		<div class="children">Children 4</div>
+		<div class="children">Children 5</div>
+	</div>
+</div>
+<script src="js/02-make-dom-boject.js"></script>
+<!-- <script src="js/01-about-dom.js"></script> -->
+</body>
+</html>

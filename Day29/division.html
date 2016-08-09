@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box"></div>
+		<div class="box2"></div>
+		<div class="circle"></div>
+		<div class="triangle"></div>
+	</div>
+	<script>
+	//만들 요소가 무엇인지 정한다
+	var division = document.createElement('div');
+
+	//컨텐츠를 정의한다 createTextNode 이용
+	var vidision_text = document.createTextNode("영선이를 사랑한다.")
+	
+
+	//원하는 위치를 querySelector로 잡는다
+	var wrap = document.querySelector('.wrapper');
+	//console.log(wrap);
+
+	//appendChild를 이용하여 맨 마지막에 원하는 것을 자식으로 가질 수 있다.
+var append_wrap = wrap.appendChild(division);
+append_wrap.appendChild(vidision_text);
+//division.style.color="red";
+
+division.setAttribute('style', 'color:red');
+	//<document.querySelector('.wrapper')> = wrap
+	//<document.createElement('div')> = division
+	//<document.querySelector('.wrapper')>.appendChild(<document.createElement('div')>)
+
+	//이미 생성된 자식요소에 한 번 더 appendChild를 먹여서 그 요소의 자식을 만드는 것
+
+
+	</script>
+</body>
+</html>
