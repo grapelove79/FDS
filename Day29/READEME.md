@@ -50,6 +50,7 @@
 </div>
 ```
 ```
+javascript
 var parent_el = document.getElementById('parent');
 var parent_el_child_nodes = parent_el.childNodes;
 
@@ -63,31 +64,41 @@ console.log(1, parent_el_child_nodes.item(1).nodeType);
 console.log(1, parent_el_child_nodes[1].nodeType);
 console.log(2, parent_el_child_nodes.item(2).nodeType);
 console.log(3, parent_el_child_nodes.item(3).nodeType);
+console.log(4, parent_el_child_nodes.item(4).nodeType);
+console.log(5, parent_el_child_nodes.item(5).nodeType);
+console.log(6, parent_el_child_nodes.item(6).nodeType);
+console.log(7, parent_el_child_nodes.item(7).nodeType);
+console.log(8, parent_el_child_nodes.item(8).nodeType);
 
 // 미리보는 자바스크립트의 반복 구문
-
 // while, do ~ while , for, for ~ in, for ~ of, forEach
-for (var i =0; i <9; i = i +1) {
-//console.log('i: ', i)
-console.log(i, parent_el_child_nodes.item(i).nodeType);
+for (var i = 0; i < 9; i = i + 1) {
+    //console.log('i: ', i)
+    console.log(i, parent_el_child_nodes.item(i).nodeType);
 }
+
 // 미리보는 자바스크립트의 조건 구문
 // if ~ else, switch case default break, 3항식
-for (var i =0; i <9; i = i +1) {
-   if (parent_el_child_nodes.item(i).nodeType===1) {
-       console.log('현재 노드는 ELEMENT_NODE');
-   } else { console.log('현재 노드는 TEXT_NODE');
-   }
+for (var i = 0; i < 9; i = i + 1) {
+    if (parent_el_child_nodes.item(i).nodeType === 1) {
+        console.log('현재 노드는 ELEMENT_NODE');
+    } else {
+        console.log('현재 노드는 TEXT_NODE');
+    }
 }
+
 // 크롬에서 콘솔창 출력 스타일링 하기
 console.log('%c some text', 'background: #222; color: #f00')
+
 // #parent .child:first-child 요소의 자식노드를 순환하여 노드 유형 로그하기
 // children => 요소 노드만 수집한다
-var parent_el_first_child_el =parent_el.children[0];
-var test_list =parent_el_first_child_el.children;
-var test_list_len =test_list.length;
-for (i =0; i < test_list_len; i++) {
-   console.log(test_list[i].nodeType);
+var parent_el_first_child_el = parent_el.children[0];
+
+var test_list = parent_el_first_child_el.children;
+var test_list_len = test_list.length;
+
+for (i = 0; i < test_list_len; i++) {
+    console.log(test_list[i].nodeType);
 }
 ```
 
@@ -97,25 +108,16 @@ $0.children[0] // 첫번째자식요소 찾음
 $0.children[$0.children.length -1] // 마지막 자식요소 찾음
 $0 은 콘솔창에서 가리키는 요소
 
-## 노드(node)의 유형/이름/값을 출력하는 방법
+## 노드(node)의 유형/이름/값을 출력하는 
 
-속성 | 특성
--|-
-nodeType | 노드의 타입 반환(요소노드는 1, 텍스트노드 3, 주석노드 8)
-
-nodeName( tagName) | 요소의 이름을 문자(대문자)로 반환.  텍스트노드의 경우는 #text로 반환. 요소의 경우 DIV처럼 대문자로 반환
+| 속성 | 특성 |
+|---|---|
+|nodeType| 노드의 타입 반환(요소노드는 1, 텍스트노드 3, 주석노드 8) |
+|nodeName( tagName)|요소의 이름을 문자(대문자)로 반환.  텍스트노드의 경우는 #text로 반환. 요소의 경우 DIV처럼 대문자로 반환
 - 노드.nodeName.toLowerCase(); 라고하면 소문자로 반환
-- 노드.tagName도 쓸 수 있다. (예전방식)
-
-
-
-
-nodeValue
-( data )
-
-Text 노드에서만 접근 가능, ELEMENT_NODE는 null 반환, 텍스트 노드의 실제 값 반환
-
-- nodeType
+- 노드.tagName도 쓸 수 있다. (예전방식) |
+|nodeValue( data )| 
+Text 노드에서만 접근 가능, ELEMENT_NODE는 null 반환, 텍스트 노드의 실제 값 반환 |
 
     - ELEMENT_NODE = 1
     - TEXT_NODE = 3
