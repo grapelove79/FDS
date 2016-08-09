@@ -136,7 +136,7 @@ $0 은 콘솔창에서 가리키는 요소
 - `노드.nextElementSibling`     :  노드의 다음 위치에 자리한 형제 요소 노드 반환
 - `노드.parentElement`          :  노드의 부모 요소 노드 반환
 
-###NODE Information
+## NODE Information
 ```javascript
 var parent_el = document.getElementById('parent');
 console.log('id:', parent_el.id); // 'parent' 출력
@@ -155,7 +155,7 @@ console.log('role:', parent_el.getAttribute('role'));
 console.log('data-con:', parent_el.getAttribute('data-con'));
 console.log('aria-hidden:', parent_el.getAttribute('aria-hidden'));
 ```
-####HTML DOM 방식의 속성 접근 방법, 웹 초창기 때부터 존재했던 속성들
+###HTML DOM 방식의 속성 접근 방법, 웹 초창기 때부터 존재했던 속성들
 ```javascript
 var parent_el = document.getElementById('parent');
 
@@ -164,7 +164,7 @@ parent_el.className  (class는 예약어)
 parent_el.title
 ```
 
-####그렇다면 새롭게 등장한 속성들은 어떻게 가져오는가?(data-*, role, aria)
+###그렇다면 새롭게 등장한 속성들은 어떻게 가져오는가?(data-*, role, aria)
 ```html
 <div id="parent" role="group" aria-hidden="true" data-container="false"></div>
 ```
@@ -187,7 +187,7 @@ data-container="true" aria-hidden="false"
 
 
 
-###DOM Method
+##DOM Method
 hasChildNodes가 있니?
 hasChildNodes(): 자식이 있으면 true, 자식이 없으면 false
 ```javascript
@@ -227,7 +227,7 @@ var container = document.getElementsByClassName('container');
 ```
 document.querySelector('#parent > .child:nth-child(3)');
 ```
-### 노드 만들기
+## 노드 만들기
 
 문서 객체를 동적으로 생성한다
 
@@ -243,14 +243,12 @@ var maked_ul_li = document.createElement('li');
 var maked_div_text = document.createTextNode('this is division');
 var maked_li_text = document.createTextNode('this is list item');
 ```
-### 노드 조작
+## 노드 조작
 문서 객체를 동적으로 조작한다, node 만들기. 동적 생성
 
 - document.createElement('element')
     - html 요소 만들기. 실제 DOM에 붙는건 아니다.
-
 - document.createAttribute('attribute')
-
     - 안씀
 - document.createTextNode('text')
     - 텍스트 노드 만들기
@@ -262,12 +260,10 @@ var maked_li_text = document.createTextNode('this is list item');
     - 노드 ~ 앞에 삽입
 - node.removeChild(childnode)
 - node.replaceChild(alternate, target)
-
     - replacedNode = parentNode.replaceChild(newChild, oldChild);
 - node.cloneNode(boolean)
     - false가 기본값 ul이면 ul만 복제. true면 ul과 자식까지 복제
 - element.innerHTML
-
     - 위의 것들을 손쉽게 해줌
 ```
 // 동적으로 생성한 텍스트를 역시나 동적으로 생성한 div에 추가
@@ -287,12 +283,12 @@ document.body.appendChild(target_container);
 var target = document.body.firstChild;
 target.parentNode.insertBefore(target_container, target)
 ```
-###기타
-####객체
+##기타
+###객체
 Number,String, Boolean, Array, Function, Object, Math, Date, RegEx, ....
 위에 나열된 객체 생성자로부터 태어난 객체(인스턴스)를 통해 확인(검증)
 
-#### 형변환 및 반전
+### 형변환 및 반전
 - 느낌표 !! 2개는 형변환이 일어난다.
 - 저 값이 true, false을 확인하기 위해.!!두개 붙여주면 Boolean 값을 나타낸다.
 ```
@@ -338,7 +334,7 @@ $0.children[$0.children.length -1] // lastchild 5-1 =4
 $0.children[$0.children.length -2] // lastchild 5-2 =3
 ```
 
-####Children : 
+###Children : 
 - 모든자식요소찾기
 - Children은 모든 ie에서 지원
 - document.codumentElement.firstChild; 첫번째 자식 노드 찾기
