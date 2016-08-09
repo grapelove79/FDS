@@ -113,9 +113,7 @@ $0 은 콘솔창에서 가리키는 요소
 | 속성 | 특성 |
 |---|---|
 |nodeType| 노드의 타입 반환(요소노드는 1, 텍스트노드 3, 주석노드 8) |
-|nodeName( tagName)|요소의 이름을 문자(대문자)로 반환.  텍스트노드의 경우는 #text로 반환. 요소의 경우 DIV처럼 대문자로 반환
-- 노드.nodeName.toLowerCase(); 라고하면 소문자로 반환
-- 노드.tagName도 쓸 수 있다. (예전방식) |
+|nodeName( tagName)|요소의 이름을 문자(대문자)로 반환.  텍스트노드의 경우는 #text로 반환. 요소의 경우 DIV처럼 대문자로 반환 - 노드.nodeName.toLowerCase(); 라고하면 소문자로 반환 - 노드.tagName도 쓸 수 있다. (예전방식) |
 |nodeValue( data )| 
 Text 노드에서만 접근 가능, ELEMENT_NODE는 null 반환, 텍스트 노드의 실제 값 반환 |
 
