@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<div class="modal">
+		<h2 class="modal-title">Modal Window</h2>
+		<p class="modal-desc">야무와 demun 한글 로렘입숨. 할지라도, 꾸며, 그러므로. 반짝이는 산야에, 산야에 사막이다. 어디. 거선의 봄바람이다. 이상을 평화스러운, 두손을 사막이다. 어디 반짝이는 그들에게 노년에게서, 피다. 가장, 노년에게서 운다. 봄바람이다.? 물방아 스며들어 노년에게서, 얼마나 사람은.</p>
+		<button class="modal-cta">young</button>
+		<button class="modal-close">sun</button>
+	</div>
+	
+	<script>
+		var wrapper = document.querySelector('.modal');
+		var division = document.createElement('div');
+		var division_text = document.createTextNode('영선이는 잘하고 싶어');
+
+		wrapper.appendChild(division);
+		division.appendChild(division_text);
+		division.style.color="#fff"
+		division.style.fontSize="50px"
+		division.style.background="blue";
+
+		var target = document.body.firstChild;
+		target.parentNode.insertBefore(division, target);
+
+	</script>
+</body>
+</html>
