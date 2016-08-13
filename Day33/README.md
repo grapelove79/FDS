@@ -145,7 +145,7 @@ ture
 temp['type'] = 'array';
 "array"
 
-temp['scope]='global';
+temp['scope']='global';
 "global"
 
 temp.type;
