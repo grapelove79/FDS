@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		body{
+			background-color: #000;
+		}
+	 ul, li{
+	 	list-style: none;
+	 }
+		#box {
+			width: 500px;
+			height: 500px;
+			border: 1px solid gray;
+		}
+		button{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			cursor: pointer;
+			background-color: yellowgreen;
+			border:none;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul class="button-group">
+			<li><button type="button">#ff0000</button></li>
+			<li><button type="button">#fff</button></li>
+			<li><button type="button">#333</button></li>
+		</ul>
+	</div>
+	<script>
+		var body = document.body;
+		var box = document.getElementById('box');
+		var btn_group = document.querySelector('.button-group');
+		var button = btn_group.getElementsByTagName('button');
+
+    for(var i = 0 ; i < button.length ; i++){
+        button[i].onclick = function(){
+        box.style.backgroundColor = this.innerText;
+    		}
+		}
+
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+	div, ul, li, button {
+		margin: 0;
+		padding: 0;
+	}
+	 ul, li{
+	 	list-style: none;
+	 }
+		#box {
+			width: 500px;
+			height: 500px;
+			border: 1px solid gray;
+		}
+		
+
+		.button-group li{
+			margin: 10px;
+			float: left;
+		}
+		button{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			cursor: pointer;
+			background-color: yellowgreen;
+			border:none;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul class="button-group">
+			<li><button type="button" class="button1">red</button></li>
+			<li><button type="button" class="button2">blue</button></li>
+			<li><button type="button" class="button3">yellow</button></li>
+		</ul>
+	</div>
+	<script>
+		var box = document.getElementById('box');
+		var btn1 = document.querySelector('.button1');
+		var btn2 = document.querySelector('.button2');
+		var btn3 = document.querySelector('.button3');
+
+		btn1.onclick = function(){
+					box.style.backgroundColor = "red";
+		}
+		btn2.onclick = function(){
+					box.style.backgroundColor = "blue";
+		}
+		btn3.onclick = function(){
+					box.style.backgroundColor = "yellow";
+		}
+
+</script>
+</body>
+</html>
+
+
