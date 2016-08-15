@@ -52,7 +52,7 @@ b
 - 자료형 데이터 유형(객체, 배열, 함수)
 	- 자료형 데이텨 유형은 데이터가 참조가 된다.
 ```javascript
-var obj= {'name: '점심시간'};
+var obj= {name: '점심시간'};
 obj.name;
 "점심시간"
 var obj2 = obj;
