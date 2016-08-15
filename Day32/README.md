@@ -125,7 +125,7 @@ num.toString();
 "3rem" - 0
 === NaN //단위 부터 제거하고, 다시 단위를 붙여준다.
 ```
-```
+```js
 +$0.style.lineHeight  //숫자를 문자로 바꿔준다.
 ```
 |종류|뜻|
@@ -135,7 +135,7 @@ num.toString();
 |parseFolat()| 단위를 빼고 실수를 반환시킨다. (IE하위번전 6,7 지원 안됨.)|
 |split(''px")| 배열 상태로 변화고, 그후 단위를 뺀다.|
 
-```
+```js
 parseFloat( $0.style.fontSize, 10);
 === NaN
 parseInt( $0.style.fontSize, 10);
@@ -149,7 +149,7 @@ $0.style.fontSize.split('px')[0]-0
 === "예리나예"
 ```
 ##### 데이터 유형 변환3
-```
+```js
 Boolean(null)
 === false
 Boolean(' ') // 띄어쓰기는 true이다.
@@ -164,7 +164,7 @@ Boolean('')
 
 >글자 크기 변환하는 것은 setter이기 때문에 retrun일 필요없다.
 
-```
+```js
 // 비표준 Ms IE 방식
 $0
 // 비표준 Ms IE 방식
@@ -184,7 +184,7 @@ getStyle($0, 'marginTop', '::after')
 
 ### 정규표현식
 하는 기능만 알아두자. 검색하고 가져다 쓰다.. 시간적 여유가 되면 분석을 해보자
-```
+```js
 function camelCase(css_prop) {
 	return css_prop.replace(/-./g. function($1){
 		return $1.replace('-','').toUpperCase();

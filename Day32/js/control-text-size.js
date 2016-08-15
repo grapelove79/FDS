@@ -101,10 +101,9 @@ decrease_btn.onclick = changeTextSize;
 	//console.log(page_header.style.fontSize);
 //};
 
-
-
- 
-function getStyle(el, property, pseudo) {
+ //위의 var current_size = parseInt(getStyle(page_header, 'font-size'));에서
+ //age_header, 'font-size'의 인사 값을 받아서  아래 getStyle함수를 실행한다.
+function getStyle(el, property, pseudo) { 
 // property는 무조건 문자열로 받아야 한다. 
 // pseudo는 가상요소를 가져올때 스타일 속성 값을 가져온다.(디자이너가 가상요소 만들것을 가져올때 ) 
 // 가상은 검증 과정을 통해 가지고 와야 한다.
@@ -131,19 +130,19 @@ function getStyle(el, property, pseudo) {
 
   if ( window.getComputedStyle ) { //좋지 않은 코드다. 왜냐면 한번만 물어보면 되는데 계속 물어보니까!,
     el_style = window.getComputedStyle(el,pseudo);
-    if (pseudo && el_style.content === '') {
+    if (pseudo && el_style.content === '') {//pseudo우는 차등이기 때문에 빈공간을 만들어 놓고 중간 놓는다.
       return null;
     }
-    value = el_style[property];//pseudo우는 차등이기 때문에 빈공간을 만들어 놓고 중간 놓는다.
+    value = el_style[property];
   } else {
     value = el.currentStyle[property]; //비표준 방식 
   }
   return value;
 }
 
-function camelCase(css_prop) {
-   return css_prop.replace(/-./g, function($1){
-      return $1.replace('-','').toUpperCase();
+function camelCase(text) {
+   return text.replace(/(\s|-|_)./g, function($1){
+      return $1.replace(/(\s|-|_)/g,'').toUpperCase();
    });
 }
 
