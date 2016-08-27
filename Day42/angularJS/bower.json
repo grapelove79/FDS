@@ -1,0 +1,18 @@
+{
+  "name": "angularJS",
+  "homepage": "https://github.com/grapelove79/FDS",
+  "authors": [
+    "grapelove <grapelove79@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ]
+}
