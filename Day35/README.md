@@ -1,10 +1,10 @@
 
 ###### Front-End Develop SCHOOL
 # DAY35_JAVASCRIPT
->[__JavaScript Garden__<bold>
+>[__JavaScript Garden__<bold><br>
 >http://bonsaiden.github.io/JavaScript-Garden/ko/#function.this](http://bonsaiden.github.io/JavaScript-Garden/ko/#function.this)
 
->[__배열__<bold>
+>[__배열__<bold><br>
 >http://colintoh.com/blog/5-array-methods-that-you-should-use-today?utm_source=javascriptweekly&utm_medium=email](http://colintoh.com/blog/5-array-methods-that-you-should-use-today?utm_source=javascriptweekly&utm_medium=email)
 
 ##자바스크립트 반복문
@@ -75,10 +75,10 @@ var new_movielist = movielist.map(function(item, index, arr) {
 });
 console.log('movielist.map() 결과: ', new_movielist);
 ```
->[__forEach 참고 URL__<bold>
+>[__forEach 참고 URL__<bold><br>
 >https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
->[__map 참고 URL__<bold>
+>[__map 참고 URL__<bold><br>
 >https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ##자바스크립트 함수 
