@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jQuery RadioClass 테스트(탭메뉴를 만들기 위한 플러그인)_4시 강의</title>
+  <style>
+    .on {
+      font-weight: 900;
+      background: #ff0;
+    }
+  </style>
+  <!-- jQuery 라이브러리 로드 -->
+  <script src="../Resources/library/jquery-3.1.0.min.js"></script>
+  <!-- 커스텀 jQuery 플러그인 radioClass 로드 -->
+  <script src="plugins/radioClass/jquery.radioClass.js"></script>
+  <script src="plugins/memory/jquery.memory.js"></script>
+</head>
+<body>
+
+  <nav class="test">
+    <ul>
+      <li class="on">
+        <a href="">test suite 1</a></li>
+      <li><a href="/temp2">test suite 2</a></li>
+      <li><a href="/temp3">test suite 3</a></li>
+      <li><a href="/temp4">test suite 4</a></li>
+    </ul>
+  </nav>
+
+<script>
+//--------------------------------------
+// jquery.memory.js
+
+(function(global, jQuery){
+  'use strict';
+
+  // console.log($.fn.radioClass);
+
+  var $test = $('.test'); // test라는 클래스명을 가지고 있는 nav를 가지고와 test변수에 담는다. 
+  console.log($test);
+
+  $test.find('a').on('click', function(e) {
+    // console.log(e);
+    e.preventDefault();// e는 이벤트이다. 이벤트의 초기값은 클릭하면 브라우저 자체가 새로고침되어서 preventDefault()를 주면 새로고침 차단된다.
+
+    // var href = $(this).attr('href');
+    console.log( '객체 생성 전:', $.data(this, '$this') );
+    var href = $.$(this).attr('href');//$.$(this)는 $.memory(this)와 같은 것이고, 이 this가 jquery.memory.js의 dom_el매개변수에 전달되어 제이쿼리화된 객체$(dom_el)를 반환한다.
+    console.log( '객체 생성 후:', $.data(this, '$this') );
+    console.log(href);
+  });
+
+
+//--------------------------------------
+// radioClass.js
+
+  $test.on('click', 'a', function(ev) { // 이벤트 위임(test에는 nav요소가 할당되어 있지만 이벤트 속성을 줄 수 없어 a요소에 위임하여 이벤트를 준다.)
+//console.log(ev);
+    // 브라우저 기본 동작 차단
+    ev.preventDefault();  
+    // console.log('this:', this);
+    var $this = $(ev.target); // a요소를 클릭했을때 event속성을 가져온다. 그안에 target은 a요소이다. 
+    console.log($(ev.target) == $this);
+    var $parent = $this.parent();
+
+    $parent.radioClass('on');//  --->대망의 radioClass.js의 plugin을 호출한 것이다.
+  });
+
+})(this, this.jQuery);
+</script>
+</body>
+</html>
