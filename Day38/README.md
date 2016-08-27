@@ -1,48 +1,47 @@
 ###### Front-End Develop SCHOOL
 
 # DAY 38_JQuery
-[__버튼__<br>
- https://www.w3.org/TR/wai-aria-practices/#combobox](https://www.w3.org/TR/wai-aria-practices/#combobox)
-[__selector__<br>
-http://codylindley.com/jqueryselectors/](http://codylindley.com/jqueryselectors/)
-존 레식
-https://www.linkedin.com/in/jeresig
+[__버튼__<bold>](https://www.w3.org/TR/wai-aria-practices/#combobox)
+[__selector__<bold>](http://codylindley.com/jqueryselectors/)
+[__존 레식__<bold>]https://www.linkedin.com/in/jeresig
 
 
 - 제이쿼리 객체를 반환할때 $를 붙인다.
 
 ####체이닝
+
 ```js
 'text'.toUpperCase()   //"text"
 ```
+
 ##`$`와 `$()`는 다르다.
 - jQuery와 jQuery()결과는 다르다.
 - jQuery는 `함수`이다.
 - jQuery() `함수 실행 결과`는 `jQuery {} 인스턴스 객체`가 반환된다.
 
-css: ㅁㅔ소드
 
 ```js
 $(.button).outerWidth;   
 //outerWidth는 브라우저 상에서 computed의 넓이 값을 확인할 수 있다.
 ```
+
 ```js
 $('a').eq(0) === $('a:first')
 
 var $links = $('a:last')
 ```
 
-###odd 선택자 
+### odd 선택자 
 ```js
 $('a:nth-child(odd)')  // CSS에서 홀수, 1부터 시작한다.
 $('a:odd')	// jquery에서 짝수, 0부터 시작한다. 
 ```
-###parent
+### parent
 ```js
 $('a:parent') // a가 parent인것을 찾는것
 $('a:not(parent)')
 ```
-###hidden
+### hidden
 눈에 안보이는 것을 보이게 처리
 ```js
 $('a:hidden')
@@ -56,7 +55,7 @@ $('a:empty').width(0)
 ```
 
 
-프로토 타입은 객체를 참조하는 것이다.
+> 프로토 타입은 객체를 참조하는 것이다.
 
 ### jQuery
 
@@ -65,13 +64,12 @@ $('a:empty').width(0)
 1. 다른 자바스크립트 라이브러리와의 충돌 방지
 1. 요소 선택 (Selecting Elements)
 
-
 -
 
 ###Modernizr
 Modernizr란 사용자의 브라우저가 현재 가지고 있는 HTML5, CSS 기능들을 감지하고 지원여부를 판별하는 Javascript 라이브러리 입니다. 다양한 브라우저에서 지원되는 기능을 하나씩 확인해가면서 개발하는 것은 현실적으로 불가능하기 때문에 Modernizr와 같은 라이브러리를 통해 필요기능을 감지하고 지원 여부에 따라 개발자가 동적으로 처리를 달리할 수 있습니다.
 >__modernizr__</br>
->[https://modernizr.com/](https://modernizr.com/)
+>[https://modernizr.com/](https://modernizr.com/)</br>
 >__modernizr의 확장팩 Detect__</br>
 >[http://baris.aydinoglu.info/Detectizr/](http://baris.aydinoglu.info/Detectizr/)
 
