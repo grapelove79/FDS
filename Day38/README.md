@@ -1,9 +1,9 @@
 ###### Front-End Develop SCHOOL
 
 # DAY 38_JQuery
-[__버튼__<bold>](https://www.w3.org/TR/wai-aria-practices/#combobox)</br>
-[__selector__<bold>](http://codylindley.com/jqueryselectors/)</br>
-[__존 레식__<bold>]https://www.linkedin.com/in/jeresig
+[__combobox__<bold>](https://www.w3.org/TR/wai-aria-practices/#combobox)</br>
+[__jQuery Selectors__<bold>](http://codylindley.com/jqueryselectors/)</br>
+[__존 레식__<bold>](https://www.linkedin.com/in/jeresig)
 
 ####체이닝
 
