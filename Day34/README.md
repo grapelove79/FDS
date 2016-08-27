@@ -2,8 +2,7 @@
 
 # DAY34_JAVASCRIPT
 
-> __[JavaScript Garden__<bold>]
-> (http://bonsaiden.github.io/JavaScript-Garden/ko/#function.this)
+> [__JavaScript Garden__<bold>](http://bonsaiden.github.io/JavaScript-Garden/ko/#function.this)
 
 ## 문장
 
