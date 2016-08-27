@@ -1,0 +1,380 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "miss",
+        "first": "hazel",
+        "last": "clarke"
+      },
+      "location": {
+        "street": "4080 mornington road",
+        "city": "hamilton",
+        "state": "taranaki",
+        "postcode": 75891
+      },
+      "email": "hazel.clarke@example.com",
+      "login": {
+        "username": "smallpanda189",
+        "password": "cobalt",
+        "salt": "6TBiSS1q",
+        "md5": "575a39f99d838a4525416849a3845f62",
+        "sha1": "4865467898d600774d9d8fbfdc8ac6505286eb65",
+        "sha256": "85cfe02fd28c8ea1d37b5719c3385dd8f816a865bc986ce95e41cf074385529e"
+      },
+      "dob": "1948-02-06 21:00:40",
+      "registered": "2002-10-06 07:40:51",
+      "phone": "(668)-458-0342",
+      "cell": "(381)-561-3388",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/39.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/39.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/39.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "jeppe",
+        "last": "jensen"
+      },
+      "location": {
+        "street": "6590 oddenvej",
+        "city": "aarhus n",
+        "state": "nordjylland",
+        "postcode": 16749
+      },
+      "email": "jeppe.jensen@example.com",
+      "login": {
+        "username": "bluegoose539",
+        "password": "qiong",
+        "salt": "TBkvLj54",
+        "md5": "88a16e8ab35bb8b17c1ac427d8357775",
+        "sha1": "515ff85566497e3adc4926302230483c3aeaab2e",
+        "sha256": "26805f96a177319d4bfca9fae23aa715111ca949b227a37a91d5c28940bf1550"
+      },
+      "dob": "1947-12-22 22:10:26",
+      "registered": "2015-04-01 23:24:29",
+      "phone": "50845530",
+      "cell": "62703366",
+      "id": {
+        "name": "CPR",
+        "value": "188714-1672"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/74.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/74.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/74.jpg"
+      },
+      "nat": "DK"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "albert",
+        "last": "griffin"
+      },
+      "location": {
+        "street": "8800 rolling green rd",
+        "city": "rancho cucamonga",
+        "state": "south carolina",
+        "postcode": 34460
+      },
+      "email": "albert.griffin@example.com",
+      "login": {
+        "username": "beautifulelephant404",
+        "password": "giovanna",
+        "salt": "j0mMSgXi",
+        "md5": "1f3a079340dadd93318a1adffe331394",
+        "sha1": "37700ea53f60cd11e4df9820376f2008470b058d",
+        "sha256": "1b5f9aa39b586129c3e51ef9ee8cd1c3768d733029da9ceec64dfec5d8db4718"
+      },
+      "dob": "1976-12-28 08:21:32",
+      "registered": "2016-07-30 08:02:15",
+      "phone": "(359)-184-2894",
+      "cell": "(018)-447-6221",
+      "id": {
+        "name": "SSN",
+        "value": "145-01-8391"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/81.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/81.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/81.jpg"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "gregorio",
+        "last": "marquez"
+      },
+      "location": {
+        "street": "2039 calle covadonga",
+        "city": "jerez de la frontera",
+        "state": "aragón",
+        "postcode": 71673
+      },
+      "email": "gregorio.marquez@example.com",
+      "login": {
+        "username": "blackcat852",
+        "password": "toilet",
+        "salt": "t74Ftizx",
+        "md5": "88d9570eafea4f41032d5a15847febf7",
+        "sha1": "d1348667df1a00c9faa62784b33d97d2db32fc0f",
+        "sha256": "0c36edaa66d022159c35cc650f7b4bc95762222ebf8980c6423da9837c01652b"
+      },
+      "dob": "1982-05-28 03:10:14",
+      "registered": "2003-11-20 10:02:18",
+      "phone": "902-062-738",
+      "cell": "629-867-632",
+      "id": {
+        "name": "DNI",
+        "value": "82625463-I"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/28.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/28.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/28.jpg"
+      },
+      "nat": "ES"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "jackson",
+        "last": "johnson"
+      },
+      "location": {
+        "street": "5011 titahi bay road",
+        "city": "christchurch",
+        "state": "wellington",
+        "postcode": 78967
+      },
+      "email": "jackson.johnson@example.com",
+      "login": {
+        "username": "beautifulgorilla868",
+        "password": "forum",
+        "salt": "C5PzaERn",
+        "md5": "e30c5da362ebe63401bec8589d5d2343",
+        "sha1": "471ed5b4aa2830c4081976e8afc52486a068a1e4",
+        "sha256": "137c38205879360b465db53f881047a2aec3c73593555bc3ab57f165b61fcae3"
+      },
+      "dob": "1955-12-05 15:46:25",
+      "registered": "2014-11-22 03:12:09",
+      "phone": "(048)-548-7447",
+      "cell": "(898)-043-8238",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/48.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/48.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/48.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "aada",
+        "last": "ahola"
+      },
+      "location": {
+        "street": "2127 rautatienkatu",
+        "city": "askola",
+        "state": "åland",
+        "postcode": 68210
+      },
+      "email": "aada.ahola@example.com",
+      "login": {
+        "username": "organicfish108",
+        "password": "bootie",
+        "salt": "X0SGu3Cb",
+        "md5": "f399184368e96b3116e0d2f4d33ba612",
+        "sha1": "5d06313a83b5a80872deffcd800407fb0d717f5e",
+        "sha256": "f66bcb1990970e05fec29557e20faa3ea5a5ce2eecceb58a75b21ffa02c044ac"
+      },
+      "dob": "1984-02-17 14:10:59",
+      "registered": "2015-10-17 06:17:18",
+      "phone": "08-590-579",
+      "cell": "047-791-81-75",
+      "id": {
+        "name": "HETU",
+        "value": "684-340F"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/51.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/51.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/51.jpg"
+      },
+      "nat": "FI"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "emma",
+        "last": "hansen"
+      },
+      "location": {
+        "street": "4765 lærkevænget",
+        "city": "nykøbing sj.",
+        "state": "danmark",
+        "postcode": 33403
+      },
+      "email": "emma.hansen@example.com",
+      "login": {
+        "username": "blackmeercat407",
+        "password": "scorpio1",
+        "salt": "hrxo2DiW",
+        "md5": "c7b304e5418c61f2dc49452a88428ec6",
+        "sha1": "ad08b8fa15e3699e4165bcea2729e269060c6ad8",
+        "sha256": "86d1801118cebed7c85915b8851e91795a79cd5ec99f5cdc555129216640498b"
+      },
+      "dob": "1967-01-20 06:55:35",
+      "registered": "2016-06-17 08:13:09",
+      "phone": "46814667",
+      "cell": "34626751",
+      "id": {
+        "name": "CPR",
+        "value": "136357-2920"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/82.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/82.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/82.jpg"
+      },
+      "nat": "DK"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "sevgi",
+        "last": "van den hombergh"
+      },
+      "location": {
+        "street": "8534 eligenstraat",
+        "city": "baarn",
+        "state": "zuid-holland",
+        "postcode": 84751
+      },
+      "email": "sevgi.vandenhombergh@example.com",
+      "login": {
+        "username": "organicrabbit327",
+        "password": "hawaiian",
+        "salt": "uuUOs8ik",
+        "md5": "dbc0e66b6a114e748d505e8ff1a7d539",
+        "sha1": "05c80803d61ba03ef80ce89d13f41f84daa924c3",
+        "sha256": "028f976520e9471177369a2a0869e306914bf9ab0bbc82da6a4e0dcaa4649d51"
+      },
+      "dob": "1975-11-02 00:35:02",
+      "registered": "2013-12-25 22:24:02",
+      "phone": "(057)-899-1036",
+      "cell": "(976)-243-8209",
+      "id": {
+        "name": "BSN",
+        "value": "96798300"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/27.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/27.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/27.jpg"
+      },
+      "nat": "NL"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "رها",
+        "last": "حیدری"
+      },
+      "location": {
+        "street": "6238 ایران",
+        "city": "تهران",
+        "state": "یزد",
+        "postcode": 26168
+      },
+      "email": "رها.حیدری@example.com",
+      "login": {
+        "username": "organicpanda398",
+        "password": "5wr2i7h8",
+        "salt": "xkP8gOEl",
+        "md5": "dbc898b17eebe100d648d4631e3890d7",
+        "sha1": "2c8797bc45523475a30cca379bdd96741c41c81e",
+        "sha256": "a37dbc51e9295c6b3b1273293ac1a1f4f63475e7c442f7a674efebabf8a752fa"
+      },
+      "dob": "1984-06-02 12:15:11",
+      "registered": "2008-04-10 13:51:25",
+      "phone": "006-54625751",
+      "cell": "0963-109-3920",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/46.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/46.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/46.jpg"
+      },
+      "nat": "IR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "tracy",
+        "last": "thompson"
+      },
+      "location": {
+        "street": "7357 mill road",
+        "city": "newry",
+        "state": "essex",
+        "postcode": "V74 6FG"
+      },
+      "email": "tracy.thompson@example.com",
+      "login": {
+        "username": "bigostrich918",
+        "password": "3000gt",
+        "salt": "rvzcl0VK",
+        "md5": "d6acd0b91e7efee92793c3fc92bdf82f",
+        "sha1": "8f6031e44fb970e7fcc0623845b94a2701825aab",
+        "sha256": "e355bef429317a7040dc895f5d4d97663c13fc4646dd31533856ca69a94bdc6a"
+      },
+      "dob": "1967-10-14 10:48:33",
+      "registered": "2003-03-26 15:00:04",
+      "phone": "015396 77386",
+      "cell": "0717-199-532",
+      "id": {
+        "name": "NINO",
+        "value": "MN 78 47 86 K"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/19.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/19.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/19.jpg"
+      },
+      "nat": "GB"
+    }
+  ],
+  "info": {
+    "seed": "78ab55432d6c2867",
+    "results": 10,
+    "page": 1,
+    "version": "1.1"
+  }
+}
