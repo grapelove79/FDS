@@ -63,9 +63,9 @@ console.log( el_collection ); //[div.demo_container]
 
 ```js
 //공백이 주의
-'em rem % px vw vh vmin vmax'.split(' ');       // ["em", "rem", "%", "px", "vw", "vh", "vmin", "vmax"]
-'em,rem,%,px,vw,vh,vmin,vmax'.split(',');           // ["em", "rem", "%", "px", "vw", "vh", "vmin", "vmax"]
-'em, rem, %, px, vw, vh, vmin, vmax'.split(', ');  // ["em", "rem", "%", "px", "vw", "vh", "vmin", "vmax"]
+'em rem % px vw vh vmin vmax'.split(' ');  // ["em", "rem", "%", "px", "vw", "vh", "vmin", "vmax"]
+'em,rem,%,px,vw,vh,vmin,vmax'.split(',');  // ["em", "rem", "%", "px", "vw", "vh", "vmin", "vmax"]
+'em, rem, %, px, vw, vh, vmin, vmax'.split(', '); // ["em", "rem", "%", "px", "vw", "vh", "vmin", "vmax"]
 ```
 
 ##함수
@@ -97,8 +97,8 @@ fun0();    //함수 실행
 > 변수는 해석될때 나중에 할당된다.
 > 스코프는 해당영역이다.
 > 스코프란 
-> 
-####1. 함수 선언문
+
+#### 1. 함수 선언문
 ```js
 function fn1() {
 	console.log('선언된 함수가 실행되었다.');
@@ -106,14 +106,14 @@ function fn1() {
 fn1();
 ```
 
-####2. 함수 표현식(권장)  17:29분
+#### 2. 함수 표현식(권장)  17:29분
 ```js
 var fn2 = function() {
 	console.log('표현식(함수 리터럴)이 참조된 변수를 통해 함수가 실행되었다.');
 }
 console.log('fn2():', fn2());
 ```
-###스코프체인
+### 스코프체인
 - 전역에 뭘 만들면 거슬러 올라가기 때문에 느리다.
 - 그래서 지역변수로 만드는 것이 좋다
 - 매개변수에 정의 하지않으면 undifind가 출력된다.
