@@ -5,13 +5,13 @@
 - [__jQuery Selectors__<bold>](http://codylindley.com/jqueryselectors/)</br>
 - [__존 레식__<bold>](https://www.linkedin.com/in/jeresig)
 
-####체이닝
+## 체이닝
 
 ```js
 'text'.toUpperCase()   //"text"
 ```
 
-##`$`와 `$()`는 다르다.
+## `$`와 `$()`는 다르다.
 - jQuery와 jQuery()결과는 다르다.
 - jQuery는 `함수`이다.
 - jQuery() `함수 실행 결과`는 `jQuery {} 인스턴스 객체`가 반환된다.
