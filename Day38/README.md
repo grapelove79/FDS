@@ -1,12 +1,9 @@
 ###### Front-End Develop SCHOOL
 
 # DAY 38_JQuery
-[__버튼__<bold>](https://www.w3.org/TR/wai-aria-practices/#combobox)
-[__selector__<bold>](http://codylindley.com/jqueryselectors/)
+[__버튼__<bold>](https://www.w3.org/TR/wai-aria-practices/#combobox)</br>
+[__selector__<bold>](http://codylindley.com/jqueryselectors/)</br>
 [__존 레식__<bold>]https://www.linkedin.com/in/jeresig
-
-
-- 제이쿼리 객체를 반환할때 $를 붙인다.
 
 ####체이닝
 
