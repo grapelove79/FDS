@@ -148,6 +148,7 @@ $('[class*="hesus"]').wrapAll('<aside class="wrapAllHesus">')
 ```
 - wrapAll  :  모두 통칭해서 하나로 합치는 것
 - unwrap()
+
 ### toggle 구문
 이벤트 바인딩 시에 이벤트 객체에 사용자가 정의한 객체를 합성[객체 합성]
 외부에 변수를 만들지 않고, 이벤트 객체를 통해 조건 처리하는 토글 구문
