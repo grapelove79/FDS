@@ -6,11 +6,11 @@
 >[__배열 참고 URL__<bold>](http://colintoh.com/blog/5-array-methods-that-you-should-use-today?utm_source=javascriptweekly&utm_medium=email)
 
 ##자바스크립트 반복문
-1.1 while
-1.2 do ~ while
-2.1 for 
-2.2 for ~ in [Object] : 
-2.3 forEach [Array] :  ECMASript 5 Edition
+1.1 while<br>
+1.2 do ~ while<br>
+2.1 for<br>
+2.2 for ~ in [Object] : <br>
+2.3 forEach [Array] :  ECMASript 5 Edition<br>
 2.4 for ~ of [Array] : 배열의 원소에 바로 접근 가능. ECMASript 2015
 
 ###forEach 구문
