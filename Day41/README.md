@@ -2,7 +2,8 @@
 
 # DAY 41_AJAX, Anguler
 
-##__AJAX(Asynchronous Javascript And XML)__<br>_AJAX 비동기 통신 기술
+## AJAX(Asynchronous Javascript And XML)<br>
+__AJAX 비동기 통신 기술__<bold>
 Asynchronous(비동기) JavaScript and XML (AJAX)는 그 자체가 (특정한) 기술은 아닙니다. 하지만 HTML 또는 XHTML, Cascading Style Sheets, JavaScript, The Document Object Model, XML, XSLT, XMLHttpRequest object를 비롯한 기존의 여러 기술을 사용하는 "새로운" 접근법이라고 설명할 수 있습니다. 이러한 기술들을 AJAX 모델을 통해 결합하면, 웹 응용 프로그램을 빠르게 만들 수 있으며, 전체 웹 페이지를 다시 불러 오지 않은 채로 점진적으로 또 부분적으로 그 사용자 인터페이스(와 페이지 내용)를 갱신할 수 있습니다. 이 기능을 써서 더 빠르며 사용자가 취하는 동작이나 요구(예를 들어, 검색어 입력, 지도 스크롤, 새로운 위치 선택, 축척 조정 등)에 더 잘 응답하는 응용 프로그램을 만들 수 있습니다.
 
 ###AJAX란?
