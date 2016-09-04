@@ -1,70 +1,34 @@
 <!DOCTYPE html>
-<html lang="ko-KR" data-ng-app> <!-- ng-app는 angluer 에플리케이션을 불러오는 것이다.비표준이다.
-		  data-ng-app를 붙이면 표준이다, body에 붙여 줘도 된다. -->
+<html lang="ko-KR" data-ng-app>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta charset="UTF-8">
-	<title>AngularJS 스터디</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<script src="lib/angular/angular.min.js"></script>
-	<script src="../../Resources/library/jquery-3.1.0.min.js"></script>
-	<script>
-
-	(function(global, ng) {  //ng는 angular를 의미한다.
-		'use strict';
-		// window.angular === ng
-		ng || document.write('<script src="framework//angular.min.js"><\/script>');
-		console.log('Angular 버전:', ng.version.full); // 객체를 받는다.
-		})(this, this.angular);
-
-	// jQuery 일때
-	// function init($) {
-	// 	var $twb         = $('#twb'),
-	// 			$twb_binding = $('#twb-binding');
-
-	// 	$twb.on('keyup', function(event) {
-	// 		$twb_binding.text( event.target.value);
-	// 	});
-
-	// }jQuery.noConflict(true)(init); // === jQuery(document).ready(init);
-	// noConflict(true)는 $,제이쿼리를 포기하지만 제이쿼리 함수(객체)가 반환한다. 
-	// 인자에 담지 않았지만 바로 실행한다.
-	// 제이쿼리에 jQuery(init) 함수가 실행된다. document.ready가 실행된다. 
-	// jQuery(init) === $(init)
-
-	</script>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>AngularJS 스터디</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script>
+    (function(global, ng){
+      'use strict';
+      ng || document.write('<script src="framework/angular.min.js"><\/script>');
+      console.log('Angular 버전:', ng.version.full);
+    })(this, this.angular);
+  </script>
 </head>
-<!-- ng-init는 초기화다. -->
-<body data-ng-init="application_name='MyApp using AngularJs Framwork.'">
+<body data-ng-init="application_name='MyApp using AngularJS Framework.'">
 
-	<!-- jQuery 일때-->
-	<!-- <input type="text" id="twb">
-	<p id="twb-binding"></p> -->
+  <input type="text" data-ng-model="application_name">
 
-	<!-- AngularJS 일때-->
-	<input type="text" data-ng-model="application_name">
+  <!-- Expression -->
+  <h1 lang="en">{{application_name}}</h1>
+  <!-- Directive -->
+  <h2 lang="en" data-ng-bind="application_name"></h2>
 
-	<!--Expression 느리다. -->
-	<!-- <h1 lang="en">{{application_name}}</h1> -->
-
-	<!-- Directive 더 빠르다. -->
-	<!-- body의 초기화 값을 치환한다. -->
-	<h1 lang="en" data-ng-bind="application_name"></h1> 
-
-	<div data-ng-controller="divController">
-		
-	</div>
-	
-
-
-	<script>
-		angular.controller('divConroller', ['$scope', '$http', function($scope, $http){
-			$http // 가서 서버에서 모델 가지고와
-			$scope // 가서 템플릿에 뷰 업데이트 하고 와
-			
-		}])
-
-	</script>
-
+  <ul>
+    <li><a href="bower.json">server 요청</a></li>
+    <li><a href="#/home">home</a></li>
+    <li><a href="#/about">about</a></li>
+    <li><a href="#/works">works</a></li>
+  </ul>
 </body>
 </html>

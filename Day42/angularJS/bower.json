@@ -1,18 +1,10 @@
 {
-  "name": "angularJS",
-  "homepage": "https://github.com/grapelove79/FDS",
-  "authors": [
-    "grapelove <grapelove79@gmail.com>"
-  ],
-  "description": "",
-  "main": "",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "lib",
-    "test",
-    "tests"
-  ]
+  "name": "angular.start",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "jquery.easing": "^1.3.1"
+  }
 }

@@ -1,164 +1,143 @@
-###### Front-End Develop SCHOOL
+###### front-end develop school
 
-# DAY 42_AJAX, Anguler
+# DAY 42
 
-##storage
-웹 스토리지 API의 스토리지 인터페이스는 특정 도메인을 위한 세션스토리지 또는 로컬 스토리지에 접근할 수 있게 합니다. 예를 들면, 저장된 데이터 아이템들의 추가, 변경, 삭제가 가능한 방식과 같습니다.
+##HTML5 Storage
 
-만약 한 도메인을 위한 세션스토리지를 조작하고 싶다면, Window.sessionStorage 메서드를 사용하면 됩니다. 마찬가지로, 로컬스토리지의 경우에는 Window.localStorage를 사용합니다.
+```javascript
+(function(global, storage, $){
+	'use strict';
 
-####Properties
-Storage 오브젝트에 저장된 데이터 아이템들의 갯수를 반환합니다.
-```js
-Storage.length 
-```
-####Methods
-setItem, getItem, key , clear를 쓸 수 있다.
+	// 루트 요소인 <html>을 참조하는 jQuery 객체 생성
+	var $html = $('html');
 
-- 특정 숫자 n에 대해서, 스토리지에 n번째 저장되어 있는 키의 이름을 반환합니다.
-```js
-Storage.key()
-```
-- 키의 이름을 넘기면, 키 값이 반환됩니다.
-```js
-Storage.getItem()
-```
-- 키 이름과 값을 지정하여 스토리지에 저장합니다. 만약 키가 이미 있다면, 키의 값을 업데이트합니다.
-```js
-Storage.setItem()
-```
-- 키 이름에 해당하는 아이템을 제거합니다.
-```js
-Storage.removeItem()
-```
-- 스토리지의 모든 키를 제거합니다.
-```js
-Storage.clear()
-```
-- Aplication을 열어놓고 console에서 확인한다.
+	// 사용자 브라우저가 localStorage를 지원하는가?
+	if (storage) {
+		$html.addClass('localStorage');
+	} else {
+		$html.addClass('no-localStorage');
+	}
 
-```js
-// 로컬스토리지에 grapelove저장
-// 객체 -> 문자
-// stringify(스트링어빠이)는 객체는 문자화 해준다.
-var str_grapelove = JSON.stringify(grapelove);	// string
-strorage.setItem('grapelove', str_grapelove);
+	// 데이터 가져오기
+	var FDS = storage.getItem('FDS');
 
-// 전역에 공개
-global.grapelove = grapelove;
+	if (!FDS){
+		storage.setItem('FDS', 'Front-End Develop SCHOOL')
+	}
 
-// 문자 -> 객체
-var getted_grapelove = storage.getItem('grapelove');
-getted_grapelove = JSON.parse(getted_grapelove); // object
-console.log(getted_grapelove);
-```
-## Angular JS
-__React 강의__<br>
-https://www.youtube.com/watch?v=GEoNiUcVwjE&list=PL9FpF_z-xR_GMujql3S_XGV2SpdfDBkeC
+	// 변경 가능
+	storage.setItem('FDS', '프론트 엔드 디벨롭 스쿨')
 
-- 앵귤러는 ie8이하는 지원 못한다.
-- ie8을 고려할때는 Lagacy 1.2버전을 써야 한다.
-- 앵귤러와 제이쿼리의 같이 쓰려면 딱 필요한 기능만 쓰는 게 좋은 선택이 될 수 있다.
-- bower모듈을 깔아야 한다. 꼭 깃이 필요한다. 거기서 자료를 가져온다.
-- bower는 프론트툴을 관리 해 주는 것.
-- 앵귤러와 리액트는 같이 쓴다.
+	// 삭제
+	storage.removeItem('FDS')
 
-__BOWER Command Line__<br>
+	// 모두 삭제
+	storage.clear()
 
-- bower 설치
-```js
-angularJs kys$ sudo npm i -g bower
-```
-- bower 확인
-```js
-angularJs kys$ sudo npm list -g bower    //  윈도우에서는  npm list -g bower
-```
--  bower 버전확인
-```js
-angularJs kys$ bower -v
-```
-- bower help
-```js
-angularJs kys$ bower -h
+	var hoon = {
+		'name': 'jihoon',
+		'job': 'developer',
+		'age': 23,
+		'gender': 'male',
+		'email': 'hoon@gmail.com',
+		'favorites': ['car', 'travel', 'study']
+	}
+	// 객체를 문자화
+	hoon = JSON.stringify(hoon)
+
+	storage.setItem('hoon', hoon) // [object Object] 라는 문자열로 저장됨
+
+	// 다시 객체화
+	JSON.parse( storage.getItem('hoon'));
+
+})(this, this.localStorage, this.jQuery)
 ```
 
-- 서브라임텍스트를 열라
-```js
-angularJs kys$ subl ~/ .bowerrc
+-
+
+###Custom Storage
+
+> 설계하기 나름입니다.
+
+```javascript
+(function(global, $){
+	'use strict';
+
+	$.store = {
+		'support': (function(){
+			var JSON = !!global.JSON;
+			var localStorage = !!global.localStorage;
+			return function(feature){
+				if (!feature){
+					return {
+						'json': global.JSON,
+						'localstorage': global.localStorage
+					}
+				}
+				feature = feature.toLowerCase();
+				if (feature === 'json') {return json;}
+				if (feature === 'localStorage') {return localStorage;}
+			}
+		})(),
+		'get': function(key){
+			if ( !key || $.type(key) !== 'string'){ throw new Error('키값은 문자열을 전달해야 합니다')}
+			if (this.support('json') && this.support('localstorage')) {
+				return global.JSON.parse(global.localStorage.getItem(key));
+			} else {
+				console.info('최신 브라우저로 업그레이드 해주세요');
+			}
+		},
+		'set': function(key, value){
+			if ( !key || $.type(key) !== 'string'){ throw new Error('키값은 문자열을 전달해야 합니다')}
+			if (this.support('json') && this.support('localstorage')) {
+				return global.JSON.parse(global.localStorage.setItem(key, global.JSON.stringify(value));
+			} else {
+				console.info('최신 브라우저로 업그레이드 해주세요');
+			}
+		},
+		'del': function(key){
+			global.localStorage.removeItem(key);
+		},
+		'clear': function(){
+			global.localStorage.clear();
+		}
+	}
+})(this, (this.jQuery)
 ```
--  JSON파일을 command라인으로 만든것.
-```js
-angularJs kys$ echo '{"directory": "lib"}' > .bowerrc && cat .bowerrc
-```
-- bower.json파일을 생성
-```js
-// echo는 내용 값을 넣을 수 있다.
-angularJs kys$ echo '{}' > bower.json 
+-
+
+##Angular JS
+
+```html
+<!-- 반드시 html 요소에 걸지 않고, 원하는 요소에만 붙여도 된다 -->
+<html data-ng-app>
+.
+.
+.
+<body data-ng-init="application_name='First NG'">
+<!-- <h1>{{application_name}}</h1> 표현식 아래와 동일-->
+<h1 data-ng-bind="application_name"></h1>
+<input type="text" data-ng-model="application_name">
 ```
 
-- angular설치 (git 이 설치되어 있어야 한다.)
-```js
-angularJs kys$ bower i --save angular
-```
-```js
-angularJs kys$ rm bower.json 
-```
-- lip 설치
-```js
-angularJs kys$ bower init
+- 같은 기능을 jQuery로 쓴다면
 
-? name angularJS
-? description 
-? main file 
-? keywords 
-? authors grapelove <grapelove79@gmail.com>
-? license MIT
-? homepage https://github.com/grapelove79/FDS
-? set currently installed components as dependencies? Yes
-? add commonly ignored files to ignore list? Yes
-? would you like to mark this package as private which prevents it from being accidentally published to the registry? No
+```html
+<input type="text" id="twb">
+<p id="twb -binding"></p>
+```
+```javascript
+function init($){
+	var $twb = $('#twb'), $twb_binding = $('#twb-binding');
 
-{
-  name: 'angularJS',
-  homepage: 'https://github.com/grapelove79/FDS',
-  authors: [
-    'grapelove <grapelove79@gmail.com>'
-  ],
-  description: '',
-  main: '',
-  license: 'MIT',
-  ignore: [
-    '**/.*',
-    'node_modules',
-    'bower_components',
-    'lib',
-    'test',
-    'tests'
-  ]
+	$twb.on('keyup', function(evt){
+		$twb_binding.text( evt.target.value );
+	});
 }
 
-? Looks good? Yes
+jQuery.noConflict(true)(init);
+// 아래와 동일한 코드
+// => jQuery(document).ready(init);
 ```
-- angular 설치
-```js
-angularJs kys$ bower install angular#1.5.8
 
-bower                     invalid-meta The "name" is recommended to be lowercase, can contain digits, dots, dashes
-bower angular#1.5.8         not-cached https://github.com/angular/bower-angular.git#1.5.8
-bower angular#1.5.8            resolve https://github.com/angular/bower-angular.git#1.5.8
-bower angular#1.5.8           checkout v1.5.8
-bower angular#1.5.8           resolved https://github.com/angular/bower-angular.git#1.5.8
-bower angular#1.5.8            install angular#1.5.8
-
-angular#1.5.8 lib/angula
-```
-- map파일은 하나의 모듈 단위로 개발해서 통합.
-
-- css스프라이트 이미지/스타일 파일 자동 생성 (png, svg기반)
---> sprites.png, sprites.svg, sprites.css파일을 자동을 생서합니다.
-
-bower.json  (클라이언트)
-package.json (서버)
-`->` 에러 function 표시
-
-RESTful서비스 : 
+> 구조 정의는 공식문서 혹은 키노트 파일 참조!
