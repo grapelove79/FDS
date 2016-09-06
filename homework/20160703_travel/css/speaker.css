@@ -1,0 +1,137 @@
+html {
+  font-size: 10px;
+
+}
+body {
+  /*
+  [참고] http://caniuse.com/#search=rem
+  rem 단위 지원: IE 9+
+  font 속기형 작성법에서 rem 단위 지원: IE 11+
+  */
+  font: 1.3rem/1.5 "Spoqa Han Sans", sans-serif;
+  color: #494949;
+}
+
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.speakers-container *{
+	margin-top: 0;
+	margin-bottom: 0;
+
+}
+
+.speakers-container {
+	width: 1000px;
+	max-width: 1000px;
+	margin:2rem auto;
+	border: 1px solid;
+
+}
+
+.speaker {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.speaker:hover {
+	background: #fff2e2;
+}
+
+.speaker-photo {
+	float: left;
+	width: 50%;
+	height: auto;
+}
+
+.layout-half {
+	width: 50%;
+}
+
+.speaker-bio {
+	position: relative;
+    float: right;
+    width: 50%;
+
+}
+
+.speaker-bio::after {
+	position: absolute;
+	left: -1.5rem;
+	top: 55%;
+	border-top: 1rem solid transparent;
+	border-bottom: 1rem solid transparent;
+	border-right: 1.5rem solid #fff2e2;
+}
+.speaker:hover .speaker-bio::after {
+	content: '';
+}
+.speaker-bio.arrow-right::after {
+	position: absolute;
+	left: initial; /*위에 left값을 초기화 하기 위해 100%줌, 또는 left:initial;주어서 초기화
+  나머지 값은 위로 부터 상속된다.(initial은 ie와 오페라에서 안됨) */
+	right: -1.5rem;
+	top: 55%;
+	border-top: 1rem solid transparent;
+	border-bottom: 1rem solid transparent;
+	border-left: 1.5rem solid #fff2e2;
+	border-right: none;
+}
+	
+.speaker-bio p:first-of-type {
+	margin-top: 3.4375em;
+    margin-bottom: 1.125em;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.speaker-bio p:last-of-type{
+	padding-left: 1.88em;
+	padding-right: 1.88em;
+}
+
+.speaker-bio .speaker-desc::after{
+	display: block;
+	content: '';
+	height: 1px;
+	width: 2.81em;
+	margin: 0.81em auto;
+	background-color: #000;
+
+}
+
+.speaker-bio .speaker-twitter {
+	display: block;
+	width: 1.25em;
+	height: 1.25em;
+	margin-right: auto;
+    margin-left: auto;
+	background: url("../images/icon-twitter.svg") no-repeat; /* 0 0 : x y좌표 기본값 */
+	 background-position: left bottom;
+ 	 background-size: 1.25em;
+
+}
+
+
+.speaker-bio .speaker-twitter:hover,
+.speaker-bio .speaker-twitter:focus {
+  background-position: left top;
+}
+.speaker-bio .speaker-twitter:focus {
+  outline: none;
+}
+
+.align-right {
+	float: right;
+}
+
+
+
+
+
