@@ -103,6 +103,7 @@ a
 	height: 27px
 	line-height: 0
 	transform: translateY(-50%)
+	cursor: pointer
 	span
 		display: inline-block
 		position: relative
@@ -141,7 +142,8 @@ a
 	.information-go
 		&:nth-child(1) .information
 			position: relative
-			background: #978e9a
+			background: #d0d8db
+			opacity: 0.9
 			.card_sale
 				position: absolute
 				right: percent(120, 800)
@@ -446,6 +448,9 @@ a
 	display: none
 
 @media screen and (min-width: 800px)
+	
+	.header
+		width: 1200px
 
 	.utility-navigation-wrap
 		display: block
@@ -573,9 +578,10 @@ a
 		.main-banner-cont
 			position: relative
 			height: 133px
-			border: 1px solid red
-			background: #B3BCC0
+			background: #d0d8db
 			padding: 0 40px
+			opacity: 0.9
+
 			&:nth-of-type(1)
 				text-align: left
 				font-size: rem(14px)
@@ -588,6 +594,7 @@ a
 						padding-top: 5px
 
 			&:nth-of-type(2)
+				display: none
 				font-size: rem(16px)
 				letter-spacing: -.5px
 				ul
@@ -637,6 +644,7 @@ a
 					text-indent: -9999px
 
 			&:nth-of-type(3)
+				display: none
 				text-align: left
 				line-height: 133px
 				font-size: rem(14px)
@@ -911,7 +919,7 @@ a
 			float: left
 			padding-right: 20px
 		a
-			width: 200px
+			width: percent(200, 400)
 			float: left
 
 	/* FOOTER */
@@ -963,6 +971,7 @@ a
 					text-indent: -99999px
 
 	.phone-number
+		width: 700px
 		float: right
 		border-bottom: none
 		.phone-list
