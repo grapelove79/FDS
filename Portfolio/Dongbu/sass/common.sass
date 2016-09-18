@@ -1,0 +1,78 @@
+// 의존 function 모듈
+@import "functions/percent"
+
+// * --------------------------------
+// * 목록 초기화
+@mixin reset-list
+  margin-top:    0
+  margin-bottom: 0
+  padding-left:  0
+  list-style: none
+
+// * --------------------------------
+// * font 초기화
+@mixin reset-font-style
+  font-style: normal
+
+// * --------------------------------
+// * 제목 초기화
+@mixin reset-heading
+  padding: 0
+  margin: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+// * --------------------------------
+// * 이미지 하단 공백 제거
+@mixin rm-img-blank 
+  vertical-align: bottom
+
+// * --------------------------------
+// * 이미지 옆에 위치한 요소 정렬
+%align-aside-img img + * 
+  overflow: hidden
+
+// * --------------------------------
+// * 반응형 웹 미디어
+%rwd-media 
+  width: 100%
+  height: auto
+
+%rwd-media-ratio 
+  width: 100%
+  height: 0
+  background-size: cover
+  background-position: center center
+
+%rwd-media-4-3 
+  @extend %rwd-media-ratio
+  padding-bottom: percent(3,4)
+%rwd-media-16-9 
+  @extend %rwd-media-ratio
+  padding-bottom: percent(9,16)
+
+%rwd-media-21-9 
+  @extend %rwd-media-ratio
+  padding-bottom: percent(9,21)
+
+h1, h2, h3, h4, h5, h6
+  @include reset-heading
+
+em, strong, cite
+  @include reset-font-style
+
+ul, ol, li
+  @include reset-list
+
+.clearfix::after, .cf::after 
+  content: ''
+  display: block
+  clear: both
+  height: 0
+
+.lt-ie8 .clearfix, .lt-ie8 .cf  /*ie6,7 고려할 경우(비표준) */
+  zoom: 1
+
+
