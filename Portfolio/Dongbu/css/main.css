@@ -79,7 +79,7 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, -50%);
   vertical-align: bottom;
 }
 
@@ -101,6 +101,7 @@ a {
   line-height: 0;
   transform: translateY(-50%);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .toggle-menu-button span {
