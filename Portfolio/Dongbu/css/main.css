@@ -73,7 +73,7 @@ a {
   height: 38px;
   text-align: center;
   line-height: 38px;
-  margin-right: 8.33333%;
+  margin-right: 12.5%;
 }
 
 .logo img {
@@ -168,7 +168,7 @@ a {
 .information-wrap .information-go:nth-child(1) .information .card_sale {
   position: absolute;
   right: 15%;
-  bottom: 0;
+  bottom: -5px;
   width: 20%;
 }
 
