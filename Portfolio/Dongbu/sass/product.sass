@@ -1,0 +1,507 @@
+// 의존 function 모듈
+@import common
+@import mixin
+@import functions/percent
+@import functions/rem
+
+$dominance_color: #00a087
+$assort_color: #636b7e
+$point_color: #fe5400
+$font-family: "맑은고딕", "Malgun Gothic", "apple Gothic",  "Apple SD Gothic Neo", Dotum, "돋움", Gulim, "굴림", "Helvetica-Neue", Helvetica, Arial, Verdana, Tahoma, sans-serif
+$page-width: 1200px
+$content-width: 1000px
+
+body 
+	color: #666
+	font-size: 14px
+	font-family: $font-family
+	line-height: 1.5
+	letter-spacing: -.5px
+	box-sizing: border-box
+
+a
+	text-decoration: none
+	color: #666
+	vertical-align: bottom
+
+.hide
+	position: absolute
+	left: -9999em
+
+.box-width
+	min-width: $page-width
+
+// header
+.utility-navigation-wrap
+	width: 525px
+	height: 57px
+	line-height: 57px
+	font-size: rem(13px)
+	float: right
+
+.utility-navigation
+	float: left
+	display: block
+	color: #666
+	padding: 0 1.6483516484%
+	&:nth-of-type(7)
+		margin-right: 0.5%
+
+.search
+	float: right
+	width: 36px
+	height: 36px
+	background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
+	text-indent: -9999px
+	transform: translateY(25%)
+	border-left: 1px solid #e0e0e0
+
+.logo-navigation-wrap
+	margin-bottom: 19px
+
+.logo
+	position: relative
+	float: left
+	margin-right: 100px
+	height: 38px
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		@include rm-img-blank
+
+.main-navigation-wrap
+	float: left
+	.main-navigation
+		float: left
+		width: 125px
+		display: block
+		height: 38px
+		line-height: 38px
+		font-size: rem(20px)
+		font-weight: 700
+		color: #666
+
+.side-navigation
+	float: right
+	.count
+		float: left
+		width: 242px
+		height: 38px
+		line-height: 38px
+		color: $dominance_color
+		border: 1px solid $dominance_color
+		font-weight: 700
+		text-align: center
+		.count-icon
+			display: inline-block
+			padding-left: 23px
+			height: 37px
+			background: url(../images/common/btn_ico_spt.png) no-repeat
+			background-position: -764px 10px
+			vertical-align: top
+	.all-navigation
+		position: relative
+		float: right
+		width: 48px
+		height: 38px
+		border: 1px solid #d3d3d3
+		background: #fff
+		overflow: hidden
+		.toggle-menu-button
+			position: absolute
+			right: 50%
+			top: 50%
+			width: percent(48, 300)
+			height: 38px
+			line-height: 0
+			transform: translate(-50%, -50%)
+			cursor: pointer
+			overflow: visible
+			span
+				display: inline-block
+				position: relative
+				width: 20px
+				height: 3px
+				margin-top: 4px
+				background-color: $point_color
+				&:first-child
+					margin-top: 0
+
+// MAIN
+.product-wrap
+	padding: 0
+	background: url(../images/product/bg_top.jpg) center top no-repeat
+	background-size: 1572px
+	text-align: center
+	padding-bottom: 57px
+
+.visual
+	border-top: 2px solid $dominance_color
+	padding-top: 100px
+	padding-bottom: 100px
+	margin-bottom: 19px
+	.sub-title
+		@include text(22px, 26px, #000)
+		margin-bottom: 15px
+		display: block
+	.title
+		@include text(40px, 48px,#000)
+		letter-spacing: -3.5px
+		em
+			color: $point_color
+	.text
+		@include text(18px, 20px, #000)
+		margin-top: 15px
+	.button
+		margin-top: 21px
+		@include button(240px, 57px, 57px, #000,#000)
+		font-size: 20px
+		font-weight: 700
+
+.con-navigation
+	padding-top: 23px
+	padding-bottom: 38px
+	width: 100%
+	ul
+		width: $content-width
+		margin: 0 auto
+		height: 57px
+		.button
+			float: left
+			margin-left: -1px
+			font-size: rem(16px)
+			@include button(251px, 57px, 57px, #666, #bbb)
+
+.centents-wrap
+	letter-spacing: -1px
+	.sub-title
+		@include text(18px, 20px, #000)
+		margin-bottom: 8px
+		display: block
+	.title
+		@include text(40px, 48px,#000)
+		letter-spacing: -3.5px
+		em
+			color: #13756f
+	.text
+		@include text(14px, 23px, #636b7e)
+		margin-top: 15px
+		font-size: 14px
+		line-height: 23px
+		li
+			background: url(../images/common/bul_blue_dot01.png) left 10px no-repeat
+			padding-left: 15px
+	.button
+		@include button(116px, 46px, 46px, #13756f, #00a087)
+		font-weight: 700
+		font-size: rem(16px)
+	.button-a
+		@include button(116px, 46px, 46px, #666, #bbb)
+		font-weight: 700
+		font-size: rem(16px)
+		margin-right: 8px
+		background: url(../images/common/btn_ico_spt.png) no-repeat
+		background-position: -680px -60px
+
+	.sub-title-w
+		@include text(16px, 20px, #fff)
+		margin-bottom: 8px
+		display: block
+	.title-w
+		@include text(32px, 42px,#fff)
+		letter-spacing: -3.5px
+		em
+			color: #13756f
+	.button-w
+		@include button(116px, 46px, 46px, #fff, #fff)
+		font-size: rem(16px)
+	.button-w-a
+		@include button(116px, 46px, 46px, #fff, #fff)
+		font-size: rem(16px)
+		margin-right: 8px
+
+.centents-wrap-01
+	width: 100%
+	background: url(../images/product/bg_feature.jpg) center top no-repeat
+	height: 399px
+	.contents
+		text-align: left
+		// width: $content-widt
+		.contents-box
+			+size(50%, 399px)
+			background: #eceff1
+			opacity: 0.9
+			padding: 44px 0 0 40px
+			.button-wrap
+				margin-top: 10px
+		.contents.col-10
+			margin: 0 auto
+
+.centents-wrap-02
+	background: url(../images/product/bg_merit.jpg) center top no-repeat
+	height: 399px
+	.contents
+		text-align: left
+		width: $content-width
+		margin: 0 auto
+		.contents-box
+			float: right
+			+size(50%, 399px)
+			background: #eceff1
+			opacity: 0.9
+			padding: 44px 0 0 40px
+			.button-wrap
+				margin-top: 56px
+
+.centents-wrap-03
+	height: 285px
+	.contents
+		background: url(../images/product/bg_guarantee.jpg) right top no-repeat
+		background-size: cover
+		@include size($content-width, 285px)
+		margin: 0 auto
+		.contents-box
+			@include size(50%, 285px)
+			background: $dominance_color
+			opacity: 1
+			padding: 44px 0 0 0
+			h3
+				margin-top: 29px
+			.button-wrap
+				margin-top: 68px
+
+.centents-wrap-04
+	background: #eceff1
+	height: 285px
+	.contents
+		background: url(../images/product/bg_faq.jpg) left top no-repeat
+		background-size: cover
+		@include size($content-width, 285px)
+		margin: 0 auto
+		.contents-box
+			float: right
+			@include size(50%, 285px)
+			background: #5d71a4
+			padding: 44px 0 0 0
+			.button-wrap
+				margin-top: 68px
+
+.review_num
+	p
+		width: $content-width
+		display: block
+		margin: 19px auto 0
+		text-align: right
+		font-size: rem(14px)
+		color: #666
+		line-height: 19px
+
+
+/* FOOTER */
+.footer
+	width: 100%
+	margin-bottom: 38px
+
+.sns-tel-wrap
+	width: 100%
+	border-top: 1px solid #e3e3e3
+
+.sns-tel
+	width: $page-width
+	margin: 0 auto
+	height: 55px
+
+.sns-wrap
+	position: relative
+	padding: 0 0
+	height: 55px
+	line-height: 55px
+	color: #333
+	font-weight: 700
+	.sns-title
+		float: left
+		font-size: rem(14px)
+		font-weight: 700
+	.sns
+		position: absolute
+		left: 144px
+		top: 50%
+		transform: translateY(-50%)
+		float: right
+		.sns-list
+			display: block
+			float: left
+			width: 32px
+			height: 32px
+			&:nth-of-type(1)
+				background: url(../images/m_main/footer_sns.png) no-repeat
+				background-position: left -35px
+				background-size: 100%
+				margin-right: 8px
+				text-indent: -99999px
+			&:nth-of-type(2)
+				background: url(../images/m_main/footer_sns.png) no-repeat
+				background-position: left -71px
+				background-size: 100%
+				text-indent: -99999px
+
+.phone-number
+	width: 663px
+	float: right
+	line-height: 56px
+	border-bottom: none
+	.phone-list
+		color: #333
+		float: left
+		text-align: right
+		font-weight: 700
+		font-size: rem(14px)
+		padding-right: 30px
+
+		.phone-icon
+			width: 19px
+			height: 20px
+			margin-right: 4px
+		.tel
+			padding-left: 20px
+			color: $point-color
+			font-size: rem(20px)
+		&:nth-of-type(1) .phone-icon
+			background: url(../images/m_main/ico_foot.png) no-repeat
+			background-position: left top
+			background-size: 100%
+			vertical-align: -5px
+		&:nth-of-type(2) .phone-icon
+			background: url(../images/m_main/ico_foot.png) no-repeat
+			background-position: left -40px
+			background-size: 100%
+			vertical-align: -5px
+		&:nth-of-type(3) .phone-icon
+			background: url(../images/m_main/ico_foot.png) no-repeat
+			background-position: left -20px
+			background-size: 100%
+			vertical-align: -5px
+		&:nth-of-type(3)
+			padding-right: 0
+
+.foot-wrap
+	border-top: 1px solid #e3e3e3
+	width: 100%
+	padding-top: 19px
+	margin-bottom: 38px
+	.foot
+		width: $page-width
+		margin: 0 auto
+
+.quick-guide
+	float: left
+	line-height: 12px
+	.guide-list
+		display: block
+		text-align: center
+		font-size: rem(13px)
+		float: left
+		color: #000
+		position: relative
+		margin: 0 8px
+		&:hover
+			text-decoration: underline
+		&::after
+			position: absolute
+			right: -8px
+			top: 50%
+			transform: translateY(-50%)
+			@include pseudo
+
+	.footer-link1
+		margin-bottom: 12px
+		.guide-list
+			&:nth-child(1)
+				color: #218082
+				font-weight: 700
+				margin-left: 0
+			&:nth-child(2)
+				color: #218082
+				font-weight: 700
+			&:nth-child(3)
+				display: block
+			&:nth-child(4)
+				color: #333
+			&:nth-child(5)
+				display: block
+			&:nth-child(6)
+				display: block
+			&:nth-child(7)
+				display: block
+				&::after
+					display: none
+
+	.footer-link2
+		.guide-list
+			&:nth-of-type(1)
+				margin-left: 0
+
+.addr
+	text-align: left
+	font-size: rem(12px)
+	margin-top: 19px
+	line-height: rem(19px)
+	strong, cite
+		display: inline-block
+		margin-right: 16px
+	span
+		display: inline-block
+		margin: 0 16px
+
+.copy
+	line-height: rem(19px)
+	text-align: left
+	font-size: rem(12px)
+	margin-bottom: 0
+
+.footer-aside
+	width: 330px
+	float: right
+	padding-bottom: 19px
+	.button-site
+		float: left
+		width: 160px
+		height: 38px
+		padding-left: 16px
+		line-height: 38px
+		border: 1px solid #ddd
+		background: url(../images/common/bg_arrow02_open.png) 134px 14px no-repeat #f5f5f5
+		font-size: rem(13px)
+		color: #666
+		margin-right: 10px
+		&:nth-of-type(2)
+			margin-right: 0
+		a
+			display: block
+
+	.footer-award
+		float: right
+		margin-top: 19px
+		a
+			display: inline-block
+			height: 31px
+			margin-left: 3px
+			background: url(../images/common/footer_logo.png) no-repeat
+			text-indent: -9999px
+			&.wa
+				width: 46px
+				background-position: 0 0
+			&.kswci
+				width: 28px
+				background-position: -53px 0
+			&.ksgp
+				width: 34px
+				background-position: -88px 0
+			&.ccm
+				width: 40px
+				background-position: -129px 0
+			&.djsi
+				width: 73px
+				background-position: -175px 0

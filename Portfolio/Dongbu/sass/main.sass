@@ -1,5 +1,6 @@
 // 의존 function 모듈
 @import common
+@import mixin
 @import functions/percent
 @import functions/rem
 
@@ -7,39 +8,6 @@ $dominance_color: #00a087
 $assort_color: #636b7e
 $point_color: #fe5400
 $font-family: "맑은고딕", "Malgun Gothic", "apple Gothic",  "Apple SD Gothic Neo", Dotum, "돋움", Gulim, "굴림", "Helvetica-Neue", Helvetica, Arial, Verdana, Tahoma, sans-serif
-
-// * --------------------------------
-// * margin 중앙정렬
-@mixin margin-center
-	margin: 0 auto
-
-// * --------------------------------
-// * button
-@mixin button($width:108px, $height: 38px, $line-height: 38px)
-	display: inline-block
-	border: 1px solid #fff
-	width: $width
-	height: $height
-	line-height: $line-height
-
-@mixin button-go($width:32px, $height: 32px, $top: 50%)
-	position: absolute
-	right: 22px
-	top: $top
-	transform: translateY(-50%)
-	width: $width
-	height: $height
-	background: url(../images/m_main/btn_go_main.png) no-repeat
-	background-size: 100%
-
-// * --------------------------------
-// * 가상선택자
-@mixin pseudo($width: 1px, $height: 8px, $background-color: #dfdfdf)
-	display: block
-	content: ''
-	width: $width
-	height: $height
-	background-color: $background-color
 
 body 
 	color: #666
@@ -64,8 +32,7 @@ a
 
 	.search
 		float: right
-		width: 36px
-		height: 36px
+		@include size(36px, 36px)
 		background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
 		text-indent: -9999px
 		transform: translateY(25%)
@@ -83,7 +50,7 @@ a
 		position: absolute
 		left: 50%
 		top: 50%
-		transform: translate(-60%, -50%)
+		transform: translate(-50%, -50%)
 		@include rm-img-blank
 
 .main-navigation-wrap
@@ -97,8 +64,7 @@ a
 	right: 9px
 	top: 50%
 	color: blue
-	width: 30px
-	height: 27px
+	@include size(30px, 27px)
 	line-height: 0
 	transform: translateY(-50%)
 	cursor: pointer
@@ -106,17 +72,18 @@ a
 	span
 		display: inline-block
 		position: relative
-		width: 20px
-		height: 3px
+		@include size(20px, 3px)
 		margin-top: 4px
 		background-color: $point_color
 		&:first-child
 			margin-top: 0
 
+// MAIN
 .contents-wrap
 	width: 100%
 	background: url("../images/m_main/img_main.jpg") top center no-repeat
 	background-size: 100%
+
 .visual
 	color: #fff
 	text-align: center
@@ -128,7 +95,6 @@ a
 		line-height: rem(33px)
 		font-size: rem(16px)
 	.visual-button
-		color: #fff
 		margin-top: 19px
 		@include button(160px, 57px, 57px)
 		span
@@ -210,7 +176,6 @@ a
 			line-height: rem(16px)
 			padding-bottom: 57px
 		.product-button
-			color: #fff
 			@include button
 			span
 				font-weight: 700
@@ -420,6 +385,8 @@ a
 				display: none
 			&:nth-child(4)
 				color: #333
+				&::after
+					display: none
 			&:nth-child(5)
 				display: none
 			&:nth-child(6)
@@ -447,9 +414,26 @@ a
 	display: none
 
 @media screen and (min-width: 800px)
+
+	// HEADER
+	.utility-navigation-wrap
+		display: none
+
+
+	// MAIN
+	.contents-wrap
+		width: 100%
+
+	// FOOTER
+	.footer
+		width: 100%
+		margin-bottom: 38px
+
+
+@media screen and (min-width: 1000px)
 	
-	.header
-		width: 1200px
+	.box-width
+		min-width: $page-width
 
 	.utility-navigation-wrap
 		display: block
@@ -488,7 +472,6 @@ a
 
 	.main-navigation-wrap
 		display: block
-		margin-right: percent(100, 1200)
 		.main-navigation
 			height: 38px
 			line-height: 38px
@@ -497,6 +480,7 @@ a
 			color: #666
 
 	.side-navigation
+		width: 300px
 		float: right
 		.count
 			display: block
@@ -522,6 +506,7 @@ a
 			height: 38px
 			border: 1px solid #d3d3d3
 			background: #fff
+			overflow: hidden
 			.toggle-menu-button
 				position: absolute
 				right: 50%
@@ -542,6 +527,7 @@ a
 		padding: 0
 		background: url("../images/main/bg_top.jpg") top center no-repeat
 		text-align: center
+		margin: 0 auto
 
 	.visual
 		.visual-title
@@ -818,7 +804,7 @@ a
 				a
 					display: block
 					overflow: hidden
-					width: 300px
+					width: 100%
 					height: 22px
 					text-overflow: ellipsis
 					white-space: nowrap
@@ -853,14 +839,12 @@ a
 				background-position: 50px -213px
 
 	.main-information-wrap
-		color: #000
 		width: 100%
 		border-bottom: 1px solid #e3e3e3
 		background: #f1f1f1
 		padding: initial
 		.main-information
-			width: 1200px
-			margin: 38px auto
+			margin: 38px auto 39px
 		.title
 			font-size: rem(22px)
 			line-height: rem(22px)
@@ -886,7 +870,7 @@ a
 
 	.promotion
 		float: left
-		margin-left: 40px
+		padding-left: 40px
 		.promotion-list
 			padding-top: 0
 			margin-bottom: 0px
@@ -931,9 +915,8 @@ a
 		border-bottom: 1px solid #e3e3e3
 
 	.sns-tel
-		width: 1200px
 		margin: 0 auto
-		height: 57px
+		height: 55px
 
 	.sns-wrap
 		border: none
@@ -992,7 +975,6 @@ a
 		margin-top: 19px
 		margin-bottom: 38px
 		.foot
-			width: 1200px
 			margin: 0 auto
 
 	.quick-guide
