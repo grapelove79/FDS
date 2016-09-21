@@ -7,8 +7,9 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: baseline;
 }
 
-em, strong, cite {
+em, strong, cite, b {
   font-style: normal;
+  font-weight: normal;
 }
 
 ul, ol, li {

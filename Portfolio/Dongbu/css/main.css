@@ -8,8 +8,9 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: baseline;
 }
 
-em, strong, cite {
+em, strong, cite, b {
   font-style: normal;
+  font-weight: normal;
 }
 
 ul, ol, li {
@@ -79,7 +80,7 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-60%, -50%);
+  transform: translate(-50%, -50%);
   vertical-align: bottom;
 }
 
@@ -140,13 +141,14 @@ a {
 }
 
 .visual .visual-button {
-  color: #fff;
   margin-top: 19px;
   display: inline-block;
   border: 1px solid #fff;
   width: 160px;
   height: 57px;
   line-height: 57px;
+  color: #fff;
+  text-align: center;
 }
 
 .visual .visual-button span {
@@ -271,12 +273,13 @@ a {
 }
 
 .product-wrap .product .product-button {
-  color: #fff;
   display: inline-block;
   border: 1px solid #fff;
   width: 108px;
   height: 38px;
   line-height: 38px;
+  color: #fff;
+  text-align: center;
 }
 
 .product-wrap .product .product-button span {
@@ -583,6 +586,10 @@ a {
   color: #333;
 }
 
+.quick-guide .footer-link1 .guide-list:nth-child(4)::after {
+  display: none;
+}
+
 .quick-guide .footer-link1 .guide-list:nth-child(5) {
   display: none;
 }
@@ -621,8 +628,21 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-  .header {
-    width: 1200px;
+  .utility-navigation-wrap {
+    display: none;
+  }
+  .contents-wrap {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .box-width {
+    min-width: 1200px;
   }
   .utility-navigation-wrap {
     display: block;
@@ -663,7 +683,6 @@ a {
   }
   .main-navigation-wrap {
     display: block;
-    margin-right: 8.33333%;
   }
   .main-navigation-wrap .main-navigation {
     height: 38px;
@@ -673,6 +692,7 @@ a {
     color: #666;
   }
   .side-navigation {
+    width: 300px;
     float: right;
   }
   .side-navigation .count {
@@ -701,6 +721,7 @@ a {
     height: 38px;
     border: 1px solid #d3d3d3;
     background: #fff;
+    overflow: hidden;
   }
   .side-navigation .all-navigation .toggle-menu-button {
     position: absolute;
@@ -724,6 +745,7 @@ a {
     padding: 0;
     background: url("../images/main/bg_top.jpg") top center no-repeat;
     text-align: center;
+    margin: 0 auto;
   }
   .visual .visual-title {
     line-height: 5.125rem;
@@ -741,6 +763,8 @@ a {
     width: 240px;
     height: 57px;
     line-height: 57px;
+    color: #fff;
+    text-align: center;
   }
   .information-wrap {
     display: none;
@@ -960,6 +984,8 @@ a {
     width: 122px;
     height: 38px;
     line-height: 38px;
+    color: #fff;
+    text-align: center;
   }
   .product-wrap .product .product-button span {
     font-weight: normal;
@@ -1076,7 +1102,7 @@ a {
   .banner-wrap .notice li a {
     display: block;
     overflow: hidden;
-    width: 300px;
+    width: 100%;
     height: 22px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1117,15 +1143,13 @@ a {
     background-position: 50px -213px;
   }
   .main-information-wrap {
-    color: #000;
     width: 100%;
     border-bottom: 1px solid #e3e3e3;
     background: #f1f1f1;
     padding: initial;
   }
   .main-information-wrap .main-information {
-    width: 1200px;
-    margin: 38px auto;
+    margin: 38px auto 39px;
   }
   .main-information-wrap .title {
     font-size: 1.375rem;
@@ -1165,7 +1189,7 @@ a {
   }
   .promotion {
     float: left;
-    margin-left: 40px;
+    padding-left: 40px;
   }
   .promotion .promotion-list {
     padding-top: 0;
@@ -1218,9 +1242,8 @@ a {
     border-bottom: 1px solid #e3e3e3;
   }
   .sns-tel {
-    width: 1200px;
     margin: 0 auto;
-    height: 57px;
+    height: 55px;
   }
   .sns-wrap {
     border: none;
@@ -1288,7 +1311,6 @@ a {
     margin-bottom: 38px;
   }
   .foot-wrap .foot {
-    width: 1200px;
     margin: 0 auto;
   }
   .quick-guide {
