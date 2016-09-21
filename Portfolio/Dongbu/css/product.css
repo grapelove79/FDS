@@ -383,8 +383,9 @@ a {
 .centents-wrap-01 {
   position: relative;
   width: 100%;
-  background: url(../images/product/bg_feature.jpg) center top no-repeat;
   height: 399px;
+  background: url(../images/product/bg_feature.jpg) center top no-repeat;
+  background-size: cover;
 }
 
 .centents-wrap-01 .contents {
@@ -410,8 +411,9 @@ a {
 .centents-wrap-02 {
   position: relative;
   width: 100%;
-  background: url(../images/product/bg_merit.jpg) center top no-repeat;
   height: 399px;
+  background: url(../images/product/bg_merit.jpg) center top no-repeat;
+  background-size: cover;
 }
 
 .centents-wrap-02 .contents {
@@ -447,6 +449,7 @@ a {
   width: 1000px;
   height: 285px;
   margin: 0 auto;
+  background-size: cover;
 }
 
 .centents-wrap-03 .contents .contents-box {
@@ -476,6 +479,7 @@ a {
   width: 1000px;
   height: 285px;
   margin: 0 auto;
+  background-size: cover;
 }
 
 .centents-wrap-04 .contents .contents-box {

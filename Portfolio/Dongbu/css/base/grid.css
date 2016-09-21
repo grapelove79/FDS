@@ -75,14 +75,14 @@ body{
 .push-7 { left: 1120px; }
 .push-8 { left: 1280px; }
 
-.grid .pull-1 { right: 160px; }
-.grid .pull-2 { right: 320px; }
-.grid .pull-3 { right: 480px; }
-.grid .pull-4 { right: 640px; }
-.grid .pull-5 { right: 800px; }
-.grid .pull-6 { right: 960px; }
-.grid .pull-7 { right: 1120px; }
-.grid .pull-8 { right: 1280px; }
+.pull-1 { right: 160px; }
+.pull-2 { right: 320px; }
+.pull-3 { right: 480px; }
+.pull-4 { right: 640px; }
+.pull-5 { right: 800px; }
+.pull-6 { right: 960px; }
+.pull-7 { right: 1120px; }
+.pull-8 { right: 1280px; }
 
 
 /**
