@@ -23,8 +23,7 @@ a
 	vertical-align: bottom
 
 .hide
-	position: absolute
-	left: -9999em
+	@include hide
 
 // HEADER
 .utility-navigation-wrap
@@ -430,10 +429,7 @@ a
 		margin-bottom: 38px
 
 
-@media screen and (min-width: 1000px)
-	
-	.box-width
-		min-width: $page-width
+@media screen and (min-width: 1024px)
 
 	.utility-navigation-wrap
 		display: block
@@ -913,6 +909,9 @@ a
 	.sns-tel-wrap
 		width: 100%
 		border-bottom: 1px solid #e3e3e3
+		padding:
+				left: 10px
+				right: 10px
 
 	.sns-tel
 		margin: 0 auto
@@ -940,7 +939,7 @@ a
 				display: block
 				float: left
 				width: 32px
-				height: 32px
+				height: 33px
 				&:nth-of-type(1)
 					background: url(../images/m_main/footer_sns.png) no-repeat
 					background-position: left -35px
@@ -969,11 +968,15 @@ a
 				padding-left: 20px
 				color: $point-color
 				font-size: rem(20px)
+				vertical-align: -2px
 
 	.foot-wrap
 		width: 100%
 		margin-top: 19px
 		margin-bottom: 38px
+		padding:
+				left: 10px
+				right: 10px
 		.foot
 			margin: 0 auto
 
@@ -1035,12 +1038,11 @@ a
 		text-align: left
 		font-size: rem(12px)
 		margin-top: 19px
-		strong, cite
+		strong, cite, span
 			display: inline-block
 			margin-right: 16px
-		span
-			display: inline-block
-			margin: 0 16px
+		span:last-child
+			margin-right: 0
 
 	.copy
 		text-align: left

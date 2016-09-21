@@ -1,7 +1,5 @@
 @import functions/rem
 
-
-
 // * --------------------------------
 // * size
 @mixin size($w: null, $h: null) 
@@ -46,3 +44,15 @@
 	width: $width
 	height: $height
 	background-color: $background-color
+
+
+@mixin hide
+	position: absolute
+	left: -9999em
+	&:focus
+		position: static
+		left: 0
+		top: 0 
+		padding: 10px 15px
+		color: #fff
+		background-color: #000

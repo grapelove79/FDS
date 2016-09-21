@@ -63,6 +63,28 @@ body{
  .col-12 { width: 1200px; }
 
 
+[class*="push-"], 
+[class*="pull-"] { position: relative; }
+/* float을 (float의 기본값은 none이다.)주면 다른 요소가 밀려나기 때문에 nomal flow가 깨지는데 position:relative을 줘서 원래 있던 영을 유지한체 흐름을 깨지 않고 이동 함. */
+.push-1 { left: 160px; }
+.push-2 { left: 320px; }
+.push-3 { left: 480px; }
+.push-4 { left: 640px; }
+.push-5 { left: 800px; }
+.push-6 { left: 960px; }
+.push-7 { left: 1120px; }
+.push-8 { left: 1280px; }
+
+.grid .pull-1 { right: 160px; }
+.grid .pull-2 { right: 320px; }
+.grid .pull-3 { right: 480px; }
+.grid .pull-4 { right: 640px; }
+.grid .pull-5 { right: 800px; }
+.grid .pull-6 { right: 960px; }
+.grid .pull-7 { right: 1120px; }
+.grid .pull-8 { right: 1280px; }
+
+
 /**
  * --------------------------------
  * 유닛 모듈 .unit-{$divide-number}-{$units}
@@ -254,7 +276,7 @@ body{
 }
 
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1024px){
 	.unit-l-1-2, 
 	.unit-l-2-4, 
 	.unit-l-3-6, 
