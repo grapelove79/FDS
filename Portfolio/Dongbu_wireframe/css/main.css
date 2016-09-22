@@ -1,7 +1,4 @@
 @charset "UTF-8";
-@import url("base/grid.css");
-/*@import "common.css";*/
-/*@import url("Custom-Grid-UI-home.css");*/
 
 .sns-tel-wrap .center .reset-list .phone-number,
 .sns-tel-wrap .center .reset-list .phone-number {
@@ -278,4 +275,4 @@ a {
   background: #8c8984;
 }
 
-/*# sourceMappingURL=../map/style.css.map */
+/*# sourceMappingURL=../map/main.css.map */
