@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+.sns-tel-wrap .center .reset-list .phone-number,
+.sns-tel-wrap .center .reset-list .phone-number {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.clearfix::after,
+.cf::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.lt-ie8 .clearfix,
+.lt-ie8 .cf {
+  zoom: 1;
+}
+
+body {
+  color: #fff;
+  font-size: 14px;
+  font-family: 맑은고딕, "Malgun Gothic", "apple Gothic", Dotum, 돋움, Gulim, 굴림, "Helvetica-Neue", Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  line-height: 1.5;
+  letter-spacing: -.5px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.hide {
+  position: absolute;
+  left: -9999em;
+}
+
+.utility-navigation-wrap {
+  width: 525px;
+  height: 57px;
+  line-height: 57px;
+  font-size: 0.8125rem;
+  float: right;
+}
+
+.utility-navigation-wrap .utility-navigation {
+  float: left;
+  display: block;
+  color: #666;
+  padding: 0 1.6483516484%;
+}
+
+.utility-navigation-wrap .utility-navigation:nth-of-type(7) {
+  margin-right: 0.5%;
+}
+
+.utility-navigation-wrap .search {
+  float: right;
+  width: 36px;
+  height: 36px;
+  background: url(../images/btn_ico_spt.png) -140px -92px no-repeat;
+  text-indent: -9999px;
+  transform: translateY(25%);
+  border-left: 1px solid #e0e0e0;
+}
+
+.logo-navigation-wrap {
+  margin-bottom: 19px;
+}
+
+.logo {
+  height: 38px;
+  background: #78beb9;
+  text-align: center;
+  line-height: 38px;
+  margin-right: 8.33333%;
+}
+
+.main-navigation-wrap {
+  margin-right: 8.33333%;
+}
+
+.main-navigation-wrap .main-navigation {
+  height: 38px;
+  line-height: 38px;
+  font-size: 1.25rem;
+  line-height: 38px;
+  color: #666;
+}
+
+.side-navigation {
+  float: right;
+}
+
+.side-navigation .count {
+  float: left;
+  width: 80.666666667%;
+  height: 38px;
+  line-height: 38px;
+  background: #78beb9;
+}
+
+.side-navigation .site-map {
+  float: left;
+  width: 16%;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 10px;
+  background: #808080;
+}
+
+.contents-wrap {
+  width: 100%;
+  padding: 0;
+  background: url("../images/background-top.png") top center no-repeat;
+  text-align: center;
+}
+
+.visual {
+  padding-top: 201px;
+}
+
+.information {
+  height: 133px;
+  line-height: 132px;
+  margin-top: 176px;
+  margin-bottom: 38px;
+  text-align: center;
+  box-sizing: content-box;
+  background: #978e9a;
+}
+
+.product-wrap {
+  margin-bottom: 38px;
+}
+
+.product-wrap .product {
+  line-height: 304px;
+  text-align: center;
+}
+
+.product-wrap .product:nth-of-type(1) {
+  height: 608px;
+  line-height: 608px;
+  background: #8d9ba0;
+}
+
+.product-wrap .product:nth-of-type(2) {
+  height: 304px;
+  background: #3f97b0;
+}
+
+.product-wrap .product:nth-of-type(3) {
+  height: 304px;
+  background: #6483a7;
+}
+
+.product-wrap .product:nth-of-type(4) {
+  height: 304px;
+  background: #6483a7;
+}
+
+.product-wrap .product:nth-of-type(5) {
+  height: 304px;
+  background: #73a328;
+}
+
+.banner-wrap {
+  margin-bottom: 38px;
+}
+
+.banner {
+  height: 171px;
+  line-height: 171px;
+  float: left;
+  text-align: center;
+}
+
+.banner:nth-of-type(1) {
+  background: #73a328;
+}
+
+.banner:nth-of-type(2) {
+  background: #9cddd9;
+}
+
+.banner:nth-of-type(3) {
+  background: #dadee1;
+}
+
+.my-contract {
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  margin-bottom: 38px;
+  background: blue;
+}
+
+/* FOOTER */
+.footer {
+  width: 1200px;
+}
+
+.guest {
+  width: 100%;
+  height: 209px;
+  line-height: 209px;
+  text-align: center;
+  background: #dadee1;
+}
+
+.sns-tel-wrap {
+  width: 100%;
+  height: 57px;
+  background: #8d9ba0;
+}
+
+.sns-tel-wrap .center {
+  width: 1200px;
+  height: 57px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sns-tel-wrap .center .sns-wrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.sns-tel-wrap .center .sns-wrap .sns {
+  font-size: 0.875rem;
+  float: left;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin-right: 10px;
+  background: #715b63;
+}
+
+.sns-tel-wrap .center .sns-wrap .sns:nth-of-type(1) {
+  width: 128px;
+  height: 19px;
+  line-height: 19px;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+
+.sns-tel-wrap .center .reset-list {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.sns-tel-wrap .center .reset-list .phone-number {
+  float: left;
+  text-align: center;
+  background: #715b63;
+}
+
+.address {
+  width: 100%;
+  height: 142px;
+  line-height: 143px;
+  text-align: center;
+  background: #8c8984;
+}
+
+/*# sourceMappingURL=../map/main.css.map */
