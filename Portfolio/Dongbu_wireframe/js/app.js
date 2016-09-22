@@ -1,1 +1,0 @@
-toggleGrid('.container', 'grid');
