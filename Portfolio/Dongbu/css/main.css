@@ -129,7 +129,6 @@ a {
 
 .contents-wrap {
   width: 100%;
-  background: url("../images/m_main/img_main.jpg") top center no-repeat;
   background-size: 100%;
 }
 
@@ -747,11 +746,18 @@ a {
     margin-top: 0;
   }
   .contents-wrap {
+    position: relative;
+  }
+  .bg {
     width: 100%;
     padding: 0;
     background: url("../images/main/bg_top.jpg") top center no-repeat;
     text-align: center;
     margin: 0 auto;
+    display: block;
+    position: absolute;
+    height: 200vh;
+    z-index: -100;
   }
   .visual .visual-title {
     line-height: 5.125rem;

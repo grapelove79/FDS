@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="Resources/initialization/ress.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/parallax.css">
 </head>
 
 <body>
@@ -68,6 +69,7 @@
 	
 	<!-- main -->
 	<main id="contents-warp" class="contents-wrap clearfix">
+		<span class="bg"></span>
 		<div class="visual">
 			<h3 class="visual-title">자동차보험</h3>
 			<p class="visual-contents">다이렉트 차보다 사람이 먼저입니다.</p>
@@ -102,41 +104,41 @@
 			</a>
 		</div>
 
-			<div class="main-banner-box container">
-				<div class="main-banner-view">
-					<div class="main-banner-cont unit-1">
-						<dl>
-							<dt class="title"><strong>smarT UBI</strong> 안전운전 특약</dt>
-							<dd class="text">안전한 운전습관을 실천하는 고객님이라면 5% 추가 할인<br>(T map 500km 이상 주행 및 일정 기준 이상의 안전운전 점수 획득 시</dd>
-						</dl>
-						<a href=""><em class="button-go"></em></a>
-					</div>
-					<div class="main-banner-cont unit-1">
-						<ul>
-							<li class="banner-01">동부화재 프로미카 대비 <br>평균 <em>17.2%</em> 할인</li>
-							<li class="banner-02">개인용 3천Km이하 주행 시 <br>최대 <em>22%</em> 할인</li>
-							<li class="banner-03">최근 3년 연속 무사고 시 <br>최대 <em>11.5%</em> 할인</li>
-							<li class="banner-04">블랙박스 장착시 <br>개인용 3%, 업무용 1.5% 할인</li>
-						</ul>
-						<a href="">보험료 계산 바로가기</a>
-					</div>
-					<div class="main-banner-cont unit-1">
-						<dl>
-							<dt class="title"><strong>Baby in car</strong> 특약</dt>
-							<dd class="banner-01">태아가 있는 경우 <em>10%</em> 할인</dd>
-							<dd class="or">or</dd>
-							<dd class="banner-02">만 1세 미만 자녀가 있는 경우 <em>4%</em> 할인</dd>
-						</dl>
-						<a href=""><em class="button-go"></em></a>
-					</div>
+		<div class="main-banner-box container">
+			<div class="main-banner-view">
+				<div class="main-banner-cont unit-1">
+					<dl>
+						<dt class="title"><strong>smarT UBI</strong> 안전운전 특약</dt>
+						<dd class="text">안전한 운전습관을 실천하는 고객님이라면 5% 추가 할인<br>(T map 500km 이상 주행 및 일정 기준 이상의 안전운전 점수 획득 시</dd>
+					</dl>
+					<a href=""><em class="button-go"></em></a>
 				</div>
-				<div class="dot-box">
-					<a href="">첫번째 페이지</a>
-					<a href="">두번째 페이지</a>
-					<a href="">세번째 페이지</a>
-					<a href="">정지</a>
+				<div class="main-banner-cont unit-1">
+					<ul>
+						<li class="banner-01">동부화재 프로미카 대비 <br>평균 <em>17.2%</em> 할인</li>
+						<li class="banner-02">개인용 3천Km이하 주행 시 <br>최대 <em>22%</em> 할인</li>
+						<li class="banner-03">최근 3년 연속 무사고 시 <br>최대 <em>11.5%</em> 할인</li>
+						<li class="banner-04">블랙박스 장착시 <br>개인용 3%, 업무용 1.5% 할인</li>
+					</ul>
+					<a href="">보험료 계산 바로가기</a>
+				</div>
+				<div class="main-banner-cont unit-1">
+					<dl>
+						<dt class="title"><strong>Baby in car</strong> 특약</dt>
+						<dd class="banner-01">태아가 있는 경우 <em>10%</em> 할인</dd>
+						<dd class="or">or</dd>
+						<dd class="banner-02">만 1세 미만 자녀가 있는 경우 <em>4%</em> 할인</dd>
+					</dl>
+					<a href=""><em class="button-go"></em></a>
 				</div>
 			</div>
+			<div class="dot-box">
+				<a href="">첫번째 페이지</a>
+				<a href="">두번째 페이지</a>
+				<a href="">세번째 페이지</a>
+				<a href="">정지</a>
+			</div>
+		</div>
 
 		<div class="container">
 			<section class="product-wrap unit-1">
@@ -224,10 +226,9 @@
 			</section>
 		</div>
 
-		<section class="main-information-wrap unit-1">
-			<h2 class="hide">동부화재 다이렉트 고객서비스</h2>
-			<div class="main-information container clearfix">
-
+		<div class="main-information-wrap unit-1">
+			<section class="main-information container clearfix">
+				<h2 class="hide">동부화재 다이렉트 고객서비스</h2>
 				<dl class="promotion unit-l-7-12">
 					<dt class="title">동부화재 다이렉트 고객님이시라면</dt>
 					<dd>
@@ -258,8 +259,8 @@
 								경품 추천의 혜택도 받아가세요!</a>
 					</dd>
 				</dl>
-			</div>
-		</section>
+			</section>
+		</div>
 	</main>
 	
 	<!-- footer -->
@@ -333,8 +334,18 @@
 		</div>
 	</footer>
 
+
+	<!-- ScrollMagic JS Library-->
+	<!-- ScrollMagic 플러그인 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<!-- ScrollMagic 디버깅 인디케이터 플러그인 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js
+"></script>
+	<!-- Javascript -->
 	<script src="js/toggleGrid.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/logo.js"></script>
+
+	
 	</body>
 </html>
