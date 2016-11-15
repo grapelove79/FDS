@@ -1,0 +1,12 @@
+.wrapper {
+  width: 100%;
+  background-color: Silver; }
+
+.header {
+  background: tomato; }
+
+.main {
+  background: deepskyblue; }
+
+.footer {
+  background: lightgreen; }
