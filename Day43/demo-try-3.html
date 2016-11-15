@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>앵귤러 이해를 위한 실습 Part 3(VIEW단)</title>
+	<style>
+  pre {
+    padding: 1rem;
+    background: #ececec;
+    border-radius: 4px;
+  }
+  </style>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<!-- people은 배열 -->
+<!-- rder_reverse = true;의 true는 반전이다. -->
+<body data-ng-init="
+order_reverse = true;
+people = [
+  {
+    'name'    : 'tomy',
+    'age'     : 23,
+    'mail'    : 'tomy@study.com',
+    'birthday': '2001-09-02',
+    'has-money': 5300,
+    'picture' : {
+      'width': 200,
+      'height': 200,
+      'src': 'http://placehold.it/220x220/34c0ff/fff/?text=tomy'
+    }
+  },
+  {
+    'name'    : 'sunny',
+    'age'     : 32,
+    'mail'    : 'SUNNY@STUDY.COM',
+    'birthday': '1982-02-17',
+    'has-money': 10200,
+    'picture' : {
+      'width': 200,
+      'height': 200,
+      'src': 'http://placehold.it/220x220/7045cf/fff/?text=sunny'
+    }
+  },
+  {
+    'name'    : 'zeus',
+    'age'     : 61,
+    'mail'    : 'zeus@study.com',
+    'birthday': '1109-01-01',
+    'has-money': 1000000,
+    'picture' : {
+      'width': 200,
+      'height': 200,
+      'src': 'http://placehold.it/220x220/3a0099/fff/?text=zeus'
+    }
+  },
+  {
+    'name'    : 'Aron',
+    'age'     : 18,
+    'mail'    : 'aron@study.com',
+    'birthday': '1998-11-21',
+    'has-money': 121900,
+    'picture' : {
+      'width': 200,
+      'height': 200,
+      'src': 'http://placehold.it/220x220/3a0099/fff/?text=aron'
+    }
+  }
+];
+limit_count = people.length;
+">
+
+<!-- <ul>
+  <li data-ng-repeat="person in people">
+    <div>{{ person.name }}</div>
+    <div>{{ person.age }}</div>
+    <div>{{ person.mail }}</div>
+    <div>
+      <img src="{{ person.picture }}" alt="{{ person.name }}">
+    </div>
+  </li>
+</ul> -->
+
+<!-- <button type="button" data-ng-click="order_reverse = !order_reverse">나이 순 정렬 토글</button>
+ -->
+<p>
+	<label for="person_name">Name: </label>
+	<input id="person_name" type="search" data-ng-model="search.name"><!-- searc:객체, name:속성. -->
+</p>
+<p>
+	<label for="person_age">Age: </label>
+	<input id="person_age" type="search" data-ng-model="search.age"><!-- searc:객체, age:속성. -->
+</p>
+<p>
+	<label for="person_limit">Limit: </label>
+	<input id="person_limit" type="search" data-ng-model="limit_count"><!-- searc:객체, age:속성. -->
+</p>
+<p>
+	<label><input name="sorting" type="radio" data-ng-click="order_reverse = true">오름차순</label>
+	<label><input name="sorting" type="radio" data-ng-click="order_reverse = false">내림차순</label>
+</p>
+
+
+<pre>
+	{{ search | json}}
+</pre>
+
+<ol class="people-list">
+<!-- 시작: people.length 개수만큼 반복하여 <li>템플릿 완성 -->
+<!-- 반복되는 것에 ng-repeat을 붙여야 한다. -->
+<!-- orderBy 필터 : orderBy:'-age'의 -를 붙이면 반전된다. -->
+<!-- orderBy의 기본값은 reverse이다. 거기에 true 를 붙이면 반전이된다.-->
+  <li data-ng-repeat="person in people | filter: search | limitTo: limit_count | orderBy:'age' : order_reverse"> 
+    <div data-ng-bind="person.name | uppercase"></div>
+    <div data-ng-bind="person.age"></div>
+    <div data-ng-bind="person.mail | lowercase"></div>
+    <div data-ng-bind="person.birthday | date:'yyyy년 MM월 dd월'"></div>
+    <div data-ng-bind="person['has-money'] | currency:'EURO(€) ':0"></div><!-- 필터는 파이프라인(|)을 사용한다. 옵션은 콜론(:) 을 사용한다.   -->
+    <div>{{ person['has-money'] | number:0 }}원</div> <!-- '원'을 쓸경우 에러가 뜨는데 그러면 데이타 익스프레션을 사용해야 한다. -->
+    <div>
+   <!-- ngSrc: Lazy Loading (게으른 로딩사용). 비동기 통신에서 부르겠다. -->
+   <!-- 프레임워크의 장점은 자동처리이다. -->
+   <!-- data-ng-src는 앵귤러의 속성으로 붙인 디렉트브이다. 접근성이 있다. / src="{{ person.picture.src }}"는 접근성 없다.-->
+      <img
+        data-ng-src="{{ person.picture.src }}"
+        alt="{{ person.name }}"
+        width="{{ person.picture.width }}"
+        height="{{ person.picture.height }}"
+      >
+    </div>
+  </li>
+  <!-- 종료: people.length 개수만큼 반복하여 <li> 템플릿 완성 -->
+</ol>
+
+<pre>
+<code>
+<!-- JSON 필터 -->
+{{ people | json }}
+</code>
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>앵귤러 이해를 위한 실습 Part 2</title>
+	<style>
+		
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<!-- app 객체정의 -->
+<body data-ng-init="
+	app = [{ 
+		'name' : 'DirectiveApp',
+		'switch': eyes,
+	}]
+
+">
+	<div data-ng-cloak class="demo-app-container" data-ng-switch="app.switch"> <!-- 서버에서 구현할때 더블 curly brackets이 살짝 보인는데 data-ng-cloak은 더블 curly brackets을 감춤현상을 준다. -->
+		<h1 class="demo-app-title">{{app.name}}</h1>
+		<div class="demo-app-swicher">
+			<button data-ng-click="app.switch = 'open'">Open</button>
+			<button data-ng-click="app.switch = 'close'">Close</button>
+			<button data-ng-click="app.switch = 'etc'">etc...</button>
+		<!-- 상태 제어 -->
+		<p data-ng-switch-when="open" class="switch-is-open">
+			App Switch Value is Open.
+		</p>
+		<p data-ng-switch-when="close" class="switch-is-close">
+			App Switch Value is Close.
+		</p>
+		<p data-ng-switch-default class="switch-is-something">
+			App Switch Value is Something
+		</p>
+	</div>
+</body>
+</html>
