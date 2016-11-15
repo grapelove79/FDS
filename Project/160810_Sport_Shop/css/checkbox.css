@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*
+  도움준사람 사이먼!!
+*/
+/*
+  뷰포트 사이즈 믹스인
+  $type - size 와 관련된 css 속성
+  $size - px 단위로 작성
+*/
+body {
+  padding: 8.53333vw;
+  background: #000;
+}
+
+.default-themes .toggle-box .toggle-name {
+  color: #9b9b9b;
+}
+
+.default-themes .toggle-box input[type="checkbox"]:checked ~ .toggle-name {
+  color: #ef1a7e;
+}
+
+.default-themes .toggle-box input[type="checkbox"]:checked ~ .toggle-name:before, .default-themes .toggle-box input[type="checkbox"]:checked ~ .toggle-name:after {
+  background-color: #ef1a7e;
+}
+
+.toggle-btn {
+  position: relative;
+  display: block;
+  margin-bottom: 8.53333vw;
+}
+
+.toggle-btn .toggle-name {
+  font-size: 4.66667vw;
+  color: #9b9b9b;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.toggle-btn .toggle-name:before, .toggle-btn .toggle-name:after {
+  position: absolute;
+  top: 50%;
+  display: block;
+  content: '';
+  background-color: #9b9b9b;
+  transition: all 0.3s;
+}
+
+.toggle-btn .toggle-name:before {
+  right: 0;
+  width: 10.53333vw;
+  height: 4vw;
+  border-radius: 0.938em;
+  transform: translate(0, -50%);
+}
+
+.toggle-btn .toggle-name:after {
+  left: 88%;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  box-shadow: -0.112em 0.15em 0.625em rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, -50%);
+}
+
+.toggle-btn input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-btn input[type="checkbox"]:checked ~ .toggle-name {
+  color: #0de0fc;
+}
+
+.toggle-btn input[type="checkbox"]:checked ~ .toggle-name:before, .toggle-btn input[type="checkbox"]:checked ~ .toggle-name:after {
+  background-color: #0de0fc;
+}
+
+.toggle-btn input[type="checkbox"]:checked ~ .toggle-name:after {
+  left: 100%;
+}
+
+.themes-selector {
+  text-align: center;
+}
+
+.themes-selector li {
+  float: left;
+  width: 33.33%;
+}
+
+.themes-selector li:nth-child(1) .themes-btn {
+  position: relative;
+  display: inline-block;
+  width: 21.6vw;
+  height: 21.6vw;
+  border-radius: 100%;
+  border: 1px solid #0de0fc;
+}
+
+.themes-selector li:nth-child(1) .themes-btn .themes-name {
+  text-indent: -9999px;
+}
+
+.themes-selector li:nth-child(1) .themes-btn .themes-name:before, .themes-selector li:nth-child(1) .themes-btn .themes-name:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  transition: all 0.3s;
+  border: 1px solid #0de0fc;
+}
+
+.themes-selector li:nth-child(1) .themes-btn .themes-name:before {
+  width: 18vw;
+  height: 18vw;
+  border: 1px solid #0de0fc;
+}
+
+.themes-selector li:nth-child(1) .themes-btn .themes-name:after {
+  width: 14.66667vw;
+  height: 14.66667vw;
+  background-color: #0de0fc;
+}
+
+.themes-selector li:nth-child(1) .themes-btn input[type="radio"] {
+  display: none;
+}
+
+.themes-selector li:nth-child(1) .themes-btn input[type="radio"]:checked ~ .themes-name {
+  color: #0de0fc;
+}
+
+.themes-selector li:nth-child(1) .themes-btn input[type="radio"]:checked ~ .themes-name:after {
+  width: 100%;
+  height: 100%;
+}
+
+.themes-selector li:nth-child(2) .themes-btn {
+  position: relative;
+  display: inline-block;
+  width: 21.6vw;
+  height: 21.6vw;
+  border-radius: 100%;
+  border: 1px solid #f0167c;
+}
+
+.themes-selector li:nth-child(2) .themes-btn .themes-name {
+  text-indent: -9999px;
+}
+
+.themes-selector li:nth-child(2) .themes-btn .themes-name:before, .themes-selector li:nth-child(2) .themes-btn .themes-name:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  transition: all 0.3s;
+  border: 1px solid #f0167c;
+}
+
+.themes-selector li:nth-child(2) .themes-btn .themes-name:before {
+  width: 18vw;
+  height: 18vw;
+  border: 1px solid #f0167c;
+}
+
+.themes-selector li:nth-child(2) .themes-btn .themes-name:after {
+  width: 14.66667vw;
+  height: 14.66667vw;
+  background-color: #f0167c;
+}
+
+.themes-selector li:nth-child(2) .themes-btn input[type="radio"] {
+  display: none;
+}
+
+.themes-selector li:nth-child(2) .themes-btn input[type="radio"]:checked ~ .themes-name {
+  color: #f0167c;
+}
+
+.themes-selector li:nth-child(2) .themes-btn input[type="radio"]:checked ~ .themes-name:after {
+  width: 100%;
+  height: 100%;
+}
+
+.themes-selector li:nth-child(3) .themes-btn {
+  position: relative;
+  display: inline-block;
+  width: 21.6vw;
+  height: 21.6vw;
+  border-radius: 100%;
+  border: 1px solid #d2d940;
+}
+
+.themes-selector li:nth-child(3) .themes-btn .themes-name {
+  text-indent: -9999px;
+}
+
+.themes-selector li:nth-child(3) .themes-btn .themes-name:before, .themes-selector li:nth-child(3) .themes-btn .themes-name:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  transition: all 0.3s;
+  border: 1px solid #d2d940;
+}
+
+.themes-selector li:nth-child(3) .themes-btn .themes-name:before {
+  width: 18vw;
+  height: 18vw;
+  border: 1px solid #d2d940;
+}
+
+.themes-selector li:nth-child(3) .themes-btn .themes-name:after {
+  width: 14.66667vw;
+  height: 14.66667vw;
+  background-color: #d2d940;
+}
+
+.themes-selector li:nth-child(3) .themes-btn input[type="radio"] {
+  display: none;
+}
+
+.themes-selector li:nth-child(3) .themes-btn input[type="radio"]:checked ~ .themes-name {
+  color: #d2d940;
+}
+
+.themes-selector li:nth-child(3) .themes-btn input[type="radio"]:checked ~ .themes-name:after {
+  width: 100%;
+  height: 100%;
+}

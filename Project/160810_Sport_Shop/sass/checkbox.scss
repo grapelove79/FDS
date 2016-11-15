@@ -1,0 +1,174 @@
+/*
+  도움준사람 사이먼!!
+*/
+
+$primary-color: #0de0fc;
+$disable-color: #9b9b9b;
+
+// 단위 제거 함수
+@function deUnit($value) {
+  @return ($value / ($value * 0 + 1))
+}
+
+/*
+  뷰포트 사이즈 믹스인
+  $type - size 와 관련된 css 속성
+  $size - px 단위로 작성
+*/
+@mixin vps($type, $size) {
+  #{$type}:deUnit($size) / deUnit(750px) * 100vw;
+}
+
+body {
+  @include vps(padding, 64px);
+  background:#000;
+}
+
+@mixin toggle-base {
+  position:relative;
+  display:block;
+  @include vps(margin-bottom, 64px);
+  
+  .toggle-name {
+    @include vps(font-size, 35px);
+    color: $disable-color;
+    font-weight: 700;
+    transition:all 0.3s;
+    
+    &:before,
+    &:after {
+      position:absolute;
+      top:50%;
+      display:block;
+      content:'';
+      background-color: $disable-color;
+      transition:all 0.3s;
+    }
+    &:before {
+      right:0;
+      @include vps(width, 79px);
+      @include vps(height, 30px);
+      border-radius: 0.938em;
+      transform:translate(0, -50%);
+    }    
+    
+    &:after {
+      left:88%;
+      @include vps(width, 45px);
+      @include vps(height, 45px);
+      border-radius:50%;
+      box-shadow: -0.112em 0.15em 0.625em rgba(0, 0, 0, 0.8);
+      transform:translate(-50%, -50%);
+    }
+  }
+  
+  input[type="checkbox"] {display:none;}
+  input[type="checkbox"]:checked ~ .toggle-name {
+    color:$primary-color;
+    
+    &:before,
+    &:after {
+      background-color:$primary-color;
+    }
+    &:after {left:100%;}
+    
+  }
+}
+
+@mixin themes-base($themes-color) {
+  position:relative;
+  display:inline-block;
+  @include vps(width, 162px);
+  @include vps(height, 162px);
+  border-radius:100%;
+  border:1px solid $themes-color;
+  
+  .themes-name {
+    text-indent:-9999px;
+    &:before,
+    &:after {
+      content:'';
+      display:block;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      border-radius:100%;
+      transition:all 0.3s;
+      border:1px solid $themes-color;
+    }
+
+    &:before {
+      @include vps(width, 135px);
+      @include vps(height, 135px);
+      border:1px solid $themes-color;
+    }
+
+    &:after {
+      @include vps(width, 110px);
+      @include vps(height, 110px);
+      background-color:$themes-color;
+    }
+  }
+  
+  
+  input[type="radio"] {display:none;}
+  input[type="radio"]:checked ~ .themes-name {
+    color:$themes-color;
+    
+    &:after {
+      width:100%;
+      height:100%;
+    }
+  }
+}
+
+.default-themes {
+  
+  $primary-color: #ef1a7e;
+  
+  .toggle-box {
+
+    .toggle-name {color: $disable-color;}
+    
+    input[type="checkbox"]:checked ~ .toggle-name
+    {
+      color:$primary-color;
+
+      &:before,
+      &:after {
+        background-color:$primary-color;
+      }
+    }
+  }
+  
+}
+
+.toggle-btn {
+  @include toggle-base;
+}
+
+.themes-selector {
+  text-align:center;
+  li {
+    float:left;
+    width:33.33%;
+    
+    &:nth-child(1) {
+      .themes-btn {
+        @include themes-base($primary-color);
+      }
+    }
+    &:nth-child(2) {
+      .themes-btn {
+        @include themes-base(#f0167c);
+      }
+    }
+    &:nth-child(3) {
+      .themes-btn {
+        @include themes-base(#d2d940);
+      }
+    }
+  }
+}
+
