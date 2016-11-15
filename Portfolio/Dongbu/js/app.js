@@ -19,17 +19,17 @@ toggleGrid('.container', 'grid');
 	 * 핀 컨트롤(제어)
 	 * ---------------------------------------------------------- */
 		var bg_pin = new SM.Scene({
-			//'triggerElement': '.bg',
-			//'triggerHook': 0,
-			//'duration': 300
+			'triggerElement': '.bg',
+			'triggerHook': 0,
+			'duration': 300
 		});
 		bg_pin
 			.setPin('.bg',{'pushFollowers': false})
-			.addIndicators({
-				//'name': 'bg pin',
-				//'colorStart': '#fe4940',
-				//'colorEnd': '#36a8fe'
-			})
+			// .addIndicators({
+			// 	'name': 'bg pin',
+			// 	'colorStart': '#fe4940',
+			// 	'colorEnd': '#36a8fe'
+			// }) // 디버깅
 			.addTo(ctrl)
 			.on('end', function(evt){
 				this.removePin(true);
@@ -59,9 +59,9 @@ toggleGrid('.container', 'grid');
 			// 'reverse': false,
 		})
 		.setClassToggle(trigger_el_selector, 'fade-in')
-		.addIndicators({
-			'name': trigger_el_selector
-		}) // 디버깅
+		// .addIndicators({
+		// 	'name': trigger_el_selector
+		// }) // 디버깅
 		.addTo(ctrl);
 	});
 
