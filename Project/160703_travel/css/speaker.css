@@ -28,8 +28,8 @@ body {
 .speakers-container {
 	width: 1000px;
 	max-width: 1000px;
-	margin:2rem auto;
-	border: 1px solid;
+	margin:1.5rem auto;
+	/*border: 1px solid;*/
 
 }
 
