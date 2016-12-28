@@ -1,7 +1,7 @@
 // 플래이스홀더: 변화가 없는 상태변화없을때
 // 믹스인 : 스크립트처럼 뭔가 바뀌지.. 움직임과 색이 변경된다던지. 값이 바뀐다.
 
-$carousel_arrow: arrow
+$carousel_arrow: btn
 $dominance_color: #f8d2c5
 $assort_color: #4d4b4a
 $point_color: #f3987b
@@ -123,9 +123,9 @@ a
 			height: 87px
 			color: white
 			font-size: 100px
-		& .#{$carousel_arrow}_left
+		& .#{$carousel_arrow}_prev
 			@include position-left($left: 10px, $transform: translateY(-50%))
-		& .#{$carousel_arrow}_right
+		& .#{$carousel_arrow}_next
 			@include position-right($right: 10px, $transform: translateY(-50%))
 
 // MAIN
@@ -160,45 +160,60 @@ a
 	.space_list:nth-of-type(3)
 		margin-right: 0
 
-
+// 캐러셀
 .carousel_wrapper
 	background-color: $dominance_color
-	.carousel_img
-		position: relative
-		width: 940px
-		height: 408px
-		@extend %margin
-		& .fa-picture-o
-			@include position-left
-			width: 86px
-			height: 87px
-			color: white
-			font-size: 100px
-		& .#{$carousel_arrow}_left
-			@include position-left($left: 10px, $transform: translateY(-50%))
-		& .#{$carousel_arrow}_right
-			@include position-right($right: 10px, $transform: translateY(-50%))
+	position: relative
+	width: 940px
+	height: 336px
+	left: 50%
+	transform: translateX(-50%)
+	overflow: hidden
 
-	.dot-nav-area
-		text-align: center
+	.indicator
 		position: absolute
+		text-align: center
 		left: 50%
 		bottom: 28px
 		transform: translateX(-50%)
+		z-index: 1000
+		a 
+			display: inline-block
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			margin-left: 20px
+			&.btn_off
+				background: $point_color
+			&.btn_off:first-child
+			&.btn_on
+				background: #fff
 
-	.dot
-		display: inline-block
-		width: 15px
-		height: 15px
-		vertical-align: middle
-		background-color: $point_color
-		border-radius: 50%
-		margin-left: 20px
-		&.on,
-		&:hover,
-		&:active
-			background-color: #fff
+	.btn_wrap
+		position: absolute
+		top: 50%
+		width: 940px
+		height: 106px
+		// transform은 높이 값이 있어야 한다.
+		transform: translateY(-50%)
+		z-index: 99
 
+	.btn_wrap button
+		cursor: pointer
+		border: none
+		padding: 0
+		width: 33px
+		height: 106px
+		position: absolute
+		&.#{$carousel_arrow}_prev
+			left: 10px
+			background: url(../images/btn_prev.png) 0 0 no-repeat
+		&.#{$carousel_arrow}_next
+			right: 10px
+			background: url(../images/btn_next.png) 0 0 no-repeat
+
+	.slider_images li
+		float: left
 
 .creator_wrapper
 	width: 940px

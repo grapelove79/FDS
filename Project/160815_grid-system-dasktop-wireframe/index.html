@@ -32,9 +32,9 @@
 			</div>
 			<div class="visual">
 				<div class="visual_img">
-					<a href="#" class="arrow_left"><img src="images/arrow-left.png" alt="오늘쪽으로 넘김"></a>
+					<!-- <a href="#" class="btn_prev"><img src="images/arrow-left.png" alt="오늘쪽으로 넘김"></a> -->
 					<a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i></a>
-					<a href="#" class="arrow_right"><img src="images/arrow-right.png" alt="왼쪽으로 넘김"></a>
+					<!-- <a href="#" class="btn_next"><img src="images/arrow-right.png" alt="왼쪽으로 넘김"></a> -->
 				</div>
 			</div>
 		</header>
@@ -82,28 +82,46 @@
 					</article>
 				</div>
 			</section>
-
+			
+			<!-- 이미지 슬라이드 -->
+			<!-- 캐러셀 마크업 순서: indicator -> 이전 다음 버튼 -> 이미지   -->
 			<section class="carousel_wrapper">
 				<h2 class="readable-hidden">CAROUSEL</h2>
-				<div class="carousel_img">
-					<a href="#">
-						<i class="fa fa-picture-o" aria-hidden="true"></i>
-						<img src="http://placehold.it/940x409/f3c8ba/f3c8ba" alt="">
-					</a>
-					<a href="#" class="arrow_left"><img src="images/arrow-left-w.png" alt="오늘쪽으로 넘김"></a>
-					<a href="#" class="arrow_right"><img src="images/arrow-right-w.png" alt="왼쪽으로 넘김"></a>
-
-				<div class="dot-nav-area">
-				  <a href="#" class="dot"></a>
-				  <!-- 활성화 'on' 클래스 추가 -->
-				  <a href="#" class="dot on"></a>
-				  <a href="#" class="dot"></a>
-				  <a href="#" class="dot"></a>
-				  <a href="#" class="dot"></a>
-				</div>
+				<div class="indicator">
+					<a href="#" class="btn_off indicator_btn"><span class="readable-hidden">1번 이미지</span></a>
+					<!-- 활성화 'on' 클래스 추가 -->
+					<a href="#" class="btn_off indicator_btn"><span class="readable-hidden">2번 이미지</span></a>
+					<a href="#" class="btn_off indicator_btn"><span class="readable-hidden">3번 이미지</span></a>
+					<a href="#" class="btn_off indicator_btn"><span class="readable-hidden">4번 이미지</span></a>
+					<a href="#" class="btn_off indicator_btn"><span class="readable-hidden">5번 이미지</span></a>
 				</div>
 
+
+				<div class="btn_wrap">
+					<button type="button" class="btn_prev"><span class="readable-hidden">이전 이미지로 이동</span></button>
+					<button type="button" class="btn_next"><span class="readable-hidden">다음 이미지로 이동</span></button>
+				</div>
+
+				<ul class="slider_images">
+					<li>
+						<img src="images/img01.jpg" alt="구체구 폭포" width="940" height="336">
+					</li>
+					<li>
+						<img src="images/img02.jpg" alt="베이징" width="940" height="336">
+					</li>
+					<li>
+						<img src="images/img03.jpg" alt="운남성 후타호샤" width="940" height="336">
+					</li>
+					<li>
+						<img src="images/img04.jpg" alt="청두" width="940" height="336">
+					</li>
+					<li>
+						<img src="images/img05.jpg" alt="구체구" width="940" height="336">
+					</li>
+				</ul>
 			</section>
+
+
 
 			<section class="creator_wrapper">
 				<h2 class="creator_heading"><span class="line"></span>작품을 만드는 사람들<span class="line"></span></h2>
@@ -181,5 +199,8 @@
 		</footer>
 
 	</div>
+
+	<script src="js/carousel.js"></script>
+
 </body>
 </html>
