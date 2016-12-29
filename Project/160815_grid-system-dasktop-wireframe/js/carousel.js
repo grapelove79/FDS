@@ -1,4 +1,4 @@
-(function(global){1
+(function(global){
   'use strict';
   var container = document.querySelector('.carousel_wrapper');
   var container_width = container.clientWidth;
