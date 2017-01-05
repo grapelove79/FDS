@@ -1,0 +1,58 @@
+@import functions/rem
+
+// * --------------------------------
+// * size
+@mixin size($w: null, $h: null) 
+  width: $w
+  height: $h
+
+// * --------------------------------
+// * text
+@mixin text($font-size: 18px, $line-height: 20px, $color: #fff)
+	font-size: rem($font-size)
+	line-height: rem($line-height)
+	color: $color
+
+// * --------------------------------
+// * button
+@mixin button($width:108px, $height: 38px, $line-height: 38px, $color: #fff, $b-color: #fff)
+	display: inline-block
+	border: 1px solid $b-color
+	width: $width
+	height: $height
+	line-height: $line-height
+	color: $color
+	text-align: center
+
+// * --------------------------------
+// * 화살표 서클 button
+@mixin button-go($width:32px, $height: 32px, $top: 50%)
+	position: absolute
+	right: 22px
+	top: $top
+	transform: translateY(-50%)
+	width: $width
+	height: $height
+	background: url(../images/m_main/btn_go_main.png) no-repeat
+	background-size: 100%
+
+// * --------------------------------
+// * 가상선택자
+@mixin pseudo($width: 1px, $height: 8px, $background-color: #dfdfdf)
+	display: block
+	content: ''
+	width: $width
+	height: $height
+	background-color: $background-color
+
+
+@mixin hide
+	position: absolute
+	left: -9999em
+	&:focus
+		position: static
+		left: 0
+		top: 0 
+		padding: 10px 15px
+		color: #fff
+		background-color: #000
