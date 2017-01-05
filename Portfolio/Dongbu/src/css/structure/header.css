@@ -1,0 +1,20 @@
+header {
+	width: 100%;
+	height: 482px;
+	background: #242424;
+}
+
+header, main, footer {
+	color: #fff;
+}
+
+.header-top, main, footer {
+	width: 1200px;
+	margin: 0 auto;
+	background: #FD00AE;
+	height: 200px;
+}
+
+
+
+

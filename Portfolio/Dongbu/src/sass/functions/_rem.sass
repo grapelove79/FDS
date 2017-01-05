@@ -1,0 +1,7 @@
+// rem(20px) -> 1.25rem
+@function rem($px, $base-font-size: 16px)
+	// 결과 값을 반환(return)
+	// $px: 20px;
+	// <html> 요소의 기본 글자 크기는 16px
+	// 20/16
+	@return ($px/$base-font-size) * 1rem
