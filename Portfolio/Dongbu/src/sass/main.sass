@@ -350,31 +350,40 @@ a
 .quick-guide
 	height: 57px
 	line-height: 57px
+	.guide-list
+		display: block
+		width: 33.33333%
+		text-align: center
+		font-size: rem(12px)
+		float: left
+		color: #000
+		position: relative
+		&::after
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			@include pseudo
+
 	.footer-link1
-		li
-			width: 33.33333%
-			text-align: center
-			font-size: rem(12px)
-			float: left
-			position: relative
-			&::after
-				position: absolute
-				right: 0
-				top: 50%
-				transform: translateY(-50%)
-				@include pseudo
+		.guide-list
+			&:nth-child(1)
+				color: #218082
+			&:nth-child(2)
+				color: #218082
+			&:nth-child(3)
+				display: none
 			&:nth-child(4)
+				color: #333
 				&::after
 					display: none
-			a
-				color: #333
-			.guide-list
-				color: #218082
-
-		.guide-list-none
-			display: none
-			&::after
+			&:nth-child(5)
 				display: none
+			&:nth-child(6)
+				display: none
+			&:nth-child(7)
+				display: none
+
 	.footer-link2
 		display: none
 
@@ -412,7 +421,7 @@ a
 
 
 @media screen and (min-width: 1024px)
-
+	
 	.utility-navigation-wrap
 		position: relative
 		display: block
@@ -439,7 +448,7 @@ a
 
 	.logo-navigation-wrap
 		height: initial
-		margin-bottom: 12px
+		margin-bottom: 19px
 
 	.logo
 		position: relative
@@ -503,7 +512,6 @@ a
 		position: relative
 		//width: 100%
 		background: none
-		border-top: 2px solid #00a087
 		//background-size: 100%
 
 	.bg
@@ -533,7 +541,7 @@ a
 		display: none
 		
 	.main-banner-box
-		//position: relative
+		position: relative
 		margin-top: 76px
 		display: block
 		color: #444
@@ -549,13 +557,13 @@ a
 		.button-go
 			@include button-go(48px, 48px)
 
-	.main-banner
-		height: 133px
-		position: relative
-		background: #d0d8db
-		padding: 0 40px
-		opacity: 0.9
 		.main-banner-cont
+			position: relative
+			height: 133px
+			background: #d0d8db
+			padding: 0 40px
+			opacity: 0.9
+
 			&:nth-of-type(1)
 				text-align: left
 				font-size: rem(14px)
@@ -972,59 +980,58 @@ a
 			margin: 0 auto
 
 	.quick-guide
+		float: left
 		height: initial
 		line-height: 12px
+		.guide-list
+			display: block
+			width: initial
+			text-align: center
+			font-size: rem(13px)
+			float: left
+			color: #000
+			position: relative
+			margin: 0 8px
+			&:hover
+				text-decoration: underline
+			&::after
+				position: absolute
+				right: -8px
+				top: 50%
+				transform: translateY(-50%)
+				@include pseudo
+
 		.footer-link1
 			margin-bottom: 12px
-			li
-				width: initial
-				text-align: center
-				font-size: rem(13px)
-				float: left
-				position: relative
-				margin: 0 8px
-				&::after
-					position: absolute
-					right: -8px
-					top: 50%
-					transform: translateY(-50%)
-					@include pseudo
+			.guide-list
+				&:nth-child(1)
+					color: #218082
+					font-weight: 700
+					margin-left: 0
+				&:nth-child(2)
+					color: #218082
+					font-weight: 700
+				&:nth-child(3)
+					display: block
 				&:nth-child(4)
-					&::after
-						display: block
+					color: #333
+				&:nth-child(5)
+					display: block
+				&:nth-child(6)
+					display: block
 				&:nth-child(7)
+					display: block
 					&::after
 						display: none
-				a
-					color: #000
-				.guide-list
-					color: #218082
-					font-weight: bold
-
-			.guide-list-none
-				display: block
-				&::after
-					display: block
 
 		.footer-link2
 			display: block
-			li
-				float: left
-				font-size: rem(13px)
-				position: relative
-				margin: 0 8px
-				&::after
-					position: absolute
-					right: -8px
-					top: 50%
-					transform: translateY(-50%)
-					@include pseudo
-
-				&:nth-child(3)
+			.guide-list
+				&:nth-of-type(1)
+					margin-left: 0
+				&:nth-of-type(3)
 					&::after
 						display: none
-				a
-					color: #000
 
 	.addr
 		text-align: left
