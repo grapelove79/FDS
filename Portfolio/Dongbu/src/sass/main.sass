@@ -29,14 +29,6 @@ a
 .utility-navigation-wrap
 	display: none
 
-	.search
-		float: right
-		@include size(36px, 36px)
-		background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
-		text-indent: -9999px
-		transform: translateY(25%)
-		border-left: 1px solid #e0e0e0
-
 .logo-navigation-wrap
 	height: 56px
 	position: relative
@@ -430,31 +422,54 @@ a
 
 
 @media screen and (min-width: 1024px)
-
+	
 	.utility-navigation-wrap
+		position: relative
 		display: block
-		width: 525px
 		height: 57px
-		line-height: 57px
-		font-size: rem(13px)
-		float: right
 
 	.utility-navigation
-		float: left
-		display: block
+		position: absolute
+		right: 0
+		top: 0
 		color: #666
-		padding: 0 1.6483516484%
-		&:nth-of-type(7)
-			margin-right: 0.5%
+		font-size: rem(13px)
+		li
+			float: left
+			line-height: 57px
+			margin-left: 20px
+			.search
+				margin-left: -6px
+				display: block
+				@include size(36px, 36px)
+				background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
+				text-indent: -9999px
+				transform: translateY(25%)
+				border-left: 1px solid #e0e0e0
 
-	.search
-		float: right
-		width: 36px
-		height: 36px
-		background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
-		text-indent: -9999px
-		transform: translateY(25%)
-		border-left: 1px solid #e0e0e0
+	// .utility-navigation-wrap
+	// 	display: block
+	// 	width: 525px
+	// 	height: 57px
+	// 	line-height: 57px
+	// 	font-size: rem(13px)
+
+	// .utility-navigation
+	// 	float: left
+	// 	display: block
+	// 	color: #666
+	// 	padding: 0 1.6483516484%
+	// 	&:nth-of-type(7)
+	// 		margin-right: 0.5%
+
+	// .search
+	// 	float: right
+	// 	width: 36px
+	// 	height: 36px
+	// 	background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
+	// 	text-indent: -9999px
+	// 	transform: translateY(25%)
+	// 	border-left: 1px solid #e0e0e0
 
 	.logo-navigation-wrap
 		height: initial
