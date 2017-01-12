@@ -22,6 +22,7 @@ toggleGrid('.container', 'grid');
 			'triggerElement': '.bg',
 			'triggerHook': 0,
 			'duration': 300
+			'reverse': false 
 		});
 		bg_pin
 			.setPin('.bg',{'pushFollowers': false})
@@ -45,7 +46,7 @@ toggleGrid('.container', 'grid');
 
 	// 배열은 length값을 가지고 있기때문에 반복 순환처리구문을 할 수 있다.
 	// var scene_list = '.bg, .product-wrap, .banner-wrap, .main-link-wrap, .main-information-wrap, .footer'.split(', ');
-	var scene_list = '.main-banner-view, .product-wrap, .banner-wrap, .main-link-wrap, .main-information-wrap, .footer'.split(', ');
+	var scene_list = '.main-banner-view, .product-wrap, .banner-wrap, .main-link-wrap, .main-information-wrap'.split(', ');
 	// console.log(scene_list);
 	scene_list.forEach(function(trigger_el_selector, idx){ // forEach는 ES6이다.
 		// console.log(trigger_el_selector);
@@ -56,7 +57,7 @@ toggleGrid('.container', 'grid');
 			'triggerHook': 0,  // 0.5가 기본값이고 중간이다.
 			// 'duration': 300, // 씬이 끝나는 기간
 			'offset': -600,
-			// 'reverse': false,
+			'reverse': false,
 		})
 		.setClassToggle(trigger_el_selector, 'fade-in')
 		// .addIndicators({
