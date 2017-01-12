@@ -162,7 +162,8 @@ a
 			line-height: rem(39px)
 			padding-top: 76px
 			padding-bottom: 19px
-		&:nth-of-type(3) .product-title, &:nth-of-type(4) .product-title
+		&:nth-of-type(3) .product-title, 
+		&:nth-of-type(4) .product-title
 			padding-top: 38px
 			padding-bottom: 0
 			font-size: rem(20px)
@@ -170,11 +171,10 @@ a
 			font-size: rem(14px)
 			line-height: rem(16px)
 			padding-bottom: 57px
-		&:nth-of-type(3) .product-contents, &:nth-of-type(4) .product-contents
-			height: 38px
+		&:nth-of-type(3) .product-contents, 
+		&:nth-of-type(4) .product-contents
 			line-height: 38px
-			padding-bottom: 0
-			margin-bottom: 26px
+			padding-bottom: 26px
 		.product-button
 			@include button
 			span
@@ -446,30 +446,6 @@ a
 				transform: translateY(25%)
 				border-left: 1px solid #e0e0e0
 
-	// .utility-navigation-wrap
-	// 	display: block
-	// 	width: 525px
-	// 	height: 57px
-	// 	line-height: 57px
-	// 	font-size: rem(13px)
-
-	// .utility-navigation
-	// 	float: left
-	// 	display: block
-	// 	color: #666
-	// 	padding: 0 1.6483516484%
-	// 	&:nth-of-type(7)
-	// 		margin-right: 0.5%
-
-	// .search
-	// 	float: right
-	// 	width: 36px
-	// 	height: 36px
-	// 	background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
-	// 	text-indent: -9999px
-	// 	transform: translateY(25%)
-	// 	border-left: 1px solid #e0e0e0
-
 	.logo-navigation-wrap
 		height: initial
 		margin-bottom: 19px
@@ -728,35 +704,21 @@ a
 				font-size: rem(36px)
 				line-height: initial
 				padding-top: 70px
-				padding-bottom: initial
-				background: red
-
+				padding-bottom: 12px
 			&:nth-of-type(3) .product-title, 
 			&:nth-of-type(4) .product-title
 				font-size: rem(36px)
-				//height: 57px
 				padding-top: 70px
-				//padding-bottom: initial
-				//margin-top: 57px
+				padding-bottom: 12px
 
 			.product-contents
 				font-size: rem(14px)
-				line-height: rem(42px)
-				padding-bottom: 35px
-			
-
-
-
-
-		// 	product-title
-		// 	font-size: rem(28px)
-		// 	line-height: rem(39px)
-		// 	padding-top: 76px
-		// 	padding-bottom: 19px
-		// .product-contents
-		// 	font-size: rem(14px)
-		// 	line-height: rem(16px)
-		// 	padding-bottom: 57px
+				line-height: initial
+				padding-bottom: 50px
+			&:nth-of-type(3) .product-contents, 
+			&:nth-of-type(4) .product-contents
+				line-height: initial
+				padding-bottom: 50px
 
 			.product-button
 				color: #fff
@@ -765,15 +727,6 @@ a
 					font-weight: normal
 			.button-go
 				@include button-go(48px, 48px, 38px)
-
-
-
-			&:nth-of-type(3) .product-contents, &:nth-of-type(4) .product-contents
-				height: initial
-				font-size: rem(14px)
-				line-height: rem(42px)
-				padding-bottom: 35px
-				margin-bottom: initial
 
 	.banner-wrap
 		margin-bottom: 38px
