@@ -21,7 +21,7 @@ toggleGrid('.container', 'grid');
 		var bg_pin = new SM.Scene({
 			'triggerElement': '.bg',
 			'triggerHook': 0,
-			'duration': 300
+			'duration': 300,
 			'reverse': false 
 		});
 		bg_pin
@@ -57,7 +57,7 @@ toggleGrid('.container', 'grid');
 			'triggerHook': 0,  // 0.5가 기본값이고 중간이다.
 			// 'duration': 300, // 씬이 끝나는 기간
 			'offset': -600,
-			'reverse': false,
+			'reverse': false
 		})
 		.setClassToggle(trigger_el_selector, 'fade-in')
 		// .addIndicators({
