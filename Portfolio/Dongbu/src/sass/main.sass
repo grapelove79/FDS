@@ -162,24 +162,23 @@ a
 			line-height: rem(39px)
 			padding-top: 76px
 			padding-bottom: 19px
-		.product-contents
-			font-size: rem(14px)
-			line-height: rem(16px)
-			padding-bottom: 57px
-		.product-button
-			@include button
-			span
-				font-weight: 700
-
 		&:nth-of-type(3) .product-title, &:nth-of-type(4) .product-title
 			padding-top: 38px
 			padding-bottom: 0
 			font-size: rem(20px)
+		.product-contents
+			font-size: rem(14px)
+			line-height: rem(16px)
+			padding-bottom: 57px
 		&:nth-of-type(3) .product-contents, &:nth-of-type(4) .product-contents
 			height: 38px
 			line-height: 38px
 			padding-bottom: 0
 			margin-bottom: 26px
+		.product-button
+			@include button
+			span
+				font-weight: 700
 
 .banner-wrap
 	margin-bottom: 38px
@@ -702,6 +701,7 @@ a
 		.product
 			text-align: center
 			position: relative
+
 			&:nth-of-type(1)
 				height: 608px
 				background: url(../images/main/bg_product01.png) left center no-repeat
@@ -726,13 +726,37 @@ a
 
 			.product-title
 				font-size: rem(36px)
+				line-height: initial
 				padding-top: initial
+				padding-bottom: initial
 				background: red
-				
+
+			&:nth-of-type(3) .product-title, &:nth-of-type(4) .product-title
+				font-size: rem(36px)
+				//height: 57px
+				padding-top: initial
+				padding-bottom: initial
+				//margin-top: 57px
+
 			.product-contents
 				font-size: rem(14px)
 				line-height: rem(42px)
 				padding-bottom: 35px
+			
+
+
+
+
+		// 	product-title
+		// 	font-size: rem(28px)
+		// 	line-height: rem(39px)
+		// 	padding-top: 76px
+		// 	padding-bottom: 19px
+		// .product-contents
+		// 	font-size: rem(14px)
+		// 	line-height: rem(16px)
+		// 	padding-bottom: 57px
+
 			.product-button
 				color: #fff
 				@include button(122px, 38px, 38px)
@@ -741,13 +765,7 @@ a
 			.button-go
 				@include button-go(48px, 48px, 38px)
 
-			&:nth-of-type(3) .product-title, &:nth-of-type(4) .product-title
-				font-size: rem(36px)
-				height: 57px
-				line-height: 63px
-				margin-top: 57px
-				padding-top: initial
-				padding-bottom: initial
+
 
 			&:nth-of-type(3) .product-contents, &:nth-of-type(4) .product-contents
 				height: initial
