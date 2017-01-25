@@ -7,7 +7,7 @@
 $dominance_color: #00a087
 $assort_color: #636b7e
 $point_color: #fe5400
-$footer_color: #13756f
+$link_color: #13756f
 $font-family: "맑은고딕", "Malgun Gothic", "apple Gothic",  "Apple SD Gothic Neo", Dotum, "돋움", Gulim, "굴림", "Helvetica-Neue", Helvetica, Arial, Verdana, Tahoma, sans-serif
 
 body 
@@ -55,18 +55,19 @@ a
 	position: absolute
 	right: 9px
 	top: 50%
-	color: blue
-	@include size(30px, 27px)
+	@include size(50px, 27px)
 	line-height: 0
 	transform: translateY(-50%)
 	cursor: pointer
 	overflow: hidden
 	span
-		display: inline-block
+		display: block
 		position: relative
 		@include size(20px, 3px)
 		margin-top: 4px
 		background-color: $point_color
+		margin-left: auto
+		margin-right: auto
 		&:first-child
 			margin-top: 0
 
@@ -375,8 +376,8 @@ a
 		&:nth-of-type(4) a
 			&::after
 				display: none
-		a.footer-color
-				color: $footer_color
+		a.link-color
+				color: $link_color
 		&.list
 			display: none
 
@@ -418,6 +419,10 @@ a
 
 @media screen and (min-width: 1024px)
 	
+	.header
+		width: 100%
+		border-bottom: 2px solid #339966
+
 	.utility-navigation-wrap
 		position: relative
 		display: block
@@ -433,18 +438,35 @@ a
 			float: left
 			line-height: 57px
 			margin-left: 20px
+			a:hover
+				text-decoration: underline
 			.search
 				margin-left: -6px
 				display: block
-				@include size(36px, 36px)
-				background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
+				@include size(40px, 36px)
+				background: url(../images/common/btn_ico_spt.png) -136px -92px no-repeat
 				text-indent: -9999px
 				transform: translateY(25%)
-				border-left: 1px solid #e0e0e0
+				&::after
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					@include pseudo(1px, 20px)
+				// border-left: 1px solid #e0e0e0
+			.link-color
+				color: $link_color
+				posistion: relative
+			.ico-dongbu
+				display: inline-block
+				@include size(19px, 13px)
+				background: url(../images/common/btn_ico_spt.png) -295px -315px no-repeat
+				vertical-align: middle
+
 
 	.logo-navigation-wrap
-		height: initial
-		margin-bottom: 19px
+		height: inherit
+		margin-bottom: 16px
 
 	.logo
 		position: relative
@@ -484,31 +506,21 @@ a
 		.all-navigation
 			position: relative
 			float: right
-			width: 48px
+			width: 50px
 			height: 38px
 			border: 1px solid #d3d3d3
 			background: #fff
 			overflow: hidden
-			.toggle-menu-button
-				position: absolute
-				right: 50%
-				top: 50%
-				width: percent(48, 300)
-				height: 38px
-				line-height: 0
-				transform: translate(-50%, -50%)
-				overflow: visible
-				span
-					margin-top: 4px
-					background-color: $point_color
-					&:first-child
-						margin-top: 0
+			cursor: pointer
+		.toggle-menu-button
+			right: 0
+			span
+				background-color: #666
+
 
 	.contents-wrap
 		position: relative
-		//width: 100%
 		background: none
-		//background-size: 100%
 
 	.bg
 		width: 100%
@@ -1005,7 +1017,7 @@ a
 			&:nth-of-type(7) a
 				&::after
 					display: none
-			a.footer-color
+			a.link-color
 				font-weight: 700
 
 		.footer-link2
