@@ -7,6 +7,7 @@
 $dominance_color: #00a087
 $assort_color: #636b7e
 $point_color: #fe5400
+$footer_color: #13756f
 $font-family: "맑은고딕", "Malgun Gothic", "apple Gothic",  "Apple SD Gothic Neo", Dotum, "돋움", Gulim, "굴림", "Helvetica-Neue", Helvetica, Arial, Verdana, Tahoma, sans-serif
 
 body 
@@ -294,18 +295,19 @@ a
 		top: 50%
 		transform: translateY(-50%)
 		float: right
-		.sns-list
-			display: block
+		ul li
 			float: left
-			width: 26px
-			height: 26px
-			&:nth-of-type(1)
+			a
+				display: block
+				width: 26px
+				height: 27px
+			&:nth-of-type(1) a
 				background: url(../images/m_main/footer_sns.png) no-repeat
-				background-position: left -29px
+				background-position: left -28px
 				background-size: 100%
 				margin-right: 8px
 				text-indent: -99999px
-			&:nth-of-type(2)
+			&:nth-of-type(2) a
 				background: url(../images/m_main/footer_sns.png) no-repeat
 				background-position: left -57px
 				background-size: 100%
@@ -350,39 +352,30 @@ a
 .quick-guide
 	height: 57px
 	line-height: 57px
-	.guide-list
-		display: block
-		width: 33.33333%
-		text-align: center
-		font-size: rem(12px)
+	ul li
 		float: left
-		color: #000
-		position: relative
-		&::after
-			position: absolute
-			right: 0
-			top: 50%
-			transform: translateY(-50%)
-			@include pseudo
+		width: 33.33333%
+		a
+			display: block
+			text-align: center
+			font-size: rem(12px)
+			color: #333
+			position: relative
+			&::after
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				@include pseudo
 
-	.footer-link1
-		.guide-list
-			&:nth-child(1)
-				color: #218082
-			&:nth-child(2)
-				color: #218082
-			&:nth-child(3)
+	.footer-link1 li
+		&:nth-of-type(4) a
+			&::after
 				display: none
-			&:nth-child(4)
-				color: #333
-				&::after
-					display: none
-			&:nth-child(5)
-				display: none
-			&:nth-child(6)
-				display: none
-			&:nth-child(7)
-				display: none
+		a.footer-color
+				color: $footer_color
+		&.list
+			display: none
 
 	.footer-link2
 		display: none
@@ -983,53 +976,47 @@ a
 		float: left
 		height: initial
 		line-height: 12px
-		.guide-list
-			display: block
-			width: initial
-			text-align: center
-			font-size: rem(13px)
+		ul li 
 			float: left
-			color: #000
-			position: relative
-			margin: 0 8px
-			&:hover
-				text-decoration: underline
-			&::after
-				position: absolute
-				right: -8px
-				top: 50%
-				transform: translateY(-50%)
-				@include pseudo
+			width: initial
+			a
+				display: block
+				text-align: center
+				font-size: rem(13px)
+				color: #000
+				position: relative
+				margin: 0 8px
+				&:hover
+					text-decoration: underline
+				&::after
+					position: absolute
+					right: -8px
+					top: 50%
+					transform: translateY(-50%)
+					@include pseudo
 
-		.footer-link1
+		.footer-link1 li
 			margin-bottom: 12px
-			.guide-list
-				&:nth-child(1)
-					color: #218082
-					font-weight: 700
-					margin-left: 0
-				&:nth-child(2)
-					color: #218082
-					font-weight: 700
-				&:nth-child(3)
+			&.list
+				display: block
+			&:nth-of-type(1) a
+				margin-left: 0
+				margin-right: 8px
+			&:nth-of-type(4) a
+				&::after
 					display: block
-				&:nth-child(4)
-					color: #333
-				&:nth-child(5)
-					display: block
-				&:nth-child(6)
-					display: block
-				&:nth-child(7)
-					display: block
-					&::after
-						display: none
+			&:nth-of-type(7) a
+				&::after
+					display: none
+			a.footer-color
+				font-weight: 700
 
 		.footer-link2
 			display: block
-			.guide-list
-				&:nth-of-type(1)
+			li
+				&:nth-of-type(1) a
 					margin-left: 0
-				&:nth-of-type(3)
+				&:nth-of-type(3) a
 					&::after
 						display: none
 
