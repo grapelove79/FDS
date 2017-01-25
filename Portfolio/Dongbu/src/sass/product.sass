@@ -7,6 +7,7 @@
 $dominance_color: #00a087
 $assort_color: #636b7e
 $point_color: #fe5400
+$link_color: #13756f
 $font-family: "맑은고딕", "Malgun Gothic", "apple Gothic",  "Apple SD Gothic Neo", Dotum, "돋움", Gulim, "굴림", "Helvetica-Neue", Helvetica, Arial, Verdana, Tahoma, sans-serif
 $page-width: 1200px
 $content-width: 1000px
@@ -31,38 +32,58 @@ a
 	min-width: $page-width
 
 // header
+.header
+	width: 100%
+	border-bottom: 2px solid #339966
+
 .utility-navigation-wrap
-	width: 525px
+	position: relative
 	height: 57px
-	line-height: 57px
-	font-size: rem(13px)
-	float: right
 
 .utility-navigation
-	float: left
-	display: block
+	position: absolute
+	right: 0
+	top: 0
 	color: #666
-	padding: 0 1.6483516484%
-	&:nth-of-type(7)
-		margin-right: 0.5%
-
-.search
-	float: right
-	width: 36px
-	height: 36px
-	background: url(../images/common/btn_ico_spt.png) -140px -92px no-repeat
-	text-indent: -9999px
-	transform: translateY(25%)
-	border-left: 1px solid #e0e0e0
+	font-size: rem(13px)
+	li
+		float: left
+		line-height: 57px
+		margin-left: 20px
+		a:hover
+			text-decoration: underline
+		.search
+			margin-left: -6px
+			display: block
+			@include size(40px, 36px)
+			background: url(../images/common/btn_ico_spt.png) -136px -92px no-repeat
+			text-indent: -9999px
+			transform: translateY(25%)
+			&::after
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				@include pseudo(1px, 20px)
+			// border-left: 1px solid #e0e0e0
+		.link-color
+			color: $link_color
+			posistion: relative
+		.ico-dongbu
+			display: inline-block
+			@include size(19px, 13px)
+			background: url(../images/common/btn_ico_spt.png) -295px -315px no-repeat
+			vertical-align: middle
 
 .logo-navigation-wrap
-	margin-bottom: 19px
+	margin-bottom: 16px
+	position: relative
 
 .logo
 	position: relative
-	float: left
-	margin-right: 100px
+	margin-right: percent(100, 1200)
 	height: 38px
+	line-height: 38px
 	img
 		position: absolute
 		left: 50%
@@ -71,11 +92,7 @@ a
 		@include rm-img-blank
 
 .main-navigation-wrap
-	float: left
 	.main-navigation
-		float: left
-		width: 125px
-		display: block
 		height: 38px
 		line-height: 38px
 		font-size: rem(20px)
@@ -83,8 +100,10 @@ a
 		color: #666
 
 .side-navigation
+	width: 300px
 	float: right
 	.count
+		display: block
 		float: left
 		width: 242px
 		height: 38px
@@ -103,30 +122,31 @@ a
 	.all-navigation
 		position: relative
 		float: right
-		width: 48px
+		width: 50px
 		height: 38px
 		border: 1px solid #d3d3d3
 		background: #fff
 		overflow: hidden
-		.toggle-menu-button
-			position: absolute
-			right: 50%
-			top: 50%
-			width: percent(48, 300)
-			height: 38px
-			line-height: 0
-			transform: translate(-50%, -50%)
-			cursor: pointer
-			overflow: visible
-			span
-				display: inline-block
-				position: relative
-				width: 20px
-				height: 3px
-				margin-top: 4px
-				background-color: $point_color
-				&:first-child
-					margin-top: 0
+		cursor: pointer
+	.toggle-menu-button
+		position: absolute
+		right: 0
+		top: 50%
+		@include size(50px, 27px)
+		line-height: 0
+		transform: translateY(-50%)
+		cursor: pointer
+		overflow: hidden
+		span
+			display: block
+			position: relative
+			@include size(20px, 3px)
+			margin-top: 4px
+			background-color: #666
+			margin-left: auto
+			margin-right: auto
+			&:first-child
+				margin-top: 0
 
 // MAIN
 .product-wrap
@@ -137,7 +157,6 @@ a
 	padding-bottom: 57px
 
 .visual
-	border-top: 2px solid $dominance_color
 	padding-top: 100px
 	padding-bottom: 100px
 	margin-bottom: 19px
@@ -326,168 +345,136 @@ a
 	margin-bottom: 38px
 
 .sns-tel-wrap
-	width: 100%
 	border-top: 1px solid #e3e3e3
+	border-bottom: 1px solid #e3e3e3
+	width: 100%
+	padding:
+			left: 10px
+			right: 10px
 
 .sns-tel
-	width: $page-width
 	margin: 0 auto
-	height: 55px
+	height: 57px
 
 .sns-wrap
-	position: relative
-	padding: 0 0
-	height: 55px
-	line-height: 55px
-	color: #333
-	font-weight: 700
+	padding: 0
 	.sns-title
-		float: left
-		font-size: rem(14px)
+		line-height: 57px
+		color: #333
 		font-weight: 700
+		float: left
+		font-size: rem(15px)
+		margin-right: 16px
 	.sns
-		position: absolute
-		left: 144px
-		top: 50%
-		transform: translateY(-50%)
-		float: right
-		.sns-list
-			display: block
+		float: left
+		transform: translateY(36%)
+		ul li
 			float: left
-			width: 32px
-			height: 33px
-			&:nth-of-type(1)
+			a
+				display: block
+				width: 32px
+				height: 33px
+			&:nth-of-type(1) a
 				background: url(../images/m_main/footer_sns.png) no-repeat
 				background-position: left -35px
 				background-size: 100%
 				margin-right: 8px
 				text-indent: -99999px
-			&:nth-of-type(2)
+			&:nth-of-type(2) a
 				background: url(../images/m_main/footer_sns.png) no-repeat
 				background-position: left -71px
 				background-size: 100%
 				text-indent: -99999px
 
-.phone-number
-	width: 663px
-	float: right
-	line-height: 56px
-	border-bottom: none
-	.phone-list
-		color: #333
-		float: left
-		text-align: right
-		font-weight: 700
-		font-size: rem(14px)
-		padding-right: 30px
+.phone-number.unit-1
+	width: auto
 
-		.phone-icon
-			width: 19px
-			height: 20px
-			margin-right: 4px
-		.tel
-			padding-left: 20px
-			color: $point-color
-			font-size: rem(20px)
-			vertical-align: -2px
-		&:nth-of-type(1) .phone-icon
-			background: url(../images/m_main/ico_foot.png) no-repeat
-			background-position: left top
-			background-size: 100%
-			vertical-align: -5px
-		&:nth-of-type(2) .phone-icon
-			background: url(../images/m_main/ico_foot.png) no-repeat
-			background-position: left -40px
-			background-size: 100%
-			vertical-align: -5px
-		&:nth-of-type(3) .phone-icon
-			background: url(../images/m_main/ico_foot.png) no-repeat
-			background-position: left -20px
-			background-size: 100%
-			vertical-align: -5px
-		&:nth-of-type(3)
-			padding-right: 0
+.phone-number
+	float: right
+	line-height: 57px
+	li
+		float: left
+		margin-left: 30px
+		a
+			font-weight: 700
+			font-size: rem(15px)
+			color: #333
+			.tel
+				display: inline-block
+				padding-left: 20px
+				color: $point-color
+				font-size: rem(20px)
 
 .foot-wrap
-	border-top: 1px solid #e3e3e3
 	width: 100%
-	padding-top: 19px
+	margin-top: 19px
 	margin-bottom: 38px
+	padding:
+			left: 10px
+			right: 10px
+
 	.foot
-		width: $page-width
 		margin: 0 auto
 
 .quick-guide
 	float: left
 	line-height: 12px
-	.guide-list
-		display: block
-		text-align: center
-		font-size: rem(13px)
+	ul li 
 		float: left
-		color: #000
-		position: relative
-		margin: 0 8px
-		&:hover
-			text-decoration: underline
-		&::after
-			position: absolute
-			right: -8px
-			top: 50%
-			transform: translateY(-50%)
-			@include pseudo
+		a
+			display: block
+			text-align: center
+			font-size: rem(13px)
+			color: #000
+			position: relative
+			margin: 0 8px
+			&:hover
+				text-decoration: underline
+			&::after
+				position: absolute
+				right: -8px
+				top: 50%
+				transform: translateY(-50%)
+				@include pseudo
 
-	.footer-link1
+	.footer-link1 li
 		margin-bottom: 12px
-		.guide-list
-			&:nth-child(1)
-				color: #218082
-				font-weight: 700
-				margin-left: 0
-			&:nth-child(2)
-				color: #218082
-				font-weight: 700
-			&:nth-child(3)
-				display: block
-			&:nth-child(4)
-				color: #333
-			&:nth-child(5)
-				display: block
-			&:nth-child(6)
-				display: block
-			&:nth-child(7)
-				display: block
-				&::after
-					display: none
+		&:nth-of-type(1) a
+			margin-left: 0
+			margin-right: 8px
+		&:nth-of-type(7) a
+			&::after
+				display: none
+		a.link-color
+			font-weight: 700
+			color: $link_color
 
 	.footer-link2
-		.guide-list
-			&:nth-of-type(1)
+		li
+			&:nth-of-type(1) a
 				margin-left: 0
-			&:nth-of-type(3)
+			&:nth-of-type(3) a
 				&::after
 					display: none
 
 .addr
-	text-align: left
 	font-size: rem(12px)
-	margin-top: 19px
 	line-height: rem(19px)
-	strong, cite
-		display: inline-block
+	margin-top: 19px
+	strong:first-child
+		font-weight: 700
+	strong, cite, span
 		margin-right: 16px
-	span
-		display: inline-block
-		margin: 0 16px
+	span:last-child
+		margin-right: 0
 
 .copy
-	line-height: rem(19px)
-	text-align: left
 	font-size: rem(12px)
-	margin-bottom: 0
+	line-height: rem(19px)
 
 .footer-aside
 	width: 330px
+	display: block
 	float: right
 	padding-bottom: 19px
 	.button-site
