@@ -294,7 +294,6 @@ a
 		right: 22px
 		top: 50%
 		transform: translateY(-50%)
-		float: right
 		ul li
 			float: left
 			a
@@ -317,18 +316,22 @@ a
 	height: 57px
 	line-height: 57px
 	border-bottom: 1px solid #e3e3e3
-	.phone-list
-		text-align: center
-		font-size: rem(12px)
+	li
 		float: left
-		color: #333
-		.phone-icon
-			width: 19px
-			height: 20px
-			margin-right: 4px
-			display: inline-block
-		.tel
-			display: none
+		text-align: center
+		width: 33.33333%
+		a
+			font-size: rem(12px)
+			color: #333
+			display: block
+			.tel
+				display: none
+			.phone-icon
+				width: 19px
+				height: 20px
+				margin-right: 4px
+				display: inline-block
+
 		&:nth-of-type(1) .phone-icon
 			background: url(../images/m_main/ico_foot.png) no-repeat
 			background-position: left top
@@ -919,48 +922,54 @@ a
 		font-weight: 700
 		.sns-title
 			float: left
-			font-size: rem(14px)
+			font-size: rem(15px)
 			font-weight: 700
 		.sns
 			position: absolute
-			left: 144px
+			right: auto
+			left: 148px
 			top: 50%
 			transform: translateY(-50%)
-			float: right
-			.sns-list
-				display: block
+			ul li
 				float: left
-				width: 32px
-				height: 33px
-				&:nth-of-type(1)
+				a
+					display: block
+					width: 32px
+					height: 33px
+				&:nth-of-type(1) a
 					background: url(../images/m_main/footer_sns.png) no-repeat
 					background-position: left -35px
 					background-size: 100%
 					margin-right: 8px
 					text-indent: -99999px
-				&:nth-of-type(2)
+				&:nth-of-type(2) a
 					background: url(../images/m_main/footer_sns.png) no-repeat
 					background-position: left -71px
 					background-size: 100%
 					text-indent: -99999px
 
+	.phone-number.unit-1
+		width: auto
+
 	.phone-number
-		width: 700px
 		float: right
 		border-bottom: none
-		.phone-list
+		li
 			float: left
-			text-align: right
-			font-weight: 700
-			font-size: rem(14px)
-			.phone-icon
-				display: none
-			.tel
-				display: inline-block
-				padding-left: 20px
-				color: $point-color
-				font-size: rem(20px)
-				vertical-align: -2px
+			width: auto
+			margin-left: 30px
+			text-align: inherit
+			a
+				font-weight: 700
+				font-size: rem(15px)
+				.phone-icon
+					display: none
+				.tel
+					display: inline-block
+					padding-left: 20px
+					color: $point-color
+					font-size: rem(20px)
+					vertical-align: -2px
 
 	.foot-wrap
 		width: 100%
