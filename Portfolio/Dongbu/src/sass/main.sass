@@ -276,23 +276,25 @@ a
 	width: 100%
 	margin-bottom: 38px
 
-.sns-wrap
-	position: relative
-	padding: 0 22px
-	height: 57px
-	line-height: 57px
+.sns-tel-wrap
 	border-top: 1px solid #e3e3e3
 	border-bottom: 1px solid #e3e3e3
-	color: #333
-	font-weight: 700
+
+.sns-tel
+	margin: 0 auto
+	height: 57px
+	
+.sns-wrap
+	padding: 0 22px
 	.sns-title
+		line-height: 57px
+		color: #333
+		font-weight: 700
 		float: left
 		font-size: rem(13px)
 	.sns
-		position: absolute
-		right: 22px
-		top: 50%
-		transform: translateY(-50%)
+		float: right
+		transform: translateY(50%)
 		ul li
 			float: left
 			a
@@ -312,7 +314,6 @@ a
 				text-indent: -99999px
 
 .phone-number
-	height: 57px
 	line-height: 57px
 	border-bottom: 1px solid #e3e3e3
 	li
@@ -901,34 +902,22 @@ a
 		width: 100%
 
 	.sns-tel-wrap
+		border-top: inherit
 		width: 100%
-		border-bottom: 1px solid #e3e3e3
 		padding:
 				left: 10px
 				right: 10px
 
-	.sns-tel
-		margin: 0 auto
-		height: 55px
-
 	.sns-wrap
-		border: none
-		padding: 0 0
-		position: relative
-		height: 57px
-		line-height: 57px
-		color: #333
-		font-weight: 700
+		padding: 0
 		.sns-title
-			float: left
+			color: #333
 			font-size: rem(15px)
-			font-weight: 700
+			line-height: 57px
+			margin-right: 16px
 		.sns
-			position: absolute
-			right: auto
-			left: 148px
-			top: 50%
-			transform: translateY(-50%)
+			float: left
+			transform: translateY(36%)
 			ul li
 				float: left
 				a
@@ -968,7 +957,6 @@ a
 					padding-left: 20px
 					color: $point-color
 					font-size: rem(20px)
-					vertical-align: -2px
 
 	.foot-wrap
 		width: 100%
