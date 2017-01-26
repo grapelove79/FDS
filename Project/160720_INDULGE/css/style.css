@@ -199,7 +199,7 @@ a {
 .title-4-3 { padding-bottom: 151.34%; }
 .title-1-4 { padding-bottom: 39%; }
 
-.title-content { background: #7f6162; }
+.title-content { background: #7f6162; position: relative;}
 
 /* 본문 배경이미지 속 text 정렬 모듈 */
 .title-center {text-align: center;}
@@ -242,11 +242,12 @@ a {
 
 .title-content .button-s {
   position: absolute;
+  left: 50%;
   width: 96px;
   height: 21px;
   line-height: 21px;
   border: 1px solid #fff;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   font-size: 0.75em;
   margin-top: 21px;
 }
