@@ -23,8 +23,10 @@ AJAX란 비동기 JavaScript와 XML을 말합니다. 간단히 말하면, 서버
 ### 실습
 ####Command Line 작업
 ```
-kys$ http-server -o -a localhost -p 8081 	// 서버구동하기
-kys$ npm list -g http-server	// http-server가 설치되어있는지 확인
+서버 설치 : $ npm install http-server -g
+로컬 서버 연결(서버구동하기) : $ http-server -o -a localhost -p 8081
+: http://localhost:8081로 자동으로 띄워줍니다.
+http-server가 설치되어있는지 확인: $ npm list -g http-server 
 
 data kys$ curl http://api.randomuser.me/?results=10 > random-users.json // 10개의 json가져와  random-users.json 파일 생성됨.
 ```
@@ -38,12 +40,12 @@ http://www.generatedata.com/
 https://randomuser.me/documentation#howto
 
 ####JSON사용법
-- text --> objcet
-	- json객체의 parse( )메소드를 사용
-	- JSON.parse( JSON 문자열)
-- text --> object
+- 인자로 받은 객체를 JSON 문자열로 반환함 (object --> text)
 	- JSON 객체의 stringify( )메소드를 사용
-	-  JSON.stringify( javascript 문자열)
+	- JSON.stringify( object )
+- 인자로 받은 문자열을 Javascript Object로 변경해 반환함 (text --> objcet)
+	- json객체의 parse( )메소드를 사용
+	- JSON.parse( JSON 문자열 )
 
 ##__AngularJS__<br>
 - 어플리케이션 만들때 쓴다
