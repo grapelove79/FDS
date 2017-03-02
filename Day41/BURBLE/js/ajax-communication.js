@@ -147,7 +147,7 @@
   function updateViewPlace() {
     view_items = 5;
     console.log(view_items);
-    xhr.open('GET', 'http://api.randomuser.me/?results='+ view_items);
+    xhr.open('GET', 'https://api.randomuser.me/?results='+ view_items);
     // AJAX 통신 요청 보내기
     xhr.send();
     // 비동기 통신을 요청했을 경우,
